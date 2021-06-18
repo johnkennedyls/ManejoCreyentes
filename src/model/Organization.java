@@ -2,8 +2,10 @@ package model;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Organization {
 	
@@ -13,24 +15,41 @@ public class Organization {
 		
 	}
 	
-	public void importDataOrder(String fn) throws IOException {
-		File fl = new File(fn);
-		@SuppressWarnings("resource")
-		BufferedReader br = new BufferedReader(new FileReader(fl));
-		br.readLine();
-		
-		String line = br.readLine();
-		
-		while (line != null) {
-			String[] split = line.split(",");	
-			
-			//se crea el objeto que vamos a leer y se añaden a la estructura.
-			/*
-			Order or = new 	Order(split[0], java.sql.Date.valueOf(split[1]), split[2], split[3], split[4], StatusOrder.valueOf(split[5]), split[6]) ;
-			orders.add(or);
-			*/
-			line = br.readLine();
-			
-		}
-	}
+	
+	public static void leerArchivo(String ruta) {
+
+     	String dato;
+     	
+        try {
+            File archivo = new File(ruta);
+            Scanner myReader = new Scanner(archivo);
+            String[] list = myReader.nextLine().split(";");
+            int[][] myMatrix = new int[list.length-1][list.length-1];
+            int row = 0;
+            String[] info;
+            while (myReader.hasNextLine()) {
+                dato = myReader.nextLine();
+                info = dato.split(";");
+                System.out.println("Tamaño info: " + info.length);
+                for (int i = 1; i < list.length; i++) {
+                    myMatrix[row][i-1] = Integer.parseInt(info[i]);
+                }
+                row++;               
+            }
+            
+            for (int j = 0; j < list.length-1; j++){ 
+                for (int k = 0; k < list.length-1; k++){ 
+                    System.out.print(myMatrix[j][k]+" "); 
+                } 
+                System.out.println(""); 
+            }
+            
+        } catch (FileNotFoundException ex) {
+             System.out.println("El archivo no existe");
+        }
+
+      
+     }
+	
 }
+

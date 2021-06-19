@@ -33,7 +33,7 @@ public class Church {
 		String line = br.readLine();
 		
 		while (line != null) {
-			String[] split = line.split(",");
+			String[] split = line.split(";");
 			Member member = new Member(split[0], split[1], split[2], split[3],
 					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9]);
 			
@@ -105,5 +105,7 @@ public class Church {
 	}
 	
 	
-	
+	public void divideByCommittee() {
+		
+	}
 }

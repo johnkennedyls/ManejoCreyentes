@@ -68,4 +68,42 @@ public class Church {
 		theSector = new Sector(name);
 		theSectors.add(theSector);
 	}
+	
+	public boolean existSector(String name){
+		boolean exist = false;
+		for (int i = 0; i < theSectors.size(); i++) {
+			if(theSectors.get(i).getName().equals(name)) {
+				exist = true;
+			}
+		}
+		
+		return exist;
+	}
+	
+	public Sector searchSector(String name){
+		Sector s = null;
+		for (int i = 0; i < theSectors.size(); i++) {
+			if(theSectors.get(i).getName().equals(name)) {
+				s=theSectors.get(i);
+			}
+		}
+		
+		return s;
+	}
+	
+	public void divideBySectors() {
+		for (int i = 0; i < generalMembers.size(); i++) {
+			if(existSector(generalMembers.get(i).getSector())) {
+				Sector s = searchSector(generalMembers.get(i).getSector());
+				s.addMember(generalMembers.get(i));
+			}else {
+				createSector(generalMembers.get(i).getSector());
+				Sector s = searchSector(generalMembers.get(i).getSector());
+				s.addMember(generalMembers.get(i));
+			}
+		}
+	}
+	
+	
+	
 }

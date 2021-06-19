@@ -45,4 +45,8 @@ public class Sector {
 		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector, committee);
 		membersList.add(theMember);
 	}
+	
+	public void addMember(Member m) {
+		membersList.add(m);
+	}
 }

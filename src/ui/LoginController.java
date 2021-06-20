@@ -1,9 +1,7 @@
 package ui;
 
 import java.io.IOException;
-
 import javafx.event.ActionEvent;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,7 +26,7 @@ public class LoginController {
     		passwordField.getScene().getWindow().hide();
     		
 		} catch (IOException ioException) {
-			// TODO: handle exception
+
 			ioException.printStackTrace();
 			
 		}
@@ -41,10 +39,9 @@ public class LoginController {
 		Scene scene = new Scene(root);
 		Stage secondaryStage = new Stage();
 		secondaryStage.setScene(scene);
-		secondaryStage.setTitle("Acceder");
+		secondaryStage.setTitle("Principal");
 		secondaryStage.setResizable(false);
 		secondaryStage.show();
-		
     }
     
     private boolean verifyLogin() {

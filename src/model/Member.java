@@ -12,9 +12,12 @@ public class Member {
 	private String phoneNumber;
 	private String sector;
 	private String committee;
+	private SectorType sectorType;
+	private OfficeType officeType;
+	
 	
 	public Member(String name, String idNumber,String gender, String birthday, boolean baptized, boolean active, String observations,
-			String phoneNumber, String sector, String committee) {
+			String phoneNumber, String sector, String committee, SectorType sectorType, OfficeType officeType) {
 		this.name = name;
 		this.idNumber = idNumber;
 		this.gender = gender;
@@ -25,6 +28,8 @@ public class Member {
 		this.phoneNumber = phoneNumber;
 		this.sector = sector;
 		this.committee = committee;
+		this.sectorType = sectorType;
+		this.officeType = officeType;
 	}
 
 	public String getName() {
@@ -105,6 +110,22 @@ public class Member {
 
 	public void setCommittee(String committee) {
 		this.committee = committee;
+	}
+
+	public SectorType getSectorType() {
+		return sectorType;
+	}
+
+	public void setSectorType(SectorType sectorType) {
+		this.sectorType = sectorType;
+	}
+
+	public OfficeType getOfficeType() {
+		return officeType;
+	}
+
+	public void setOfficeType(OfficeType officeType) {
+		this.officeType = officeType;
 	}
 	
 	

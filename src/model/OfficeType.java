@@ -1,0 +1,6 @@
+package model;
+
+public enum OfficeType {
+	
+	PRESIDENTE, VICEPRESIDENTE, SECRETARIO, TESORERO, VOCAL, AUXILIAR, FISCAL
+}

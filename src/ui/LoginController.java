@@ -9,8 +9,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.Church;
 
 public class LoginController {
+	
+	private Church church;
+	
+	public LoginController() {
+		church = new Church("default", "Cali");
+		
+	}
+	
 	@FXML
     private PasswordField passwordField;
 
@@ -20,10 +29,16 @@ public class LoginController {
     @FXML
     void login(ActionEvent event) {
     	try {
-			
-    		openPrincipalWindow();
+			if (verifyLogin()) {
+				openPrincipalWindow();
+	    		
+	    		passwordField.getScene().getWindow().hide();
+	    		
+			}else {
+				//TODO: add invalid user exception to throw
+				
+			}
     		
-    		passwordField.getScene().getWindow().hide();
     		
 		} catch (IOException ioException) {
 
@@ -31,7 +46,7 @@ public class LoginController {
 			
 		}
     	
-    	verifyLogin();
+    	
     }
     
     private void openPrincipalWindow() throws IOException{
@@ -45,6 +60,16 @@ public class LoginController {
     }
     
     private boolean verifyLogin() {
+    	String name = church.getMinister().getName();
+    	String password = church.getMinister().getPassword();
+    	
+    	String inputName = userNameField.getText();
+    	String inputPassword = passwordField.getText();
+    	
+    	if (name.equals(inputName) && password.equals(inputPassword)) {
+			return true;
+		}
+    	
     	return false;
     }
 

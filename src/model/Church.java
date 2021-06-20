@@ -12,6 +12,8 @@ public class Church {
 	private String name;
 	private String city;
 	
+	private Minister minister;
+	
 	private Sector theSector;
 	private List<Sector> theSectors;
 	private List<Member> generalMembers;
@@ -19,6 +21,8 @@ public class Church {
 	public Church(String name, String city) {
 		this.name = name;
 		this.city = city;
+		
+		this.minister = new Minister("admin", "123");
 		
 		theSectors = new ArrayList<Sector>();
 		generalMembers = new ArrayList<Member>();
@@ -41,7 +45,7 @@ public class Church {
 			line = br.readLine();
 		}
 
-		}
+	}
 
 	public String getName() {
 		return name;
@@ -58,6 +62,16 @@ public class Church {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
+	public Minister getMinister() {
+		return minister;
+	}
+
+	public void setMinister(String name, String password) {
+		Minister tempMinister = new Minister(name, password);
+		this.minister = tempMinister;
+		
+	}
 
 	public List<Sector> getTheSectors() {
 		return theSectors;
@@ -67,6 +81,7 @@ public class Church {
 		
 		theSector = new Sector(name);
 		theSectors.add(theSector);
+	
 	}
 	
 	public boolean existSector(String name){
@@ -78,6 +93,7 @@ public class Church {
 		}
 		
 		return exist;
+		
 	}
 	
 	public Sector searchSector(String name){
@@ -89,6 +105,7 @@ public class Church {
 		}
 		
 		return s;
+		
 	}
 	
 	public void divideBySectors() {
@@ -102,10 +119,12 @@ public class Church {
 				s.addMember(generalMembers.get(i));
 			}
 		}
+		
 	}
 	
 	
 	public void divideByCommittee() {
 		
 	}
+	
 }

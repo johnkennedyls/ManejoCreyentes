@@ -16,10 +16,7 @@ public class PrincipalController {
     	void openRegister(ActionEvent event) {
     		try {
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/register.fxml"));
-				fxmlLoader.setController(this);
-
 				Parent Pane = fxmlLoader.load();
-
 				principalWindow.setRight(Pane);
 
     		} catch (IOException ioException) {
@@ -34,10 +31,7 @@ public class PrincipalController {
 	    void openCommittees(ActionEvent event) {
 			try {
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/committees.fxml"));
-				fxmlLoader.setController(this);
-
 				Parent Pane = fxmlLoader.load();
-
 				principalWindow.setRight(Pane);
 
     		} catch (IOException ioException) {
@@ -51,10 +45,7 @@ public class PrincipalController {
 	    void openRecords(ActionEvent event) {
 			try {
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/records.fxml"));
-				fxmlLoader.setController(this);
-
 				Parent Pane = fxmlLoader.load();
-
 				principalWindow.setRight(Pane);
 
     		} catch (IOException ioException) {
@@ -68,10 +59,7 @@ public class PrincipalController {
 	    void openOptions(ActionEvent event) {
 	    	try {
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/options.fxml"));
-				fxmlLoader.setController(this);
-
 				Parent Pane = fxmlLoader.load();
-
 				principalWindow.setRight(Pane);
 
     		} catch (IOException ioException) {

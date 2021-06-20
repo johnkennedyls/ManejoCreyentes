@@ -1,6 +1,8 @@
 package ui;
 
 import java.io.IOException;
+
+import exceptions.InvalidUserException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,7 +37,7 @@ public class LoginController {
 	    		passwordField.getScene().getWindow().hide();
 	    		
 			}else {
-				//TODO: add invalid user exception to throw
+				throw new InvalidUserException();
 				
 			}
     		
@@ -44,8 +46,11 @@ public class LoginController {
 
 			ioException.printStackTrace();
 			
+		} catch (InvalidUserException invalidUserException) {
+			invalidUserException.printStackTrace();
+			
 		}
-    	
+
     	
     }
     

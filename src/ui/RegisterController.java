@@ -7,6 +7,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import model.OfficeType;
+import model.SectorType;
 
 public class RegisterController {
 	
@@ -38,17 +40,37 @@ public class RegisterController {
     private TextField committeeField;
 
     @FXML
-    private ComboBox<?> sectorType;
+    private ComboBox<String> sectorType;
 
     @FXML
-    private ComboBox<?> officeType;
+    private ComboBox<String> officeType;
 
     @FXML
     private TextArea observationsField;
-
+    
+    @FXML
+    public void initialize() {
+        loadOfficeType();
+        loadSectorType();
+    }
+    
     @FXML
     void signUp(ActionEvent event) {
 
+    }
+    
+    private void loadSectorType() {
+    	for (SectorType st : SectorType.values()) {
+    		sectorType.getItems().add(st.toString());
+		}
+    	
+    }
+    
+    private void loadOfficeType() {
+    	for (OfficeType ot : OfficeType.values()) {
+    		officeType.getItems().add(ot.toString());
+		}
+    	
     }
     
 }

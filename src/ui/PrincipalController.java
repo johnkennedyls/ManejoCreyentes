@@ -20,7 +20,6 @@ public class PrincipalController {
 				principalWindow.setRight(Pane);
 
     		} catch (IOException ioException) {
-    			System.out.println("hello");
 				ioException.printStackTrace();
 				
 			}

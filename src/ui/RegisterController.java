@@ -1,12 +1,17 @@
 package ui;
 
+import java.time.LocalDate;
+
+import exceptions.EmptyDataException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import model.OfficeType;
 import model.SectorType;
 
@@ -56,7 +61,13 @@ public class RegisterController {
     
     @FXML
     void signUp(ActionEvent event) {
-
+    	try {
+    		validateEmptyFields();
+    		
+    		System.out.println("registered :)");
+		} catch (EmptyDataException emptyDataException) {
+			emptyFieldsAlert(emptyDataException.getMessage());
+		}
     }
     
     private void loadSectorType() {
@@ -71,6 +82,47 @@ public class RegisterController {
     		officeType.getItems().add(ot.toString());
 		}
     	
+    }
+    
+    private void validateEmptyFields() throws EmptyDataException{
+    	if (nameField.getText().equals("")) {
+			throw new EmptyDataException();
+		}
+    	
+    	if (idField.getText().equals("")) {
+			throw new EmptyDataException();
+		}
+    	
+    	if (genderField.getText().equals("")) {
+			throw new EmptyDataException();
+		}
+    	
+    	LocalDate localDate = birthday.getValue();
+    	
+    	if (localDate == null) {
+			throw new EmptyDataException();
+		}
+    	
+    	if (phoneNumberField.getText().equals("")) {
+			throw new EmptyDataException();
+		}
+    	
+    	if (sectorField.getText().equals("")) {
+			throw new EmptyDataException();
+		}
+    	
+    	if (committeeField.getText().equals("")) {
+			throw new EmptyDataException();
+		}
+    	
+    }
+    
+    private void emptyFieldsAlert(String message) {
+    	Alert emptyFieldsAlert = new Alert(AlertType.ERROR);
+    	emptyFieldsAlert.setTitle("Datos vacíos.");
+    	emptyFieldsAlert.setHeaderText(message);
+    	emptyFieldsAlert.showAndWait();
+
     }
     
 }

@@ -1,6 +1,7 @@
 package ui;
 
 import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,9 +12,21 @@ public class PrincipalController {
 	 	
 		@FXML
 		private BorderPane principalWindow;
+		
+		@FXML
+	    public void initialize() {
+	        openRegister();
+			
+			
+	    }
 	
     	@FXML
     	void openRegister(ActionEvent event) {
+    		openRegister();
+    		
+    	}
+    	
+    	private void openRegister() {
     		try {
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/register.fxml"));
 				Parent Pane = fxmlLoader.load();
@@ -24,9 +37,8 @@ public class PrincipalController {
 				
 			}
     		
-    		
     	}
-    
+    	
 		@FXML
 	    void openCommittees(ActionEvent event) {
 			try {

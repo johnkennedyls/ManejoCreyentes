@@ -2,20 +2,66 @@ package model;
 
 public class Member {
 	
+	/**
+	 * Member name
+	 */
 	private String name;
+	/**
+	 * Member ID
+	 */
 	private String idNumber;
+	/**
+	 * Member gender
+	 */
 	private String gender;
+	/**
+	 * Member birthay
+	 */
 	private String birthday;
+	/**
+	 * Represents if the member is baptized
+	 * true = baptized
+	 * false = unbaptized
+	 */
 	private boolean baptized;
+	/**
+	 * Represents if the member is promised
+	 * true = promised
+	 * false = not promised
+	 */
 	private boolean active;
+	/**
+	 * Notes for member
+	 */
 	private String observations;
+	/**
+	 * Member phoneNumber
+	 */
 	private String phoneNumber;
+	/**
+	 * Member sector
+	 */
 	private String sector;
+	/**
+	 * Member committee
+	 */
 	private String committee;
 	private SectorType sectorType;
 	private OfficeType officeType;
 	
-	
+	/**
+	 * Initialize a new member
+	 * @param name:String Represents member name
+	 * @param idNumber:String Represents member ID
+	 * @param gender:String Represents member gender
+	 * @param birthay:String Represents member birthay
+	 * @param baptized:Boolean Indicate if the member is baptized
+	 * @param active:Boolean Indicate if the member is promised
+	 * @param observations:String Minister notes of the member
+	 * @param phoneNumber:String Represents member phone number
+	 * @param sector:String Represents member sector
+	 * @param 
+	 */
 	public Member(String name, String idNumber,String gender, String birthday, boolean baptized, boolean active, String observations,
 			String phoneNumber, String sector, String committee, SectorType sectorType, OfficeType officeType) {
 		this.name = name;

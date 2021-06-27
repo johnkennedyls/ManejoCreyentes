@@ -28,25 +28,12 @@ public class Church {
 		generalMembers = new ArrayList<Member>();
 	}
 	
-	public  void readMembers(String fn) throws IOException {
-		File fl = new File(fn);
-		@SuppressWarnings("resource")
-		BufferedReader br = new BufferedReader(new FileReader(fl));
-		br.readLine();
-		
-		String line = br.readLine();
-		
-		while (line != null) {
-			String[] split = line.split(";");
-			Member member = new Member(split[0], split[1], split[2], split[3],
-					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9]);
-			
-			generalMembers.add(member);
-			line = br.readLine();
-		}
-
-	}
-
+	
+	
+	//------------------------------------------------------
+	//------------------------------------------------------
+    //Getters and setters
+	//-----------------------------------------------------
 	public String getName() {
 		return name;
 	}
@@ -76,6 +63,28 @@ public class Church {
 	public List<Sector> getTheSectors() {
 		return theSectors;
 	}
+	
+	
+	public  void readMembers(String fn) throws IOException {
+		File fl = new File(fn);
+		@SuppressWarnings("resource")
+		BufferedReader br = new BufferedReader(new FileReader(fl));
+		br.readLine();
+		
+		String line = br.readLine();
+		
+		while (line != null) {
+			String[] split = line.split(";");
+			Member member = new Member(split[0], split[1], split[2], split[3],
+					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9]);
+			
+			generalMembers.add(member);
+			line = br.readLine();
+		}
+
+	}
+
+	
 	
 	public void createSector(String name) {
 		

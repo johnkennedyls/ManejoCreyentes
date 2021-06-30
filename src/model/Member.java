@@ -77,59 +77,101 @@ public class Member {
 		this.sectorType = sectorType;
 		this.officeType = officeType;
 	}
-
+	/**
+	 * return member name
+	 * @return name:String Member name
+	 */
 	public String getName() {
 		return name;
 	}
-
+	/**
+	 * Set member name
+	 * @param name:String Member name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	/**
+	 * return member ID
+	 * @return idNumber:String Member ID
+	 */
 	public String getIdNumber() {
 		return idNumber;
 	}
-
+	/**
+	 * set member ID
+	 * @param idNumber:String Member ID
+	 */
 	public void setIdNumber(String idNumber) {
 		this.idNumber = idNumber;
 	}
-
+	/**
+	 * return member gender
+	 * @return gender:String Member gender
+	 */
 	public String getGender() {
 		return gender;
 	}
-
+	/**
+	 * set member gender
+	 * @param gender:String Member gender
+	 */
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
+	/**
+	 * return member birthday
+	 * @return birthay:String Member birthday
+	 */
 	public String getBirthday() {
 		return birthday;
 	}
-
+	/**
+	 * Set member birthday
+	 * @param birthday:String Member birthday
+	 */
 	public void setBirthday(String birthday) {
 		this.birthday = birthday;
 	}
-
+	/**
+	 * Return if member is baptized
+	 * @return baptized:boolean true:if member is baptized false: if member is not baptized
+	 */
 	public boolean isBaptized() {
 		return baptized;
 	}
-
+	/**
+	 * Set if member is baptized
+	 * @param baptized:boolean true:if member is baptized false:if member is not baptized
+	 */
 	public void setBaptized(boolean baptized) {
 		this.baptized = baptized;
 	}
-
+	/**
+	 * Return if member is promised
+	 * @return active:boolean true:if member is promised false: if member is not promised
+	 */
 	public boolean isActive() {
 		return active;
 	}
-
+	/**
+	 * Set if member is promised
+	 * @param active:boolean true:if member is promised false:if member is not promised
+	 */
 	public void setActive(boolean active) {
 		this.active = active;
 	}
-
+	/**
+	 * return member observations
+	 * @return observations:String Member observations
+	 */
 	public String getObservations() {
 		return observations;
 	}
-
+	/**
+	 * Set member birthday
+	 * @param birthday:String Member birthday
+	 */
 	public void setObservations(String observations) {
 		this.observations = observations;
 	}

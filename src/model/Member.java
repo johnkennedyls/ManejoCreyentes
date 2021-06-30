@@ -46,8 +46,7 @@ public class Member {
 	 * Member committee
 	 */
 	private String committee;
-	private SectorType sectorType;
-	private OfficeType officeType;
+
 	
 	/**
 	 * Initialize a new member
@@ -63,7 +62,7 @@ public class Member {
 	 * @param 
 	 */
 	public Member(String name, String idNumber,String gender, String birthday, boolean baptized, boolean active, String observations,
-			String phoneNumber, String sector, String committee, SectorType sectorType, OfficeType officeType) {
+			String phoneNumber, String sector, String committee) {
 		this.name = name;
 		this.idNumber = idNumber;
 		this.gender = gender;
@@ -74,8 +73,6 @@ public class Member {
 		this.phoneNumber = phoneNumber;
 		this.sector = sector;
 		this.committee = committee;
-		this.sectorType = sectorType;
-		this.officeType = officeType;
 	}
 	/**
 	 * return member name
@@ -199,22 +196,5 @@ public class Member {
 	public void setCommittee(String committee) {
 		this.committee = committee;
 	}
-
-	public SectorType getSectorType() {
-		return sectorType;
-	}
-
-	public void setSectorType(SectorType sectorType) {
-		this.sectorType = sectorType;
-	}
-
-	public OfficeType getOfficeType() {
-		return officeType;
-	}
-
-	public void setOfficeType(OfficeType officeType) {
-		this.officeType = officeType;
-	}
-	
 	
 }

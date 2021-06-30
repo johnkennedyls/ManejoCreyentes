@@ -35,18 +35,18 @@ public class Sector {
 	}
 
 	public void createLeaders(String name, String idNumber, String gender, String birthday, boolean baptized,
-			boolean active, String observations, String phoneNumber, String sector, String committee, SectorType sectorType, OfficeType officeType) {
+			boolean active, String observations, String phoneNumber, String sector, String committee) {
 
 		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector,
-				committee, sectorType, officeType);
+				committee);
 		leaders.add(theMember);
 	}
 
 	public void createMembers(String name, String idNumber, String gender, String birthday, boolean baptized,
-			boolean active, String observations, String phoneNumber, String sector, String committee, SectorType sectorType, OfficeType officeType) {
+			boolean active, String observations, String phoneNumber, String sector, String committee) {
 
 		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector,
-				committee, sectorType, officeType);
+				committee);
 		membersList.add(theMember);
 	}
 

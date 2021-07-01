@@ -172,27 +172,45 @@ public class Member {
 	public void setObservations(String observations) {
 		this.observations = observations;
 	}
-
+	/**
+	 * return member phone
+	 * @return phoneNumber:String Member phone
+	 */
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
+	/**
+	 * Set member phone
+	 * @param phoneNumber:String Member phone
+	 */
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-
+	/**
+	 * return member sector
+	 * @return sector:String Member sector
+	 */
 	public String getSector() {
 		return sector;
 	}
-
+	/**
+	 * Set member sector
+	 * @param sector:String Member sector
+	 */
 	public void setSector(String sector) {
 		this.sector = sector;
 	}
-
+	/**
+	 * return member committee
+	 * @return committee:String Member committee
+	 */
 	public String getCommittee() {
 		return committee;
 	}
-
+	/**
+	 * Set member committee
+	 * @param committee:String Member committee
+	 */
 	public void setCommittee(String committee) {
 		this.committee = committee;
 	}

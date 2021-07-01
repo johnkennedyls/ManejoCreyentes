@@ -8,13 +8,16 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Organization {
-	
+	/**
+	 * Minister relations
+	 */
 	private Minister minister;
 
+	/**
+	 * Create a new organization
+	 */
 	public Organization() {
-		
-	}
-	
-	
-}
 
+	}
+
+}

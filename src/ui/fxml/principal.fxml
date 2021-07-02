@@ -13,7 +13,7 @@
                <children>
                   <Button mnemonicParsing="false" onAction="#openRegister" prefWidth="112.0" style="-fx-background-color: transparent;" text="Registrar" textFill="WHITE" />
                   <Button minWidth="112.0" mnemonicParsing="false" onAction="#openCommittees" style="-fx-background-color: transparent;" text="Sectores" textFill="WHITE" />
-                  <Button minWidth="112.0" mnemonicParsing="false" onAction="#openRecords" style="-fx-background-color: transparent;" text="Registros" textFill="WHITE" />
+                  <Button minWidth="112.0" mnemonicParsing="false" onAction="#openRecords" style="-fx-background-color: transparent;" text="Registros/Cumpleaños" textFill="WHITE" />
                   <Button minWidth="112.0" mnemonicParsing="false" onAction="#openOptions" style="-fx-background-color: transparent;" text="Opciones" textFill="WHITE" />
                </children>
             </VBox>

@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RecordsController">
    <children>
       <TabPane prefHeight="600.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
@@ -23,12 +22,12 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="40.0" layoutY="32.0" text="Cumpleaños">
+                        <Label layoutY="32.0" text="Cumpleaños" AnchorPane.leftAnchor="32.0">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="40.0" layoutY="264.0" text="Proximos cumpleaños">
+                        <Label layoutY="260.0" text="Proximos cumpleaños" AnchorPane.leftAnchor="32.0">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -45,7 +44,7 @@
                                     <TableColumn fx:id="active" prefWidth="75.0" text="Activo" />
                                     <TableColumn fx:id="phoneNumber" prefWidth="75.0" text="Numero" />
                                     <TableColumn fx:id="sector" prefWidth="75.0" text="Sector" />
-                                    <TableColumn fx:id="committee" prefWidth="75.0" text="Oficio" />
+                                    <TableColumn fx:id="committee" prefWidth="75.0" text="Comité" />
                                  </columns>
                               </TableView>
                            </content>
@@ -62,7 +61,7 @@
                                     <TableColumn fx:id="UActive" prefWidth="75.0" text="Activo" />
                                     <TableColumn fx:id="UPhoneNumber" prefWidth="75.0" text="Numero" />
                                     <TableColumn fx:id="USector" prefWidth="75.0" text="Sector" />
-                                    <TableColumn fx:id="UCommittee" prefWidth="75.0" text="Oficio" />
+                                    <TableColumn fx:id="UCommittee" prefWidth="75.0" text="Comité" />
                                  </columns>
                               </TableView>
                            </content>
@@ -114,7 +113,7 @@
                                     <TableColumn fx:id="MActive" prefWidth="75.0" text="Activo" />
                                     <TableColumn fx:id="MPhoneNumber" prefWidth="75.0" text="Numero" />
                                     <TableColumn fx:id="MSector" prefWidth="75.0" text="Sector" />
-                                    <TableColumn fx:id="MCommittee" prefWidth="75.0" text="Oficio" />
+                                    <TableColumn fx:id="MCommittee" prefWidth="75.0" text="Comité" />
                                  </columns>
                               </TableView>
                            </content>

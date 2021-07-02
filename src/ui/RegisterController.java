@@ -2,6 +2,7 @@ package ui;
 
 import java.time.LocalDate;
 
+
 import exceptions.EmptyDataException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,8 +13,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-import model.OfficeType;
-import model.SectorType;
 
 public class RegisterController {
 	
@@ -39,23 +38,17 @@ public class RegisterController {
     private TextField phoneNumberField;
 
     @FXML
-    private TextField sectorField;
-
-    @FXML
-    private TextField committeeField;
-
-    @FXML
     private ComboBox<String> sectorType;
 
     @FXML
-    private ComboBox<String> officeType;
+    private ComboBox<String> committees;
 
     @FXML
     private TextArea observationsField;
     
     @FXML
     public void initialize() {
-        loadOfficeType();
+        loadCommittees();
         loadSectorType();
     }
     
@@ -71,16 +64,10 @@ public class RegisterController {
     }
     
     private void loadSectorType() {
-    	for (SectorType st : SectorType.values()) {
-    		sectorType.getItems().add(st.toString());
-		}
     	
     }
     
-    private void loadOfficeType() {
-    	for (OfficeType ot : OfficeType.values()) {
-    		officeType.getItems().add(ot.toString());
-		}
+    private void loadCommittees() {
     	
     }
     
@@ -104,14 +91,6 @@ public class RegisterController {
 		}
     	
     	if (phoneNumberField.getText().equals("")) {
-			throw new EmptyDataException();
-		}
-    	
-    	if (sectorField.getText().equals("")) {
-			throw new EmptyDataException();
-		}
-    	
-    	if (committeeField.getText().equals("")) {
 			throw new EmptyDataException();
 		}
     	

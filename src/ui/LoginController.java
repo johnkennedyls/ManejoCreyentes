@@ -2,6 +2,7 @@ package ui;
 
 import java.io.IOException;
 
+
 import exceptions.InvalidUserException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

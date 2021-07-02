@@ -25,7 +25,7 @@ public class LoginController {
 	
 	public LoginController() {
 		church = new Church("default", "Cali");
-		
+
 	}
 	
 	@FXML

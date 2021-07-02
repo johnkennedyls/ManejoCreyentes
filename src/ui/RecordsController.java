@@ -3,6 +3,7 @@ package ui;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -75,10 +76,22 @@ public class RecordsController {
     private TextField idField;
 
     @FXML
+    private TextField genderField;
+
+    @FXML
+    private TextField phoneNumberField;
+
+    @FXML
     private CheckBox baptizedCB;
 
     @FXML
     private CheckBox activeCB;
+
+    @FXML
+    private ComboBox<?> sectorType;
+
+    @FXML
+    private ComboBox<?> committee1;
 
     @FXML
     private TableView<?> members;

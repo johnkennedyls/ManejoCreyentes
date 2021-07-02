@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
@@ -74,12 +75,12 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="33.0" layoutY="37.0" text="Filtros de busqueda">
+                        <Label layoutY="16.0" text="Filtros de busqueda" AnchorPane.leftAnchor="32.0">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <VBox alignment="CENTER" layoutY="72.0" prefHeight="112.0" prefWidth="640.0" spacing="8.0">
+                        <VBox alignment="CENTER" layoutY="51.0" prefHeight="152.0" prefWidth="320.0" spacing="8.0">
                            <children>
                               <TextField fx:id="nameField" prefWidth="50.0" promptText="Nombre" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: ROYALBLUE;">
                                  <opaqueInsets>
@@ -94,16 +95,32 @@
                                     <Insets left="32.0" right="32.0" />
                                  </VBox.margin>
                               </TextField>
-                              <CheckBox fx:id="baptizedCB" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Bautizado" />
-                              <CheckBox fx:id="activeCB" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Activo" />
+                              <TextField fx:id="genderField" promptText="Genero" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: ROYALBLUE;">
+                                 <VBox.margin>
+                                    <Insets left="32.0" right="32.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <TextField fx:id="phoneNumberField" promptText="Teléfono" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: ROYALBLUE;">
+                                 <VBox.margin>
+                                    <Insets left="32.0" right="32.0" />
+                                 </VBox.margin>
+                              </TextField>
                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="320.0" layoutY="34.0" prefHeight="184.0" prefWidth="320.0" spacing="8.0">
                            <padding>
                               <Insets right="4.0" />
                            </padding>
+                           <children>
+                              <CheckBox fx:id="baptizedCB" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Bautizado" />
+                              <CheckBox fx:id="activeCB" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Activo" />
+                              <ComboBox fx:id="sectorType" prefHeight="25.0" prefWidth="225.0" promptText="Sector" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
+                              <ComboBox fx:id="committee1" prefHeight="25.0" prefWidth="225.0" promptText="Comité" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
+                           </children>
                         </VBox>
-                        <ScrollPane layoutY="237.0" prefHeight="320.0" prefWidth="640.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                        <ScrollPane layoutX="40.0" layoutY="253.0" prefHeight="304.0" prefWidth="560.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
                            <content>
-                              <TableView fx:id="members" minHeight="-Infinity" prefHeight="304.0" prefWidth="677.0">
+                              <TableView fx:id="members" minHeight="-Infinity" prefHeight="289.0" prefWidth="677.0">
                                  <columns>
                                     <TableColumn fx:id="MName" prefWidth="75.0" text="Nombre" />
                                     <TableColumn fx:id="MIdNumber" prefWidth="75.0" text="CC-TI" />
@@ -118,7 +135,7 @@
                               </TableView>
                            </content>
                         </ScrollPane>
-                        <Button layoutX="284.0" layoutY="197.0" mnemonicParsing="false" onAction="#search" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Buscar" textFill="WHITE" />
+                        <Button layoutX="284.0" layoutY="210.0" mnemonicParsing="false" onAction="#search" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Buscar" textFill="WHITE" />
                      </children>
                   </AnchorPane>
             </content>

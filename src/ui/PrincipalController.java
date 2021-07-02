@@ -7,7 +7,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 public class PrincipalController {
 	 	
@@ -26,6 +28,28 @@ public class PrincipalController {
     		openRegister();
     		
     	}
+    	
+    	@FXML
+        void logOff(ActionEvent event) {
+    		try {
+    			openLoginWindow();
+    			principalWindow.getScene().getWindow().hide();
+
+    		} catch (IOException ioException) {
+				ioException.printStackTrace();
+				
+			}
+        }
+    	
+    	private void openLoginWindow() throws IOException{
+        	Parent root = FXMLLoader.load(getClass().getResource("fxml/login.fxml"));
+    		Scene scene = new Scene(root);
+    		Stage secondaryStage = new Stage();
+    		secondaryStage.setScene(scene);
+    		secondaryStage.setTitle("Principal");
+    		secondaryStage.setResizable(false);
+    		secondaryStage.show();
+        }
     	
     	private void openRegister() {
     		try {

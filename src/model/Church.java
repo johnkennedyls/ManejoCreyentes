@@ -15,32 +15,30 @@ import java.time.temporal.ChronoUnit;
 import java.time.format.DateTimeParseException;
 
 public class Church {
-	
+
 	private String name;
 	private String city;
-	
+
 	private Minister minister;
-	
+
 	private Sector theSector;
 	private List<Sector> theSectors;
 	private List<Member> generalMembers;
-	
+
 	public Church(String name, String city) {
 		this.name = name;
 		this.city = city;
-		
+
 		this.minister = new Minister("admin", "123");
-		
+
 		theSectors = new ArrayList<Sector>();
 		generalMembers = new ArrayList<Member>();
 	}
-	
-	
-	
-	//------------------------------------------------------
-	//------------------------------------------------------
-    //Getters and setters
-	//-----------------------------------------------------
+
+	// ------------------------------------------------------
+	// ------------------------------------------------------
+	// Getters and setters
+	// -----------------------------------------------------
 	public String getName() {
 		return name;
 	}
@@ -56,7 +54,7 @@ public class Church {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	
+
 	public Minister getMinister() {
 		return minister;
 	}
@@ -64,151 +62,148 @@ public class Church {
 	public void setMinister(String name, String password) {
 		Minister tempMinister = new Minister(name, password);
 		this.minister = tempMinister;
-		
+
 	}
 
 	public List<Sector> getTheSectors() {
 		return theSectors;
 	}
-	
-	
-	public  void readMembers(String fn) throws IOException {
+
+	public void readMembers(String fn) throws IOException {
 		File fl = new File(fn);
 		@SuppressWarnings("resource")
 		BufferedReader br = new BufferedReader(new FileReader(fl));
 		br.readLine();
-		
+
 		String line = br.readLine();
-		
+
 		while (line != null) {
 			String[] split = line.split(";");
-			Member member = new Member(split[0], split[1], split[2], split[3],
-					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9]);
-			
+			Member member = new Member(split[0], split[1], split[2], split[3], Boolean.parseBoolean(split[4]),
+					Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9]);
+
 			generalMembers.add(member);
 			line = br.readLine();
 		}
 
 	}
 
-	
-	
 	public void createSector(String name) {
-		
+
 		theSector = new Sector(name);
 		theSectors.add(theSector);
-	
+
 	}
-	
-	public boolean existSector(String name){
+
+	public boolean existSector(String name) {
 		boolean exist = false;
 		for (int i = 0; i < theSectors.size(); i++) {
-			if(theSectors.get(i).getName().equals(name)) {
+			if (theSectors.get(i).getName().equals(name)) {
 				exist = true;
 			}
 		}
-		
+
 		return exist;
-		
+
 	}
-	
-	public Sector searchSector(String name){
+
+	public Sector searchSector(String name) {
 		Sector s = null;
 		for (int i = 0; i < theSectors.size(); i++) {
-			if(theSectors.get(i).getName().equals(name)) {
-				s=theSectors.get(i);
+			if (theSectors.get(i).getName().equals(name)) {
+				s = theSectors.get(i);
 			}
 		}
-		
+
 		return s;
-		
+
 	}
-	
+
 	public void divideBySectors() {
 		for (int i = 0; i < generalMembers.size(); i++) {
-			if(existSector(generalMembers.get(i).getSector())) {
+			if (existSector(generalMembers.get(i).getSector())) {
 				Sector s = searchSector(generalMembers.get(i).getSector());
 				s.addMember(generalMembers.get(i));
-			}else {
+			} else {
 				createSector(generalMembers.get(i).getSector());
 				Sector s = searchSector(generalMembers.get(i).getSector());
 				s.addMember(generalMembers.get(i));
 			}
 		}
-		
+
 	}
-	
+
 	/**
-	 *Show members whose birthday is today
+	 * Show members whose birthday is today
+	 * 
 	 * @return birthayPeople:ArrayList<Member> birthay boys
 	 */
-	 public ArrayList<Member> ToListodayBirthays() {
-		 ArrayList<Member> birthayPeople = new ArrayList<Member>();
-				 
-		 for (Member member : generalMembers) {
-			 try {
-			        /*Fecha actual*/
-			        LocalDate today = LocalDate.now();
-			
-			        /*Fecha de nacimiento. Ambas formas son válidas*/
-			        LocalDate birthday = LocalDate.parse(member.getBirthday());
-			        LocalDate nextBDay = birthday.withYear(today.getYear());
-			
-			        /*Si el cumpleaños ya ocurrió este año, agrega 1 año*/
-			        if (nextBDay.isBefore(today) || nextBDay.isEqual(today)) {
-			            nextBDay = nextBDay.plusYears(1);
-			        }
-			
-			        Period p = Period.between(today, nextBDay);
-			        long totalDias = ChronoUnit.DAYS.between(today, nextBDay);
-			
-			        /*Cuando totalDias=365 hoy es el cumpleaños*/
-			
-			        if (totalDias == 365) {
-			        	birthayPeople.add(member);
-			            System.out.println("¡Su cumpleaños es hoy. Felicidades!");
-			
-			        } 
-			    }catch (DateTimeParseException exc) {
-					System.out.printf("Error: %s no es una fecha válida!%n", member.getBirthday());
-				} 
+	public ArrayList<Member> ToListodayBirthays() {
+		ArrayList<Member> birthayPeople = new ArrayList<Member>();
+
+		for (Member member : generalMembers) {
+			try {
+				/* Fecha actual */
+				LocalDate today = LocalDate.now();
+
+				/* Fecha de nacimiento. Ambas formas son válidas */
+				LocalDate birthday = LocalDate.parse(member.getBirthday());
+				LocalDate nextBDay = birthday.withYear(today.getYear());
+
+				/* Si el cumpleaños ya ocurrió este año, agrega 1 año */
+				if (nextBDay.isBefore(today) || nextBDay.isEqual(today)) {
+					nextBDay = nextBDay.plusYears(1);
+				}
+
+				Period p = Period.between(today, nextBDay);
+				long totalDias = ChronoUnit.DAYS.between(today, nextBDay);
+
+				/* Cuando totalDias=365 hoy es el cumpleaños */
+
+				if (totalDias == 365) {
+					birthayPeople.add(member);
+					System.out.println("¡Su cumpleaños es hoy. Felicidades!");
+
+				}
+			} catch (DateTimeParseException exc) {
+				System.out.printf("Error: %s no es una fecha válida!%n", member.getBirthday());
+			}
 		}
-		 return birthayPeople;
-	 }
-	
-	 public ArrayList<Member> ToListnextBirthays(){
-		 ArrayList<Member> notBirthayPeople = new ArrayList<Member>();
-		 for (Member member : generalMembers) {
-			 try {
-			        /*Fecha actual*/
-			        LocalDate today = LocalDate.now();
-			
-			        /*Fecha de nacimiento. Ambas formas son válidas*/
-			        LocalDate birthday = LocalDate.parse(member.getBirthday());
-			        LocalDate nextBDay = birthday.withYear(today.getYear());
-			
-			        /*Si el cumpleaños ya ocurrió este año, agrega 1 año*/
-			        if (nextBDay.isBefore(today) || nextBDay.isEqual(today)) {
-			            nextBDay = nextBDay.plusYears(1);
-			        }
-			
-			        Period p = Period.between(today, nextBDay);
-			        long totalDias = ChronoUnit.DAYS.between(today, nextBDay);
-			
-			        /*Cuando totalDias=365 hoy es el cumpleaños*/
-			
-			        if (totalDias != 365) {
-			        	 System.out.println("Restan " + p.getMonths() + " meses, y "
-				                    + p.getDays() + " días para su próximo cumpleaños. ("
-				                    + totalDias + " días en total)");
-			        	 notBirthayPeople.add(member);
-			
-			        } 
-			    }catch (DateTimeParseException exc) {
-					System.out.printf("Error: %s no es una fecha válida!%n", member.getBirthday());
-				} 
+		return birthayPeople;
+	}
+
+	public ArrayList<Member> ToListnextBirthays() {
+		ArrayList<Member> notBirthayPeople = new ArrayList<Member>();
+		for (Member member : generalMembers) {
+			try {
+				/* Fecha actual */
+				LocalDate today = LocalDate.now();
+
+				/* Fecha de nacimiento. Ambas formas son válidas */
+				LocalDate birthday = LocalDate.parse(member.getBirthday());
+				LocalDate nextBDay = birthday.withYear(today.getYear());
+
+				/* Si el cumpleaños ya ocurrió este año, agrega 1 año */
+				if (nextBDay.isBefore(today) || nextBDay.isEqual(today)) {
+					nextBDay = nextBDay.plusYears(1);
+				}
+
+				Period p = Period.between(today, nextBDay);
+				long totalDias = ChronoUnit.DAYS.between(today, nextBDay);
+
+				/* Cuando totalDias=365 hoy es el cumpleaños */
+
+				if (totalDias != 365) {
+					System.out.println("Restan " + p.getMonths() + " meses, y " + p.getDays()
+							+ " días para su próximo cumpleaños. (" + totalDias + " días en total)");
+					notBirthayPeople.add(member);
+
+				}
+			} catch (DateTimeParseException exc) {
+				System.out.printf("Error: %s no es una fecha válida!%n", member.getBirthday());
+			}
 		}
-		 Collections.sort(notBirthayPeople, new BirthayComparator() );
-		 return notBirthayPeople;
-	 }
+		Collections.sort(notBirthayPeople, new BirthayComparator());
+		return notBirthayPeople;
+	}
 }

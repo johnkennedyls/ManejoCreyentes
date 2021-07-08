@@ -5,7 +5,14 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.lang.*;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+import java.time.format.DateTimeParseException;
 
 public class Church {
 	
@@ -131,9 +138,77 @@ public class Church {
 		
 	}
 	
+	/**
+	 *Show members whose birthday is today
+	 * @return birthayPeople:ArrayList<Member> birthay boys
+	 */
+	 public ArrayList<Member> ToListodayBirthays() {
+		 ArrayList<Member> birthayPeople = new ArrayList<Member>();
+				 
+		 for (Member member : generalMembers) {
+			 try {
+			        /*Fecha actual*/
+			        LocalDate today = LocalDate.now();
+			
+			        /*Fecha de nacimiento. Ambas formas son válidas*/
+			        LocalDate birthday = LocalDate.parse(member.getBirthday());
+			        LocalDate nextBDay = birthday.withYear(today.getYear());
+			
+			        /*Si el cumpleaños ya ocurrió este año, agrega 1 año*/
+			        if (nextBDay.isBefore(today) || nextBDay.isEqual(today)) {
+			            nextBDay = nextBDay.plusYears(1);
+			        }
+			
+			        Period p = Period.between(today, nextBDay);
+			        long totalDias = ChronoUnit.DAYS.between(today, nextBDay);
+			
+			        /*Cuando totalDias=365 hoy es el cumpleaños*/
+			
+			        if (totalDias == 365) {
+			        	birthayPeople.add(member);
+			            System.out.println("¡Su cumpleaños es hoy. Felicidades!");
+			
+			        } 
+			    }catch (DateTimeParseException exc) {
+					System.out.printf("Error: %s no es una fecha válida!%n", member.getBirthday());
+				} 
+		}
+		 return birthayPeople;
+	 }
 	
-	public void divideByCommittee() {
-		
-	}
-	
+	 public ArrayList<Member> ToListnextBirthays(){
+		 ArrayList<Member> notBirthayPeople = new ArrayList<Member>();
+		 for (Member member : generalMembers) {
+			 try {
+			        /*Fecha actual*/
+			        LocalDate today = LocalDate.now();
+			
+			        /*Fecha de nacimiento. Ambas formas son válidas*/
+			        LocalDate birthday = LocalDate.parse(member.getBirthday());
+			        LocalDate nextBDay = birthday.withYear(today.getYear());
+			
+			        /*Si el cumpleaños ya ocurrió este año, agrega 1 año*/
+			        if (nextBDay.isBefore(today) || nextBDay.isEqual(today)) {
+			            nextBDay = nextBDay.plusYears(1);
+			        }
+			
+			        Period p = Period.between(today, nextBDay);
+			        long totalDias = ChronoUnit.DAYS.between(today, nextBDay);
+			
+			        /*Cuando totalDias=365 hoy es el cumpleaños*/
+			
+			        if (totalDias != 365) {
+			        	 System.out.println("Restan " + p.getMonths() + " meses, y "
+				                    + p.getDays() + " días para su próximo cumpleaños. ("
+				                    + totalDias + " días en total)");
+			        	 notBirthayPeople.add(member);
+			
+			        } 
+			    }catch (DateTimeParseException exc) {
+					System.out.printf("Error: %s no es una fecha válida!%n", member.getBirthday());
+				} 
+		}
+		 Collections.sort(notBirthayPeople, new BirthayComparator() );
+		 return notBirthayPeople;
+	 }
 }

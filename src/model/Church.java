@@ -9,22 +9,32 @@ import java.util.List;
 
 public class Church {
 	
+	/**
+	 * 
+	 */
 	private String name;
+	/**
+	 * 
+	 */
 	private String city;
 	
-	private Minister minister;
+	//private Minister minister;
 	
-	private Sector theSector;
+	/**
+	 * 
+	 */
 	private List<Sector> theSectors;
+	private List<Committee> theCommittees;
 	private List<Member> generalMembers;
 	
 	public Church(String name, String city) {
 		this.name = name;
 		this.city = city;
 		
-		this.minister = new Minister("admin", "123");
+		//this.minister = new Minister("admin", "123");
 		
 		theSectors = new ArrayList<Sector>();
+		theCommittees = new ArrayList<Committee>();
 		generalMembers = new ArrayList<Member>();
 	}
 	
@@ -50,15 +60,16 @@ public class Church {
 		this.city = city;
 	}
 	
-	public Minister getMinister() {
-		return minister;
-	}
-
-	public void setMinister(String name, String password) {
-		Minister tempMinister = new Minister(name, password);
-		this.minister = tempMinister;
-		
-	}
+//	public Minister getMinister() {
+//		return minister;
+//	}
+//
+//	public void setMinister(String name, String password) {
+//		
+//		Minister tempMinister = new Minister(name, password);
+//		this.minister = tempMinister;
+//		
+//	}
 
 	public List<Sector> getTheSectors() {
 		return theSectors;
@@ -76,7 +87,7 @@ public class Church {
 		while (line != null) {
 			String[] split = line.split(";");
 			Member member = new Member(split[0], split[1], split[2], split[3],
-					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9]);
+					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9], OfficeType.valueOf(split[10]));
 			
 			generalMembers.add(member);
 			line = br.readLine();
@@ -88,6 +99,7 @@ public class Church {
 	
 	public void createSector(String name) {
 		
+		Sector theSector;
 		theSector = new Sector(name);
 		theSectors.add(theSector);
 	

@@ -20,4 +20,7 @@ public class Organization {
 
 	}
 
+	public void createMInsiter(String name, String password) {
+		
+	}
 }

@@ -43,7 +43,7 @@ public class Sector {
 		leaders.add(theMember);
 	}
 
-	public void createMembers(String name, String idNumber, String gender, String birthday, boolean baptized,
+	public void createMembersSector(String name, String idNumber, String gender, String birthday, boolean baptized,
 			boolean active, String observations, String phoneNumber, String sector, String committee, OfficeType charge) {
 
 		Member theMember;

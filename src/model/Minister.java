@@ -13,10 +13,6 @@ public class Minister {
 	 */
 	private String password;
 	/**
-	 * A relation with the actual Church
-	 */
-	private Church theChurch;
-	/**
 	 * Minister churchs
 	 */
 	private List<Church> myChurchs;
@@ -84,6 +80,7 @@ public class Minister {
  */
 	public void createChurch(String name, String city) {
 
+		Church theChurch;
 		theChurch = new Church(name, city);
 		myChurchs.add(theChurch);
 	}

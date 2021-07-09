@@ -15,9 +15,6 @@ import java.time.temporal.ChronoUnit;
 import java.time.format.DateTimeParseException;
 
 public class Church {
-
-
-
 	
 	/**
 	 * 
@@ -28,12 +25,6 @@ public class Church {
 	 * 
 	 */
 	private String city;
-
-
-	//private Minister minister;
-
-	private Sector theSector;
-
 	
 	//private Minister minister;
 	
@@ -49,13 +40,7 @@ public class Church {
 		this.name = name;
 		this.city = city;
 
-
-		//this.minister = new Minister("admin", "123");
-
-
-		
-		//this.minister = new Minister("admin", "123");
-		
+		//this.minister = new Minister("admin", "123");	
 
 		theSectors = new ArrayList<Sector>();
 		theCommittees = new ArrayList<Committee>();

@@ -96,7 +96,7 @@ public class Church {
 			String[] split = line.split(";");
 
 			Member member = new Member(split[0], split[1], split[2], split[3],
-					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9], OfficeType.valueOf(split[10]));
+					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9] /*OfficeType.valueOf(split[10])*/);
 			
 
 			generalMembers.add(member);
@@ -223,6 +223,7 @@ public class Church {
 			}
 		}
 		Collections.sort(notBirthayPeople, new BirthayComparator());
+		System.out.println(notBirthayPeople.get(0).getName());
 		return notBirthayPeople;
 	}
 }

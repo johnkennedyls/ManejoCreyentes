@@ -3,6 +3,7 @@ package ui;
 import java.io.IOException;
 
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,14 +11,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.Church;
 
 public class PrincipalController {
+	private Church myChurch;
 	 	
 		@FXML
 		private BorderPane principalWindow;
 		
+		
+		public  PrincipalController(Church myChurch) throws IOException {
+			this.myChurch = myChurch;
+			
+			
+		}
 		@FXML
 	    public void initialize() {
+			
 	        openRegister();
 			
 			
@@ -81,7 +91,9 @@ public class PrincipalController {
 		@FXML
 	    void openRecords(ActionEvent event) {
 			try {
+				RecordsController recordsController = new RecordsController(myChurch);
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/records.fxml"));
+    			fxmlLoader.setController(recordsController);
 				Parent Pane = fxmlLoader.load();
 				principalWindow.setRight(Pane);
 

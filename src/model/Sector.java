@@ -32,7 +32,8 @@ public class Sector {
 	public List<Member> getMembersList() {
 		return membersList;
 	}
-
+	
+	/*
 	public void createLeaders(String name, String idNumber, String gender, String birthday, boolean baptized,
 			boolean active, String observations, String phoneNumber, String sector, String committee, OfficeType charge) {
 		
@@ -42,17 +43,8 @@ public class Sector {
 				committee, charge);
 		leaders.add(theMember);
 	}
-
-	public void createMembersSector(String name, String idNumber, String gender, String birthday, boolean baptized,
-			boolean active, String observations, String phoneNumber, String sector, String committee, OfficeType charge) {
-
-		Member theMember;
-		
-		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector,
-				committee, charge);
-		membersList.add(theMember);
-	}
-
+	*/
+	
 	public void addMember(Member m) {
 		membersList.add(m);
 	}

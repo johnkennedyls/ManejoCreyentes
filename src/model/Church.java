@@ -83,6 +83,26 @@ public class Church {
 	public List<Sector> getTheSectors() {
 		return theSectors;
 	}
+	
+	@SuppressWarnings("null")
+	public void createGeneralMember(String name, String idNumber, String gender, String birthday, boolean baptized,
+			boolean active, String observations, String phoneNumber, String sector, String committee, OfficeType charge) {
+		
+		Member theMember = null;
+		Sector theSector = null;
+		Committee theCommittee = null;
+		
+		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector, committee, charge);
+		
+		generalMembers.add(theMember);
+		
+		if (theMember.getSector() != "ninguno") {
+			theSector.getMembersList().add(theMember);
+			if (theMember.getCommittee() != "ninguno") {
+				theCommittee.getcMembersList().add(theMember);
+			}
+		} 
+	}
 
 	public void readMembers(String fn) throws IOException {
 		File fl = new File(fn);

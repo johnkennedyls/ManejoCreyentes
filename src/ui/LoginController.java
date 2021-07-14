@@ -57,11 +57,25 @@ public class LoginController {
 		}
 
 	}
-
+/*
 	private void openPrincipalWindow() throws IOException {
 		RecordsController recordsController = new RecordsController(myChurch);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/records.fxml"));
 		fxmlLoader.setController(recordsController);
+		Parent root = fxmlLoader.load();
+
+		Scene scene = new Scene(root);
+		Stage secondaryStage = new Stage();
+		secondaryStage.setScene(scene);
+		secondaryStage.setTitle("Principal");
+		secondaryStage.setResizable(false);
+		secondaryStage.show();
+	}
+	*/
+	private void openPrincipalWindow() throws IOException {
+		PrincipalController principalController = new PrincipalController(myChurch);
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/principal.fxml"));
+		fxmlLoader.setController(principalController);
 		Parent root = fxmlLoader.load();
 
 		Scene scene = new Scene(root);

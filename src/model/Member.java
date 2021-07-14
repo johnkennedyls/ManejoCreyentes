@@ -49,7 +49,7 @@ public class Member {
 	/**
 	 * Member charge
 	 */
-	//private OfficeType charge;
+	private OfficeType charge;
 	
 	/**
 	 * Initialize a new member
@@ -66,7 +66,7 @@ public class Member {
 	 * @param carge:
 	 */
 	public Member(String name, String idNumber,String gender, String birthday, boolean baptized, boolean active, String observations,
-			String phoneNumber, String sector, String committee /*OfficeType charge*/) {
+			String phoneNumber, String sector, String committee, OfficeType charge) {
 		this.name = name;
 		this.idNumber = idNumber;
 		this.gender = gender;
@@ -77,7 +77,7 @@ public class Member {
 		this.phoneNumber = phoneNumber;
 		this.sector = sector;
 		this.committee = committee;
-		//this.charge = charge;
+		this.charge = charge;
 	}
 	/**
 	 * return member name
@@ -225,17 +225,17 @@ public class Member {
 	 * 
 	 * @return
 	 */
-	/*public OfficeType getCharge() {
+	public OfficeType getCharge() {
 		return charge;
 	}
 	/**
 	 * 
 	 * @param charge
 	 */
-	/*public void setCharge(OfficeType charge) {
+	public void setCharge(OfficeType charge) {
 		this.charge = charge;
 	}
-	*/
+	
 	
 	
 }

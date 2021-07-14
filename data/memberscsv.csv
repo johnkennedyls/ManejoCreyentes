@@ -1,301 +1,301 @@
-name/first;zip;gender;date;bool;bool;pick;phone;pick;pick
-Eugenia;28691;Male;2012-08-03;false;false;ave maria;(832) 709-7401;sector1;commite2
-Rena;75180;Female;2012-06-25;true;true;ave maria;(837) 886-1615;sector1;commite1
-Randy;75151;Female;1998-07-04;false;true;ave maria;(276) 546-5076;sector3;commite2
-Lula;4848;Female;1961-09-18;false;true;un elefante se balanceaba;(581) 577-6278;sector1;commite3
-Iva;97370;Male;1995-05-30;true;true;el hacha;(702) 666-2667;sector1;commite1
-Susan;45263;Female;1989-12-31;true;false;un elefante se balanceaba;(226) 409-6707;sector3;commite2
-Keith;85016;Female;2006-07-27;true;true;un elefante se balanceaba;(349) 233-6027;sector1;commite2
-Edwin;93736;Female;1973-07-12;false;true;un elefante se balanceaba;(573) 220-3353;sector2;commite3
-Daisy;69072;Female;1995-02-08;false;false;el hacha;(619) 371-3512;sector2;commite3
-Nathan;93432;Male;2010-07-14;true;false;un elefante se balanceaba;(311) 660-8681;sector1;commite3
-Lucile;19991;Male;1969-12-08;false;false;el hacha;(703) 323-6406;sector1;commite1
-William;19934;Female;1986-12-29;false;true;el hacha;(257) 977-6139;sector3;commite1
-Victor;78547;Female;1982-12-07;true;true;ave maria;(644) 342-2973;sector2;commite1
-Belle;32328;Male;2001-04-29;true;true;un elefante se balanceaba;(779) 305-8223;sector2;commite3
-Cynthia;73177;Male;1969-04-15;true;false;un elefante se balanceaba;(425) 911-3594;sector1;commite1
-Frederick;47379;Female;2002-04-15;true;false;ave maria;(975) 496-2765;sector1;commite3
-Essie;92219;Male;1967-08-19;true;false;ave maria;(423) 547-8581;sector3;commite2
-Josephine;10957;Male;1986-06-14;false;true;ave maria;(683) 383-9248;sector3;commite1
-Etta;20364;Male;2016-08-17;true;false;el hacha;(715) 581-2634;sector3;commite1
-Francis;40690;Male;1992-05-02;true;true;ave maria;(220) 210-1157;sector3;commite3
-Martin;87872;Female;1965-05-11;false;false;ave maria;(420) 992-6704;sector1;commite1
-Milton;527;Male;2008-04-09;false;false;el hacha;(767) 555-4524;sector2;commite1
-Roxie;74808;Female;1967-10-20;false;true;ave maria;(600) 817-5403;sector3;commite3
-Maria;4263;Female;2012-01-31;false;false;un elefante se balanceaba;(469) 303-4053;sector3;commite2
-Lucinda;52183;Male;2008-06-03;true;true;un elefante se balanceaba;(736) 810-5433;sector3;commite3
-Nettie;33727;Female;2016-04-15;false;false;el hacha;(419) 276-7458;sector1;commite3
-Joseph;82710;Female;2015-03-27;true;false;el hacha;(319) 390-5371;sector2;commite3
-Eugene;6635;Female;1991-04-14;false;false;un elefante se balanceaba;(972) 391-3933;sector3;commite1
-Adelaide;10370;Male;2019-09-13;false;true;un elefante se balanceaba;(244) 463-8696;sector2;commite2
-Jackson;16051;Female;1997-09-27;false;false;ave maria;(267) 409-5306;sector3;commite3
-Philip;92642;Female;2002-08-12;false;false;un elefante se balanceaba;(450) 250-6693;sector1;commite1
-Justin;40963;Female;1993-03-24;true;false;ave maria;(937) 964-4184;sector3;commite3
-Gavin;63820;Male;1988-12-18;false;true;un elefante se balanceaba;(938) 402-8385;sector2;commite2
-Ernest;91213;Female;1991-12-10;false;false;un elefante se balanceaba;(652) 667-7721;sector3;commite1
-Gregory;9012;Female;1972-12-16;false;true;el hacha;(532) 433-7764;sector2;commite2
-Jayden;98469;Male;1997-05-24;true;false;un elefante se balanceaba;(753) 672-1627;sector2;commite2
-Brian;92982;Male;1959-02-10;false;true;un elefante se balanceaba;(763) 900-3232;sector2;commite2
-Allie;10257;Male;1983-07-17;false;true;el hacha;(729) 502-8359;sector3;commite3
-Barry;58813;Male;1999-04-08;false;true;un elefante se balanceaba;(862) 633-7157;sector2;commite3
-Phillip;43281;Female;2012-07-09;false;true;el hacha;(218) 421-4166;sector1;commite1
-John;49691;Male;1972-12-21;false;false;un elefante se balanceaba;(582) 674-5630;sector2;commite1
-Carolyn;19880;Male;1996-04-14;false;true;un elefante se balanceaba;(235) 222-6822;sector1;commite3
-Jesus;8545;Male;1998-01-13;true;false;un elefante se balanceaba;(939) 653-8229;sector1;commite2
-Isabelle;97720;Male;1959-01-08;true;true;un elefante se balanceaba;(418) 452-2041;sector1;commite2
-Willie;76890;Female;1963-06-01;true;true;ave maria;(427) 295-6585;sector1;commite3
-Hallie;37470;Female;1974-07-12;true;false;ave maria;(265) 217-3124;sector2;commite1
-Darrell;75635;Male;2018-07-02;false;false;un elefante se balanceaba;(779) 842-5928;sector2;commite2
-Marie;27589;Female;1960-07-13;true;false;ave maria;(985) 853-2768;sector2;commite3
-Elnora;48926;Female;1977-04-17;false;true;un elefante se balanceaba;(440) 903-6607;sector1;commite2
-Lee;65454;Male;1976-12-20;false;false;el hacha;(768) 578-9945;sector1;commite1
-Christina;36325;Male;1986-05-17;true;false;ave maria;(306) 782-4978;sector2;commite2
-Loretta;47265;Female;2017-09-16;true;false;ave maria;(324) 576-4183;sector2;commite1
-Victor;91205;Female;1990-02-19;true;true;el hacha;(938) 845-4475;sector3;commite2
-Joe;64456;Male;1989-02-27;false;true;el hacha;(947) 786-3369;sector1;commite2
-Marguerite;63777;Female;1965-07-18;false;true;ave maria;(570) 243-2720;sector2;commite3
-Mario;68617;Female;2002-12-13;false;false;ave maria;(765) 925-7255;sector2;commite3
-Troy;33211;Female;2018-12-23;false;false;ave maria;(658) 707-8229;sector1;commite3
-Margaret;44399;Male;2006-10-08;true;true;ave maria;(550) 587-1421;sector3;commite2
-Joshua;16031;Male;1962-10-03;true;true;ave maria;(775) 516-6985;sector3;commite3
-Wesley;77974;Male;1997-06-18;false;false;el hacha;(337) 661-6111;sector2;commite1
-Estelle;19016;Male;1992-07-05;true;true;ave maria;(361) 919-5080;sector1;commite1
-Margaret;97206;Female;1971-05-25;true;true;el hacha;(372) 626-4570;sector3;commite3
-Callie;16164;Male;2001-09-29;false;false;ave maria;(261) 459-5061;sector3;commite2
-Jeffrey;40421;Female;1980-12-25;true;false;ave maria;(465) 274-5537;sector3;commite1
-Lewis;55037;Female;1981-08-17;true;true;el hacha;(285) 364-6292;sector2;commite3
-Sean;146;Male;1991-07-24;true;false;un elefante se balanceaba;(242) 938-3787;sector1;commite1
-May;80720;Male;2011-02-19;true;true;ave maria;(231) 224-5920;sector1;commite1
-Winifred;51134;Female;1989-07-31;false;true;el hacha;(866) 715-8877;sector1;commite3
-Louis;17097;Female;1973-10-09;true;false;el hacha;(926) 341-8018;sector2;commite1
-Willie;80424;Male;1992-07-21;true;true;el hacha;(221) 400-7800;sector2;commite3
-Hallie;89084;Male;2019-02-01;false;false;ave maria;(466) 667-1868;sector2;commite2
-Jimmy;8045;Female;1960-10-20;true;false;el hacha;(809) 347-4211;sector2;commite1
-Patrick;87437;Female;1971-08-23;false;true;ave maria;(862) 349-6621;sector2;commite3
-Jay;97068;Female;1978-09-07;false;false;ave maria;(903) 766-3714;sector2;commite2
-Wesley;85133;Female;1990-07-24;true;true;un elefante se balanceaba;(572) 637-5982;sector2;commite2
-Lois;29952;Male;1983-07-02;true;false;el hacha;(453) 507-3551;sector1;commite3
-Helen;17584;Male;1972-02-09;false;true;un elefante se balanceaba;(851) 359-8705;sector2;commite3
-Micheal;53619;Female;1989-06-15;true;true;el hacha;(955) 443-2968;sector1;commite2
-Mable;35739;Female;1958-05-09;false;false;el hacha;(264) 527-2250;sector3;commite1
-Eric;81083;Male;1968-09-03;true;false;un elefante se balanceaba;(315) 631-4478;sector2;commite3
-Lucy;81418;Female;2010-07-14;false;false;un elefante se balanceaba;(900) 533-4789;sector3;commite2
-Nelle;5341;Male;1980-06-09;true;false;un elefante se balanceaba;(423) 259-3467;sector3;commite2
-John;35326;Female;2006-09-17;true;true;el hacha;(779) 634-6948;sector3;commite1
-Marcus;73663;Female;1962-05-21;true;false;el hacha;(545) 225-4382;sector2;commite1
-Anthony;13322;Male;1988-10-21;false;true;ave maria;(730) 929-1036;sector1;commite3
-Emily;48420;Female;2004-04-03;false;false;un elefante se balanceaba;(588) 900-9162;sector2;commite2
-Jeffery;97839;Female;2021-02-07;false;false;el hacha;(467) 883-5958;sector3;commite1
-Randy;56571;Male;2001-09-11;false;true;el hacha;(678) 956-8350;sector1;commite2
-Ronnie;92525;Female;1961-09-01;true;true;ave maria;(828) 232-1059;sector1;commite3
-Lucas;7367;Female;1983-05-21;true;true;el hacha;(203) 463-9165;sector2;commite3
-Lucas;18889;Female;1992-08-29;false;false;el hacha;(987) 377-9572;sector1;commite3
-Bertha;48892;Female;1963-10-13;false;false;ave maria;(362) 928-4322;sector3;commite2
-Jeffrey;99963;Male;1979-12-09;true;false;el hacha;(837) 644-4678;sector1;commite2
-Joseph;32139;Female;2014-09-30;false;true;ave maria;(213) 945-1916;sector3;commite3
-Austin;28759;Female;1996-01-30;true;false;un elefante se balanceaba;(674) 294-8546;sector2;commite1
-Corey;73348;Female;1970-08-12;true;true;ave maria;(987) 338-7394;sector3;commite2
-Lucas;99473;Male;2017-04-18;true;false;el hacha;(803) 204-5741;sector2;commite2
-Sam;11316;Female;1990-09-11;false;true;un elefante se balanceaba;(868) 387-5812;sector1;commite1
-Leo;7607;Female;1989-08-22;false;true;el hacha;(807) 872-3268;sector3;commite3
-Rosalie;36353;Male;1992-04-27;false;true;un elefante se balanceaba;(832) 365-2440;sector1;commite2
-Katie;69238;Female;2012-08-03;false;false;un elefante se balanceaba;(477) 387-5099;sector3;commite1
-Lela;37260;Female;2012-06-25;false;true;ave maria;(331) 876-7169;sector1;commite2
-Annie;14986;Female;1998-07-04;false;true;un elefante se balanceaba;(466) 915-3004;sector2;commite1
-Derrick;84498;Female;1961-09-18;false;false;ave maria;(958) 892-9159;sector3;commite3
-Chris;36104;Male;1995-05-30;true;true;un elefante se balanceaba;(963) 942-2883;sector1;commite3
-Mable;93128;Male;1989-12-31;true;true;ave maria;(348) 651-1811;sector1;commite3
-Marguerite;31974;Male;2006-07-27;false;false;un elefante se balanceaba;(727) 394-9274;sector3;commite3
-Inez;21501;Female;1973-07-12;true;true;un elefante se balanceaba;(979) 385-5535;sector2;commite1
-Louisa;71459;Male;1995-02-08;false;true;un elefante se balanceaba;(963) 760-9242;sector3;commite1
-Shane;77575;Male;2010-07-14;false;true;el hacha;(473) 743-2988;sector3;commite1
-Eugene;58913;Female;1969-12-08;true;false;el hacha;(610) 769-4259;sector2;commite1
-Randall;41847;Male;1986-12-29;true;false;el hacha;(503) 458-3626;sector1;commite2
-Devin;44136;Male;1982-12-07;true;false;el hacha;(442) 700-4489;sector2;commite1
-Marian;69628;Female;2001-04-29;true;false;el hacha;(344) 521-1279;sector1;commite2
-Dustin;16780;Female;1969-04-15;true;true;un elefante se balanceaba;(604) 866-8600;sector2;commite2
-Violet;25573;Female;2002-04-15;true;true;ave maria;(519) 208-9222;sector2;commite3
-Estella;43350;Female;1967-08-19;true;true;ave maria;(973) 411-1296;sector3;commite2
-Olive;81190;Female;1986-06-14;true;true;ave maria;(487) 268-6396;sector1;commite2
-Pearl;83818;Male;2016-08-17;true;false;un elefante se balanceaba;(621) 534-7971;sector3;commite2
-Gilbert;25109;Female;1992-05-02;false;true;el hacha;(914) 245-9534;sector3;commite2
-Mark;43199;Female;1965-05-11;false;true;el hacha;(276) 590-3213;sector2;commite1
-Cody;79398;Female;2008-04-09;false;true;el hacha;(679) 656-8497;sector1;commite1
-Maud;76731;Male;1967-10-20;true;true;ave maria;(463) 540-4379;sector2;commite1
-Lizzie;97643;Female;2012-01-31;true;true;el hacha;(647) 943-6380;sector3;commite2
-Theodore;14663;Female;2008-06-03;false;false;un elefante se balanceaba;(305) 915-2180;sector3;commite2
-Mildred;9376;Female;2016-04-15;true;true;ave maria;(310) 886-9411;sector2;commite2
-Kyle;45936;Female;2015-03-27;true;false;ave maria;(771) 555-4369;sector2;commite2
-Jayden;16765;Male;1991-04-14;true;false;un elefante se balanceaba;(622) 280-9969;sector2;commite2
-Michael;47777;Male;2019-09-13;true;true;el hacha;(364) 678-5061;sector3;commite3
-Jackson;15926;Female;1997-09-27;false;false;el hacha;(257) 744-8840;sector1;commite2
-Walter;61360;Female;2002-08-12;false;false;el hacha;(366) 535-8186;sector3;commite3
-Brent;91480;Male;1993-03-24;true;true;el hacha;(416) 428-2196;sector2;commite1
-Clara;48598;Male;1988-12-18;true;true;un elefante se balanceaba;(275) 448-7256;sector1;commite1
-Victor;86403;Female;1991-12-10;true;true;un elefante se balanceaba;(522) 306-5178;sector3;commite2
-Mike;62133;Male;1972-12-16;false;false;ave maria;(372) 933-9866;sector3;commite3
-Mabel;23194;Female;1997-05-24;true;false;ave maria;(722) 674-6686;sector2;commite3
-Owen;79112;Female;1959-02-10;false;false;ave maria;(746) 461-5528;sector3;commite2
-Mable;11146;Male;1983-07-17;false;false;un elefante se balanceaba;(546) 558-6437;sector3;commite1
-Cory;13751;Female;1999-04-08;false;false;el hacha;(316) 596-4402;sector3;commite1
-Esther;20227;Male;2012-07-09;true;true;ave maria;(980) 405-2180;sector2;commite3
-Henrietta;88138;Female;1972-12-21;true;true;un elefante se balanceaba;(219) 678-2484;sector1;commite1
-Leon;39018;Female;1996-04-14;false;false;un elefante se balanceaba;(407) 686-5263;sector1;commite2
-Curtis;78447;Male;1998-01-13;false;true;un elefante se balanceaba;(278) 570-2419;sector2;commite2
-Elva;57009;Female;1959-01-08;false;false;ave maria;(411) 769-5746;sector3;commite3
-Kenneth;4827;Male;1963-06-01;false;true;un elefante se balanceaba;(526) 752-8129;sector1;commite2
-Millie;673;Male;1974-07-12;false;false;el hacha;(679) 376-9194;sector3;commite3
-Blake;58007;Female;2018-07-02;true;false;ave maria;(859) 918-2779;sector2;commite2
-Hettie;22928;Male;1960-07-13;true;false;un elefante se balanceaba;(770) 523-9451;sector2;commite2
-Hilda;9040;Male;1977-04-17;true;true;un elefante se balanceaba;(239) 538-3200;sector2;commite2
-Kevin;85785;Female;1976-12-20;false;false;un elefante se balanceaba;(818) 973-5212;sector1;commite3
-Claudia;32833;Male;1986-05-17;true;false;un elefante se balanceaba;(487) 402-5001;sector1;commite3
-Leila;38259;Male;2017-09-16;false;true;ave maria;(501) 582-8582;sector2;commite1
-Gordon;33735;Male;1990-02-19;false;true;el hacha;(687) 731-1758;sector1;commite2
-Dale;43221;Female;1989-02-27;true;false;el hacha;(424) 969-7089;sector2;commite1
-Vincent;39582;Male;1965-07-18;true;false;un elefante se balanceaba;(772) 753-9412;sector2;commite3
-Lola;75109;Male;2002-12-13;false;false;el hacha;(621) 321-6464;sector3;commite1
-Linnie;96776;Female;2018-12-23;false;false;ave maria;(362) 967-4437;sector3;commite1
-Oscar;74545;Male;2006-10-08;true;true;un elefante se balanceaba;(521) 591-8041;sector3;commite3
-Ronnie;67024;Female;1962-10-03;false;true;ave maria;(612) 258-7767;sector2;commite3
-Flora;25887;Male;1997-06-18;false;true;ave maria;(239) 877-8749;sector3;commite3
-Isabelle;56512;Male;1992-07-05;false;true;ave maria;(266) 730-4689;sector1;commite2
-Cordelia;49197;Male;1971-05-25;true;true;ave maria;(347) 977-7357;sector1;commite1
-Daisy;95619;Female;2001-09-29;true;true;un elefante se balanceaba;(561) 740-2602;sector2;commite3
-Lela;52205;Female;1980-12-25;false;true;ave maria;(286) 301-8301;sector1;commite2
-Fannie;9335;Male;1981-08-17;true;true;un elefante se balanceaba;(934) 808-9395;sector2;commite1
-Anthony;36765;Male;1991-07-24;false;false;el hacha;(550) 602-6601;sector1;commite1
-Roger;94754;Male;2011-02-19;true;false;el hacha;(575) 887-9659;sector2;commite1
-Catherine;73474;Male;1989-07-31;true;false;el hacha;(359) 511-2278;sector3;commite3
-Rosetta;4273;Male;1973-10-09;false;true;un elefante se balanceaba;(374) 625-1568;sector2;commite3
-Stephen;37922;Male;1992-07-21;true;true;un elefante se balanceaba;(985) 335-2806;sector2;commite2
-Mabelle;76517;Female;2019-02-01;false;false;el hacha;(812) 742-4438;sector3;commite1
-Hattie;3596;Female;1960-10-20;true;false;el hacha;(209) 397-4988;sector3;commite2
-Juan;26023;Male;1971-08-23;true;false;un elefante se balanceaba;(429) 498-9335;sector3;commite2
-Jared;95351;Male;1978-09-07;false;true;ave maria;(764) 710-6956;sector1;commite3
-Essie;69739;Female;1990-07-24;true;false;el hacha;(655) 969-2309;sector2;commite2
-Leah;88551;Female;1983-07-02;true;true;un elefante se balanceaba;(526) 343-5859;sector3;commite1
-Myrtie;95791;Male;1972-02-09;true;false;un elefante se balanceaba;(423) 864-7583;sector3;commite2
-Ina;87595;Female;1989-06-15;true;false;el hacha;(557) 316-6018;sector1;commite3
-Jerry;14134;Male;1958-05-09;false;true;ave maria;(839) 546-9856;sector1;commite3
-Martha;16050;Male;1968-09-03;true;true;el hacha;(516) 467-7284;sector2;commite2
-Alexander;35643;Female;2010-07-14;true;true;el hacha;(264) 480-4194;sector3;commite3
-Marie;21982;Male;1980-06-09;true;true;ave maria;(522) 801-1266;sector3;commite2
-Alma;40606;Male;2006-09-17;true;true;ave maria;(802) 427-5952;sector2;commite2
-Lewis;24057;Female;1962-05-21;true;true;el hacha;(856) 929-5297;sector3;commite3
-Cynthia;8208;Female;1988-10-21;false;true;el hacha;(819) 223-2721;sector2;commite2
-Winifred;60737;Male;2004-04-03;true;false;el hacha;(887) 895-5890;sector2;commite3
-Inez;53785;Male;2021-02-07;true;true;un elefante se balanceaba;(985) 777-6314;sector1;commite2
-Elmer;51888;Female;2001-09-11;true;false;el hacha;(203) 257-5223;sector3;commite3
-Gary;12426;Female;1961-09-01;false;false;un elefante se balanceaba;(289) 312-3387;sector3;commite2
-Lillie;16080;Male;1983-05-21;false;false;un elefante se balanceaba;(940) 891-3134;sector3;commite1
-Genevieve;33874;Female;1992-08-29;false;true;el hacha;(973) 804-2177;sector2;commite3
-Luke;41343;Female;1963-10-13;true;true;un elefante se balanceaba;(308) 392-2954;sector1;commite3
-Marvin;56349;Female;1979-12-09;true;false;el hacha;(825) 290-9103;sector1;commite1
-Emma;16328;Female;2014-09-30;true;true;un elefante se balanceaba;(921) 771-9879;sector1;commite1
-Edward;69588;Female;1996-01-30;false;true;ave maria;(289) 741-3115;sector2;commite3
-Marian;19588;Male;1970-08-12;false;false;ave maria;(372) 575-2637;sector2;commite1
-Vernon;35118;Male;2017-04-18;false;false;ave maria;(558) 336-9230;sector2;commite1
-Nicholas;12401;Female;1990-09-11;false;true;un elefante se balanceaba;(680) 581-7129;sector1;commite3
-Lettie;45958;Female;1989-08-22;false;false;ave maria;(953) 224-3920;sector1;commite2
-Sam;2158;Male;1992-04-27;true;false;el hacha;(304) 893-3860;sector2;commite2
-Herbert;22097;Male;2012-08-03;false;true;ave maria;(309) 773-1427;sector3;commite1
-Leah;83394;Male;2012-06-25;false;false;el hacha;(240) 741-1430;sector2;commite2
-Jesse;94991;Male;1998-07-04;true;true;un elefante se balanceaba;(721) 861-2269;sector1;commite3
-Evan;80553;Male;1961-09-18;true;false;un elefante se balanceaba;(910) 477-1529;sector1;commite1
-Leona;39191;Female;1995-05-30;true;false;el hacha;(675) 225-4470;sector2;commite1
-Cole;23955;Male;1989-12-31;false;true;un elefante se balanceaba;(915) 410-1040;sector1;commite3
-Gertrude;99623;Female;2006-07-27;true;false;ave maria;(987) 992-1568;sector2;commite1
-Lillie;49576;Female;1973-07-12;false;true;ave maria;(388) 316-6112;sector2;commite3
-Myrtie;27139;Male;1995-02-08;false;false;un elefante se balanceaba;(706) 853-4291;sector3;commite3
-Ethan;57269;Male;2010-07-14;false;false;un elefante se balanceaba;(613) 207-6599;sector3;commite2
-Antonio;56986;Female;1969-12-08;false;false;el hacha;(866) 872-6840;sector3;commite2
-Helen;91202;Female;1986-12-29;false;true;un elefante se balanceaba;(578) 884-5545;sector3;commite1
-Lucy;29591;Male;1982-12-07;false;true;ave maria;(761) 813-7826;sector3;commite2
-Chase;89996;Female;2001-04-29;true;false;un elefante se balanceaba;(244) 729-9608;sector1;commite1
-Beatrice;65514;Male;1969-04-15;true;false;el hacha;(201) 327-8875;sector1;commite3
-Rodney;20178;Male;2002-04-15;true;true;un elefante se balanceaba;(515) 569-6922;sector1;commite3
-Martin;40974;Female;1967-08-19;false;false;un elefante se balanceaba;(979) 831-7406;sector1;commite2
-Cynthia;91048;Male;1986-06-14;true;false;un elefante se balanceaba;(826) 884-3515;sector1;commite3
-Hilda;18158;Male;2016-08-17;false;true;un elefante se balanceaba;(863) 806-2620;sector2;commite1
-Sue;5907;Female;1992-05-02;false;true;ave maria;(854) 327-6715;sector2;commite3
-Lawrence;49488;Male;1965-05-11;true;false;el hacha;(961) 711-6086;sector3;commite1
-Lola;55669;Male;2008-04-09;false;true;el hacha;(819) 862-1938;sector2;commite2
-Joseph;20271;Male;1967-10-20;false;true;el hacha;(586) 925-9052;sector3;commite3
-Noah;77143;Female;2012-01-31;false;true;ave maria;(660) 726-9135;sector1;commite3
-Jackson;57206;Female;2008-06-03;true;true;ave maria;(709) 920-9740;sector2;commite2
-Calvin;82740;Male;2016-04-15;false;true;el hacha;(462) 494-1763;sector2;commite1
-Ada;55801;Male;2015-03-27;true;true;el hacha;(782) 914-2608;sector3;commite2
-Edith;74379;Female;1991-04-14;true;true;el hacha;(689) 711-6992;sector2;commite3
-Blake;60241;Male;2019-09-13;false;true;ave maria;(886) 465-3308;sector3;commite2
-Alta;72308;Female;1997-09-27;false;false;un elefante se balanceaba;(742) 946-9070;sector2;commite2
-Loretta;84270;Female;2002-08-12;false;false;el hacha;(841) 474-2501;sector1;commite1
-Katherine;81619;Male;1993-03-24;false;true;ave maria;(768) 492-2253;sector3;commite3
-Manuel;73266;Female;1988-12-18;false;true;ave maria;(905) 958-7503;sector2;commite2
-Norman;38821;Female;1991-12-10;true;false;un elefante se balanceaba;(546) 717-6908;sector1;commite3
-Edith;60351;Female;1972-12-16;true;true;un elefante se balanceaba;(437) 648-3549;sector3;commite2
-Gary;87085;Male;1997-05-24;true;false;un elefante se balanceaba;(254) 313-8926;sector2;commite2
-Clarence;63869;Male;1959-02-10;true;false;el hacha;(544) 522-8709;sector2;commite3
-Leon;60948;Female;1983-07-17;false;true;el hacha;(520) 446-7508;sector1;commite2
-Rodney;42327;Male;1999-04-08;false;true;el hacha;(328) 395-2427;sector2;commite2
-Isaiah;32153;Male;2012-07-09;false;true;el hacha;(937) 635-6792;sector3;commite1
-Chris;6780;Female;1972-12-21;false;false;ave maria;(568) 772-5609;sector3;commite1
-Jesse;71170;Female;1996-04-14;false;true;un elefante se balanceaba;(934) 699-5985;sector3;commite3
-Cecelia;29136;Male;1998-01-13;false;true;ave maria;(263) 676-4263;sector3;commite3
-Mildred;23883;Male;1959-01-08;true;true;el hacha;(940) 370-3153;sector1;commite2
-Eric;76409;Male;1963-06-01;true;true;el hacha;(938) 803-6877;sector1;commite2
-Amelia;82160;Female;1974-07-12;true;false;ave maria;(205) 824-2317;sector2;commite3
-Kevin;2332;Female;2018-07-02;true;true;ave maria;(843) 725-1779;sector3;commite2
-Luke;92944;Male;1960-07-13;true;false;ave maria;(415) 903-4652;sector1;commite1
-Dora;83030;Male;1977-04-17;true;false;ave maria;(779) 265-8400;sector3;commite2
-Violet;62388;Male;1976-12-20;false;true;el hacha;(847) 390-5154;sector1;commite1
-Gene;37879;Male;1986-05-17;true;false;el hacha;(747) 489-2712;sector2;commite1
-Emily;31937;Male;2017-09-16;true;false;ave maria;(856) 481-6324;sector1;commite1
-Amelia;50304;Female;1990-02-19;true;true;ave maria;(354) 975-5742;sector3;commite3
-Roger;17520;Female;1989-02-27;false;true;un elefante se balanceaba;(457) 602-8047;sector1;commite1
-Kate;92324;Female;1965-07-18;true;false;un elefante se balanceaba;(581) 277-2562;sector1;commite3
-Todd;63433;Female;2002-12-13;false;true;el hacha;(372) 815-9577;sector1;commite2
-Lilly;97533;Female;2018-12-23;false;true;el hacha;(317) 605-2033;sector3;commite1
-Olive;85048;Male;2006-10-08;true;true;un elefante se balanceaba;(834) 937-9522;sector2;commite3
-Frederick;5435;Female;1962-10-03;false;true;ave maria;(620) 442-9686;sector3;commite2
-Harry;90174;Female;1997-06-18;false;false;un elefante se balanceaba;(704) 211-3710;sector1;commite3
-George;21147;Male;1992-07-05;true;true;ave maria;(354) 485-7593;sector2;commite2
-Daniel;98161;Male;1971-05-25;true;true;un elefante se balanceaba;(860) 429-4766;sector2;commite2
-Ricardo;23618;Female;2001-09-29;false;true;ave maria;(771) 444-2701;sector2;commite1
-Evan;7816;Male;1980-12-25;true;true;el hacha;(760) 929-9086;sector3;commite1
-Mark;77219;Female;1981-08-17;true;false;el hacha;(546) 718-9139;sector2;commite1
-Curtis;50881;Male;1991-07-24;true;false;el hacha;(540) 552-6093;sector3;commite2
-Derrick;91598;Female;2011-02-19;false;false;el hacha;(767) 534-5245;sector1;commite3
-Leroy;40944;Male;1989-07-31;true;true;el hacha;(609) 758-1958;sector1;commite3
-Larry;47167;Female;1973-10-09;false;true;un elefante se balanceaba;(713) 351-6122;sector2;commite3
-Dean;89664;Male;1992-07-21;true;true;el hacha;(614) 360-2694;sector1;commite1
-Alex;55625;Male;2019-02-01;false;true;ave maria;(830) 719-4558;sector1;commite1
-Billy;1163;Female;1960-10-20;false;true;un elefante se balanceaba;(488) 947-4186;sector2;commite1
-Ronnie;59222;Male;1971-08-23;true;false;ave maria;(515) 625-8807;sector2;commite2
-Barbara;88588;Male;1978-09-07;true;false;ave maria;(729) 496-9333;sector3;commite3
-Cornelia;95421;Female;1990-07-24;true;true;un elefante se balanceaba;(651) 210-5906;sector1;commite3
-Clarence;1825;Male;1983-07-02;false;true;el hacha;(484) 893-8085;sector3;commite1
-Russell;75295;Male;1972-02-09;false;true;el hacha;(801) 733-9374;sector2;commite1
-Rose;29279;Male;1989-06-15;true;true;ave maria;(878) 816-2120;sector3;commite2
-Belle;60662;Female;1958-05-09;false;false;un elefante se balanceaba;(866) 871-1571;sector1;commite3
-Rosalie;5581;Female;1968-09-03;false;true;el hacha;(217) 295-3805;sector1;commite3
-Ian;77540;Female;2010-07-14;false;false;el hacha;(989) 862-6082;sector2;commite2
-Roger;33441;Female;1980-06-09;true;true;ave maria;(742) 207-8339;sector2;commite3
-Georgie;42531;Male;2006-09-17;false;true;el hacha;(872) 905-8812;sector2;commite3
-Irene;12474;Male;1962-05-21;false;false;ave maria;(574) 652-3858;sector1;commite1
-Cody;1310;Male;1988-10-21;true;true;un elefante se balanceaba;(856) 930-2519;sector2;commite2
-Mathilda;19625;Male;2004-04-03;true;true;ave maria;(370) 694-3015;sector3;commite2
-Earl;14;Female;2021-02-07;true;false;un elefante se balanceaba;(430) 838-6814;sector3;commite2
-Corey;91073;Female;2001-09-11;true;false;un elefante se balanceaba;(612) 474-2939;sector2;commite2
-Ronald;321;Female;1961-09-01;false;true;ave maria;(557) 956-3644;sector3;commite1
-Charles;85146;Female;1983-05-21;false;true;el hacha;(965) 571-4224;sector3;commite1
-Isaac;38915;Male;1992-08-29;false;true;ave maria;(846) 847-3681;sector3;commite2
-Adam;92066;Male;1963-10-13;true;true;ave maria;(513) 897-5618;sector2;commite3
-Blanche;59780;Female;1979-12-09;true;false;el hacha;(318) 864-4261;sector2;commite2
-Leo;7111;Female;2014-09-30;true;true;el hacha;(257) 689-6027;sector2;commite1
-Matthew;47093;Female;1996-01-30;true;false;un elefante se balanceaba;(576) 996-9585;sector1;commite2
-Sallie;26568;Male;1970-08-12;true;true;el hacha;(880) 389-9397;sector3;commite2
-Ray;60733;Female;2017-04-18;false;true;ave maria;(603) 789-5646;sector1;commite3
-Lily;98053;Female;1990-09-11;false;false;un elefante se balanceaba;(259) 987-4664;sector2;commite3
-Mathilda;69673;Male;1989-08-22;false;false;el hacha;(453) 725-8606;sector2;commite1
-Edwin;98334;Male;1992-04-27;true;true;un elefante se balanceaba;(901) 794-2970;sector1;commite3
+name/first;zip;gender;date;bool;bool;phone;pick;pick;pick;cargo
+Eugenia;28691;Male;2012-08-03;false;false;(832) 709-7401;ave maria;sector1;commite2;FISCAL
+Rena;75180;Female;2012-06-25;true;true;(837) 886-1615;ave maria;sector1;commite1;SECRETARIO
+Randy;75151;Female;1998-07-04;false;true;(276) 546-5076;ave maria;sector3;commite2;PRESIDENTE
+Lula;4848;Female;1961-09-18;false;true;(581) 577-6278;un elefante se balanceaba;sector1;commite3;TESORERO
+Iva;97370;Male;1995-05-30;true;true;(702) 666-2667;el hacha;sector1;commite1;AUXILIAR
+Susan;45263;Female;1989-12-31;true;false;(226) 409-6707;un elefante se balanceaba;sector3;commite2;PRESIDENTE
+Keith;85016;Female;2006-07-27;true;true;(349) 233-6027;un elefante se balanceaba;sector1;commite2;TESORERO
+Edwin;93736;Female;1973-07-12;false;true;(573) 220-3353;un elefante se balanceaba;sector2;commite3;NINGUNO
+Daisy;69072;Female;1995-02-08;false;false;(619) 371-3512;el hacha;sector2;commite3;PRESIDENTE
+Nathan;93432;Male;2010-07-14;true;false;(311) 660-8681;un elefante se balanceaba;sector1;commite3;NINGUNO
+Lucile;19991;Male;1969-12-08;false;false;(703) 323-6406;el hacha;sector1;commite1;TESORERO
+William;19934;Female;1986-12-29;false;true;(257) 977-6139;el hacha;sector3;commite1;VOCAL
+Victor;78547;Female;1982-12-07;true;true;(644) 342-2973;ave maria;sector2;commite1;SECRETARIO
+Belle;32328;Male;2001-04-29;true;true;(779) 305-8223;un elefante se balanceaba;sector2;commite3;FISCAL
+Cynthia;73177;Male;1969-04-15;true;false;(425) 911-3594;un elefante se balanceaba;sector1;commite1;VOCAL
+Frederick;47379;Female;2002-04-15;true;false;(975) 496-2765;ave maria;sector1;commite3;NINGUNO
+Essie;92219;Male;1967-08-19;true;false;(423) 547-8581;ave maria;sector3;commite2;NINGUNO
+Josephine;10957;Male;1986-06-14;false;true;(683) 383-9248;ave maria;sector3;commite1;SECRETARIO
+Etta;20364;Male;2016-08-17;true;false;(715) 581-2634;el hacha;sector3;commite1;VOCAL
+Francis;40690;Male;1992-05-02;true;true;(220) 210-1157;ave maria;sector3;commite3;AUXILIAR
+Martin;87872;Female;1965-05-11;false;false;(420) 992-6704;ave maria;sector1;commite1;FISCAL
+Milton;527;Male;2008-04-09;false;false;(767) 555-4524;el hacha;sector2;commite1;VICEPRESIDENTE
+Roxie;74808;Female;1967-10-20;false;true;(600) 817-5403;ave maria;sector3;commite3;TESORERO
+Maria;4263;Female;2012-01-31;false;false;(469) 303-4053;un elefante se balanceaba;sector3;commite2;TESORERO
+Lucinda;52183;Male;2008-06-03;true;true;(736) 810-5433;un elefante se balanceaba;sector3;commite3;AUXILIAR
+Nettie;33727;Female;2016-04-15;false;false;(419) 276-7458;el hacha;sector1;commite3;AUXILIAR
+Joseph;82710;Female;2015-03-27;true;false;(319) 390-5371;el hacha;sector2;commite3;SECRETARIO
+Eugene;6635;Female;1991-04-14;false;false;(972) 391-3933;un elefante se balanceaba;sector3;commite1;AUXILIAR
+Adelaide;10370;Male;2019-09-13;false;true;(244) 463-8696;un elefante se balanceaba;sector2;commite2;PRESIDENTE
+Jackson;16051;Female;1997-09-27;false;false;(267) 409-5306;ave maria;sector3;commite3;PRESIDENTE
+Philip;92642;Female;2002-08-12;false;false;(450) 250-6693;un elefante se balanceaba;sector1;commite1;VICEPRESIDENTE
+Justin;40963;Female;1993-03-24;true;false;(937) 964-4184;ave maria;sector3;commite3;SECRETARIO
+Gavin;63820;Male;1988-12-18;false;true;(938) 402-8385;un elefante se balanceaba;sector2;commite2;PRESIDENTE
+Ernest;91213;Female;1991-12-10;false;false;(652) 667-7721;un elefante se balanceaba;sector3;commite1;TESORERO
+Gregory;9012;Female;1972-12-16;false;true;(532) 433-7764;el hacha;sector2;commite2;AUXILIAR
+Jayden;98469;Male;1997-05-24;true;false;(753) 672-1627;un elefante se balanceaba;sector2;commite2;VOCAL
+Brian;92982;Male;1959-02-10;false;true;(763) 900-3232;un elefante se balanceaba;sector2;commite2;PRESIDENTE
+Allie;10257;Male;1983-07-17;false;true;(729) 502-8359;el hacha;sector3;commite3;VICEPRESIDENTE
+Barry;58813;Male;1999-04-08;false;true;(862) 633-7157;un elefante se balanceaba;sector2;commite3;TESORERO
+Phillip;43281;Female;2012-07-09;false;true;(218) 421-4166;el hacha;sector1;commite1;TESORERO
+John;49691;Male;1972-12-21;false;false;(582) 674-5630;un elefante se balanceaba;sector2;commite1;AUXILIAR
+Carolyn;19880;Male;1996-04-14;false;true;(235) 222-6822;un elefante se balanceaba;sector1;commite3;FISCAL
+Jesus;8545;Male;1998-01-13;true;false;(939) 653-8229;un elefante se balanceaba;sector1;commite2;VOCAL
+Isabelle;97720;Male;1959-01-08;true;true;(418) 452-2041;un elefante se balanceaba;sector1;commite2;TESORERO
+Willie;76890;Female;1963-06-01;true;true;(427) 295-6585;ave maria;sector1;commite3;PRESIDENTE
+Hallie;37470;Female;1974-07-12;true;false;(265) 217-3124;ave maria;sector2;commite1;VOCAL
+Darrell;75635;Male;2018-07-02;false;false;(779) 842-5928;un elefante se balanceaba;sector2;commite2;FISCAL
+Marie;27589;Female;1960-07-13;true;false;(985) 853-2768;ave maria;sector2;commite3;FISCAL
+Elnora;48926;Female;1977-04-17;false;true;(440) 903-6607;un elefante se balanceaba;sector1;commite2;AUXILIAR
+Lee;65454;Male;1976-12-20;false;false;(768) 578-9945;el hacha;sector1;commite1;SECRETARIO
+Christina;36325;Male;1986-05-17;true;false;(306) 782-4978;ave maria;sector2;commite2;NINGUNO
+Loretta;47265;Female;2017-09-16;true;false;(324) 576-4183;ave maria;sector2;commite1;SECRETARIO
+Victor;91205;Female;1990-02-19;true;true;(938) 845-4475;el hacha;sector3;commite2;AUXILIAR
+Joe;64456;Male;1989-02-27;false;true;(947) 786-3369;el hacha;sector1;commite2;VOCAL
+Marguerite;63777;Female;1965-07-18;false;true;(570) 243-2720;ave maria;sector2;commite3;VOCAL
+Mario;68617;Female;2002-12-13;false;false;(765) 925-7255;ave maria;sector2;commite3;VICEPRESIDENTE
+Troy;33211;Female;2018-12-23;false;false;(658) 707-8229;ave maria;sector1;commite3;PRESIDENTE
+Margaret;44399;Male;2006-10-08;true;true;(550) 587-1421;ave maria;sector3;commite2;VICEPRESIDENTE
+Joshua;16031;Male;1962-10-03;true;true;(775) 516-6985;ave maria;sector3;commite3;SECRETARIO
+Wesley;77974;Male;1997-06-18;false;false;(337) 661-6111;el hacha;sector2;commite1;SECRETARIO
+Estelle;19016;Male;1992-07-05;true;true;(361) 919-5080;ave maria;sector1;commite1;AUXILIAR
+Margaret;97206;Female;1971-05-25;true;true;(372) 626-4570;el hacha;sector3;commite3;NINGUNO
+Callie;16164;Male;2001-09-29;false;false;(261) 459-5061;ave maria;sector3;commite2;FISCAL
+Jeffrey;40421;Female;1980-12-25;true;false;(465) 274-5537;ave maria;sector3;commite1;SECRETARIO
+Lewis;55037;Female;1981-08-17;true;true;(285) 364-6292;el hacha;sector2;commite3;PRESIDENTE
+Sean;146;Male;1991-07-24;true;false;(242) 938-3787;un elefante se balanceaba;sector1;commite1;AUXILIAR
+May;80720;Male;2011-02-19;true;true;(231) 224-5920;ave maria;sector1;commite1;PRESIDENTE
+Winifred;51134;Female;1989-07-31;false;true;(866) 715-8877;el hacha;sector1;commite3;VOCAL
+Louis;17097;Female;1973-10-09;true;false;(926) 341-8018;el hacha;sector2;commite1;VOCAL
+Willie;80424;Male;1992-07-21;true;true;(221) 400-7800;el hacha;sector2;commite3;FISCAL
+Hallie;89084;Male;2019-02-01;false;false;(466) 667-1868;ave maria;sector2;commite2;FISCAL
+Jimmy;8045;Female;1960-10-20;true;false;(809) 347-4211;el hacha;sector2;commite1;VOCAL
+Patrick;87437;Female;1971-08-23;false;true;(862) 349-6621;ave maria;sector2;commite3;FISCAL
+Jay;97068;Female;1978-09-07;false;false;(903) 766-3714;ave maria;sector2;commite2;NINGUNO
+Wesley;85133;Female;1990-07-24;true;true;(572) 637-5982;un elefante se balanceaba;sector2;commite2;VICEPRESIDENTE
+Lois;29952;Male;1983-07-02;true;false;(453) 507-3551;el hacha;sector1;commite3;SECRETARIO
+Helen;17584;Male;1972-02-09;false;true;(851) 359-8705;un elefante se balanceaba;sector2;commite3;FISCAL
+Micheal;53619;Female;1989-06-15;true;true;(955) 443-2968;el hacha;sector1;commite2;AUXILIAR
+Mable;35739;Female;1958-05-09;false;false;(264) 527-2250;el hacha;sector3;commite1;NINGUNO
+Eric;81083;Male;1968-09-03;true;false;(315) 631-4478;un elefante se balanceaba;sector2;commite3;SECRETARIO
+Lucy;81418;Female;2010-07-14;false;false;(900) 533-4789;un elefante se balanceaba;sector3;commite2;VOCAL
+Nelle;5341;Male;1980-06-09;true;false;(423) 259-3467;un elefante se balanceaba;sector3;commite2;FISCAL
+John;35326;Female;2006-09-17;true;true;(779) 634-6948;el hacha;sector3;commite1;FISCAL
+Marcus;73663;Female;1962-05-21;true;false;(545) 225-4382;el hacha;sector2;commite1;PRESIDENTE
+Anthony;13322;Male;1988-10-21;false;true;(730) 929-1036;ave maria;sector1;commite3;AUXILIAR
+Emily;48420;Female;2004-04-03;false;false;(588) 900-9162;un elefante se balanceaba;sector2;commite2;AUXILIAR
+Jeffery;97839;Female;2021-02-07;false;false;(467) 883-5958;el hacha;sector3;commite1;SECRETARIO
+Randy;56571;Male;2001-09-11;false;true;(678) 956-8350;el hacha;sector1;commite2;VOCAL
+Ronnie;92525;Female;1961-09-01;true;true;(828) 232-1059;ave maria;sector1;commite3;TESORERO
+Lucas;7367;Female;1983-05-21;true;true;(203) 463-9165;el hacha;sector2;commite3;TESORERO
+Lucas;18889;Female;1992-08-29;false;false;(987) 377-9572;el hacha;sector1;commite3;AUXILIAR
+Bertha;48892;Female;1963-10-13;false;false;(362) 928-4322;ave maria;sector3;commite2;VOCAL
+Jeffrey;99963;Male;1979-12-09;true;false;(837) 644-4678;el hacha;sector1;commite2;VICEPRESIDENTE
+Joseph;32139;Female;2014-09-30;false;true;(213) 945-1916;ave maria;sector3;commite3;AUXILIAR
+Austin;28759;Female;1996-01-30;true;false;(674) 294-8546;un elefante se balanceaba;sector2;commite1;SECRETARIO
+Corey;73348;Female;1970-08-12;true;true;(987) 338-7394;ave maria;sector3;commite2;NINGUNO
+Lucas;99473;Male;2017-04-18;true;false;(803) 204-5741;el hacha;sector2;commite2;VOCAL
+Sam;11316;Female;1990-09-11;false;true;(868) 387-5812;un elefante se balanceaba;sector1;commite1;PRESIDENTE
+Leo;7607;Female;1989-08-22;false;true;(807) 872-3268;el hacha;sector3;commite3;NINGUNO
+Rosalie;36353;Male;1992-04-27;false;true;(832) 365-2440;un elefante se balanceaba;sector1;commite2;FISCAL
+Katie;69238;Female;2012-08-03;false;false;(477) 387-5099;un elefante se balanceaba;sector3;commite1;NINGUNO
+Lela;37260;Female;2012-06-25;false;true;(331) 876-7169;ave maria;sector1;commite2;SECRETARIO
+Annie;14986;Female;1998-07-04;false;true;(466) 915-3004;un elefante se balanceaba;sector2;commite1;FISCAL
+Derrick;84498;Female;1961-09-18;false;false;(958) 892-9159;ave maria;sector3;commite3;PRESIDENTE
+Chris;36104;Male;1995-05-30;true;true;(963) 942-2883;un elefante se balanceaba;sector1;commite3;TESORERO
+Mable;93128;Male;1989-12-31;true;true;(348) 651-1811;ave maria;sector1;commite3;TESORERO
+Marguerite;31974;Male;2006-07-27;false;false;(727) 394-9274;un elefante se balanceaba;sector3;commite3;AUXILIAR
+Inez;21501;Female;1973-07-12;true;true;(979) 385-5535;un elefante se balanceaba;sector2;commite1;VOCAL
+Louisa;71459;Male;1995-02-08;false;true;(963) 760-9242;un elefante se balanceaba;sector3;commite1;VICEPRESIDENTE
+Shane;77575;Male;2010-07-14;false;true;(473) 743-2988;el hacha;sector3;commite1;AUXILIAR
+Eugene;58913;Female;1969-12-08;true;false;(610) 769-4259;el hacha;sector2;commite1;VOCAL
+Randall;41847;Male;1986-12-29;true;false;(503) 458-3626;el hacha;sector1;commite2;VICEPRESIDENTE
+Devin;44136;Male;1982-12-07;true;false;(442) 700-4489;el hacha;sector2;commite1;VOCAL
+Marian;69628;Female;2001-04-29;true;false;(344) 521-1279;el hacha;sector1;commite2;VOCAL
+Dustin;16780;Female;1969-04-15;true;true;(604) 866-8600;un elefante se balanceaba;sector2;commite2;SECRETARIO
+Violet;25573;Female;2002-04-15;true;true;(519) 208-9222;ave maria;sector2;commite3;VICEPRESIDENTE
+Estella;43350;Female;1967-08-19;true;true;(973) 411-1296;ave maria;sector3;commite2;SECRETARIO
+Olive;81190;Female;1986-06-14;true;true;(487) 268-6396;ave maria;sector1;commite2;VICEPRESIDENTE
+Pearl;83818;Male;2016-08-17;true;false;(621) 534-7971;un elefante se balanceaba;sector3;commite2;VICEPRESIDENTE
+Gilbert;25109;Female;1992-05-02;false;true;(914) 245-9534;el hacha;sector3;commite2;VOCAL
+Mark;43199;Female;1965-05-11;false;true;(276) 590-3213;el hacha;sector2;commite1;FISCAL
+Cody;79398;Female;2008-04-09;false;true;(679) 656-8497;el hacha;sector1;commite1;NINGUNO
+Maud;76731;Male;1967-10-20;true;true;(463) 540-4379;ave maria;sector2;commite1;FISCAL
+Lizzie;97643;Female;2012-01-31;true;true;(647) 943-6380;el hacha;sector3;commite2;AUXILIAR
+Theodore;14663;Female;2008-06-03;false;false;(305) 915-2180;un elefante se balanceaba;sector3;commite2;AUXILIAR
+Mildred;9376;Female;2016-04-15;true;true;(310) 886-9411;ave maria;sector2;commite2;PRESIDENTE
+Kyle;45936;Female;2015-03-27;true;false;(771) 555-4369;ave maria;sector2;commite2;NINGUNO
+Jayden;16765;Male;1991-04-14;true;false;(622) 280-9969;un elefante se balanceaba;sector2;commite2;NINGUNO
+Michael;47777;Male;2019-09-13;true;true;(364) 678-5061;el hacha;sector3;commite3;TESORERO
+Jackson;15926;Female;1997-09-27;false;false;(257) 744-8840;el hacha;sector1;commite2;VICEPRESIDENTE
+Walter;61360;Female;2002-08-12;false;false;(366) 535-8186;el hacha;sector3;commite3;AUXILIAR
+Brent;91480;Male;1993-03-24;true;true;(416) 428-2196;el hacha;sector2;commite1;SECRETARIO
+Clara;48598;Male;1988-12-18;true;true;(275) 448-7256;un elefante se balanceaba;sector1;commite1;SECRETARIO
+Victor;86403;Female;1991-12-10;true;true;(522) 306-5178;un elefante se balanceaba;sector3;commite2;NINGUNO
+Mike;62133;Male;1972-12-16;false;false;(372) 933-9866;ave maria;sector3;commite3;VICEPRESIDENTE
+Mabel;23194;Female;1997-05-24;true;false;(722) 674-6686;ave maria;sector2;commite3;SECRETARIO
+Owen;79112;Female;1959-02-10;false;false;(746) 461-5528;ave maria;sector3;commite2;VOCAL
+Mable;11146;Male;1983-07-17;false;false;(546) 558-6437;un elefante se balanceaba;sector3;commite1;VICEPRESIDENTE
+Cory;13751;Female;1999-04-08;false;false;(316) 596-4402;el hacha;sector3;commite1;SECRETARIO
+Esther;20227;Male;2012-07-09;true;true;(980) 405-2180;ave maria;sector2;commite3;SECRETARIO
+Henrietta;88138;Female;1972-12-21;true;true;(219) 678-2484;un elefante se balanceaba;sector1;commite1;NINGUNO
+Leon;39018;Female;1996-04-14;false;false;(407) 686-5263;un elefante se balanceaba;sector1;commite2;AUXILIAR
+Curtis;78447;Male;1998-01-13;false;true;(278) 570-2419;un elefante se balanceaba;sector2;commite2;TESORERO
+Elva;57009;Female;1959-01-08;false;false;(411) 769-5746;ave maria;sector3;commite3;VOCAL
+Kenneth;4827;Male;1963-06-01;false;true;(526) 752-8129;un elefante se balanceaba;sector1;commite2;TESORERO
+Millie;673;Male;1974-07-12;false;false;(679) 376-9194;el hacha;sector3;commite3;FISCAL
+Blake;58007;Female;2018-07-02;true;false;(859) 918-2779;ave maria;sector2;commite2;AUXILIAR
+Hettie;22928;Male;1960-07-13;true;false;(770) 523-9451;un elefante se balanceaba;sector2;commite2;SECRETARIO
+Hilda;9040;Male;1977-04-17;true;true;(239) 538-3200;un elefante se balanceaba;sector2;commite2;FISCAL
+Kevin;85785;Female;1976-12-20;false;false;(818) 973-5212;un elefante se balanceaba;sector1;commite3;SECRETARIO
+Claudia;32833;Male;1986-05-17;true;false;(487) 402-5001;un elefante se balanceaba;sector1;commite3;VOCAL
+Leila;38259;Male;2017-09-16;false;true;(501) 582-8582;ave maria;sector2;commite1;NINGUNO
+Gordon;33735;Male;1990-02-19;false;true;(687) 731-1758;el hacha;sector1;commite2;AUXILIAR
+Dale;43221;Female;1989-02-27;true;false;(424) 969-7089;el hacha;sector2;commite1;SECRETARIO
+Vincent;39582;Male;1965-07-18;true;false;(772) 753-9412;un elefante se balanceaba;sector2;commite3;PRESIDENTE
+Lola;75109;Male;2002-12-13;false;false;(621) 321-6464;el hacha;sector3;commite1;TESORERO
+Linnie;96776;Female;2018-12-23;false;false;(362) 967-4437;ave maria;sector3;commite1;NINGUNO
+Oscar;74545;Male;2006-10-08;true;true;(521) 591-8041;un elefante se balanceaba;sector3;commite3;SECRETARIO
+Ronnie;67024;Female;1962-10-03;false;true;(612) 258-7767;ave maria;sector2;commite3;SECRETARIO
+Flora;25887;Male;1997-06-18;false;true;(239) 877-8749;ave maria;sector3;commite3;PRESIDENTE
+Isabelle;56512;Male;1992-07-05;false;true;(266) 730-4689;ave maria;sector1;commite2;VICEPRESIDENTE
+Cordelia;49197;Male;1971-05-25;true;true;(347) 977-7357;ave maria;sector1;commite1;TESORERO
+Daisy;95619;Female;2001-09-29;true;true;(561) 740-2602;un elefante se balanceaba;sector2;commite3;AUXILIAR
+Lela;52205;Female;1980-12-25;false;true;(286) 301-8301;ave maria;sector1;commite2;AUXILIAR
+Fannie;9335;Male;1981-08-17;true;true;(934) 808-9395;un elefante se balanceaba;sector2;commite1;VICEPRESIDENTE
+Anthony;36765;Male;1991-07-24;false;false;(550) 602-6601;el hacha;sector1;commite1;FISCAL
+Roger;94754;Male;2011-02-19;true;false;(575) 887-9659;el hacha;sector2;commite1;VICEPRESIDENTE
+Catherine;73474;Male;1989-07-31;true;false;(359) 511-2278;el hacha;sector3;commite3;VICEPRESIDENTE
+Rosetta;4273;Male;1973-10-09;false;true;(374) 625-1568;un elefante se balanceaba;sector2;commite3;TESORERO
+Stephen;37922;Male;1992-07-21;true;true;(985) 335-2806;un elefante se balanceaba;sector2;commite2;AUXILIAR
+Mabelle;76517;Female;2019-02-01;false;false;(812) 742-4438;el hacha;sector3;commite1;VICEPRESIDENTE
+Hattie;3596;Female;1960-10-20;true;false;(209) 397-4988;el hacha;sector3;commite2;NINGUNO
+Juan;26023;Male;1971-08-23;true;false;(429) 498-9335;un elefante se balanceaba;sector3;commite2;VOCAL
+Jared;95351;Male;1978-09-07;false;true;(764) 710-6956;ave maria;sector1;commite3;TESORERO
+Essie;69739;Female;1990-07-24;true;false;(655) 969-2309;el hacha;sector2;commite2;PRESIDENTE
+Leah;88551;Female;1983-07-02;true;true;(526) 343-5859;un elefante se balanceaba;sector3;commite1;NINGUNO
+Myrtie;95791;Male;1972-02-09;true;false;(423) 864-7583;un elefante se balanceaba;sector3;commite2;VOCAL
+Ina;87595;Female;1989-06-15;true;false;(557) 316-6018;el hacha;sector1;commite3;TESORERO
+Jerry;14134;Male;1958-05-09;false;true;(839) 546-9856;ave maria;sector1;commite3;FISCAL
+Martha;16050;Male;1968-09-03;true;true;(516) 467-7284;el hacha;sector2;commite2;NINGUNO
+Alexander;35643;Female;2010-07-14;true;true;(264) 480-4194;el hacha;sector3;commite3;VOCAL
+Marie;21982;Male;1980-06-09;true;true;(522) 801-1266;ave maria;sector3;commite2;VICEPRESIDENTE
+Alma;40606;Male;2006-09-17;true;true;(802) 427-5952;ave maria;sector2;commite2;VOCAL
+Lewis;24057;Female;1962-05-21;true;true;(856) 929-5297;el hacha;sector3;commite3;VICEPRESIDENTE
+Cynthia;8208;Female;1988-10-21;false;true;(819) 223-2721;el hacha;sector2;commite2;NINGUNO
+Winifred;60737;Male;2004-04-03;true;false;(887) 895-5890;el hacha;sector2;commite3;PRESIDENTE
+Inez;53785;Male;2021-02-07;true;true;(985) 777-6314;un elefante se balanceaba;sector1;commite2;AUXILIAR
+Elmer;51888;Female;2001-09-11;true;false;(203) 257-5223;el hacha;sector3;commite3;TESORERO
+Gary;12426;Female;1961-09-01;false;false;(289) 312-3387;un elefante se balanceaba;sector3;commite2;NINGUNO
+Lillie;16080;Male;1983-05-21;false;false;(940) 891-3134;un elefante se balanceaba;sector3;commite1;PRESIDENTE
+Genevieve;33874;Female;1992-08-29;false;true;(973) 804-2177;el hacha;sector2;commite3;VICEPRESIDENTE
+Luke;41343;Female;1963-10-13;true;true;(308) 392-2954;un elefante se balanceaba;sector1;commite3;FISCAL
+Marvin;56349;Female;1979-12-09;true;false;(825) 290-9103;el hacha;sector1;commite1;AUXILIAR
+Emma;16328;Female;2014-09-30;true;true;(921) 771-9879;un elefante se balanceaba;sector1;commite1;NINGUNO
+Edward;69588;Female;1996-01-30;false;true;(289) 741-3115;ave maria;sector2;commite3;VICEPRESIDENTE
+Marian;19588;Male;1970-08-12;false;false;(372) 575-2637;ave maria;sector2;commite1;VOCAL
+Vernon;35118;Male;2017-04-18;false;false;(558) 336-9230;ave maria;sector2;commite1;VICEPRESIDENTE
+Nicholas;12401;Female;1990-09-11;false;true;(680) 581-7129;un elefante se balanceaba;sector1;commite3;FISCAL
+Lettie;45958;Female;1989-08-22;false;false;(953) 224-3920;ave maria;sector1;commite2;SECRETARIO
+Sam;2158;Male;1992-04-27;true;false;(304) 893-3860;el hacha;sector2;commite2;FISCAL
+Herbert;22097;Male;2012-08-03;false;true;(309) 773-1427;ave maria;sector3;commite1;AUXILIAR
+Leah;83394;Male;2012-06-25;false;false;(240) 741-1430;el hacha;sector2;commite2;SECRETARIO
+Jesse;94991;Male;1998-07-04;true;true;(721) 861-2269;un elefante se balanceaba;sector1;commite3;FISCAL
+Evan;80553;Male;1961-09-18;true;false;(910) 477-1529;un elefante se balanceaba;sector1;commite1;VOCAL
+Leona;39191;Female;1995-05-30;true;false;(675) 225-4470;el hacha;sector2;commite1;VOCAL
+Cole;23955;Male;1989-12-31;false;true;(915) 410-1040;un elefante se balanceaba;sector1;commite3;PRESIDENTE
+Gertrude;99623;Female;2006-07-27;true;false;(987) 992-1568;ave maria;sector2;commite1;AUXILIAR
+Lillie;49576;Female;1973-07-12;false;true;(388) 316-6112;ave maria;sector2;commite3;VOCAL
+Myrtie;27139;Male;1995-02-08;false;false;(706) 853-4291;un elefante se balanceaba;sector3;commite3;VOCAL
+Ethan;57269;Male;2010-07-14;false;false;(613) 207-6599;un elefante se balanceaba;sector3;commite2;SECRETARIO
+Antonio;56986;Female;1969-12-08;false;false;(866) 872-6840;el hacha;sector3;commite2;AUXILIAR
+Helen;91202;Female;1986-12-29;false;true;(578) 884-5545;un elefante se balanceaba;sector3;commite1;TESORERO
+Lucy;29591;Male;1982-12-07;false;true;(761) 813-7826;ave maria;sector3;commite2;TESORERO
+Chase;89996;Female;2001-04-29;true;false;(244) 729-9608;un elefante se balanceaba;sector1;commite1;SECRETARIO
+Beatrice;65514;Male;1969-04-15;true;false;(201) 327-8875;el hacha;sector1;commite3;NINGUNO
+Rodney;20178;Male;2002-04-15;true;true;(515) 569-6922;un elefante se balanceaba;sector1;commite3;FISCAL
+Martin;40974;Female;1967-08-19;false;false;(979) 831-7406;un elefante se balanceaba;sector1;commite2;AUXILIAR
+Cynthia;91048;Male;1986-06-14;true;false;(826) 884-3515;un elefante se balanceaba;sector1;commite3;FISCAL
+Hilda;18158;Male;2016-08-17;false;true;(863) 806-2620;un elefante se balanceaba;sector2;commite1;AUXILIAR
+Sue;5907;Female;1992-05-02;false;true;(854) 327-6715;ave maria;sector2;commite3;PRESIDENTE
+Lawrence;49488;Male;1965-05-11;true;false;(961) 711-6086;el hacha;sector3;commite1;FISCAL
+Lola;55669;Male;2008-04-09;false;true;(819) 862-1938;el hacha;sector2;commite2;PRESIDENTE
+Joseph;20271;Male;1967-10-20;false;true;(586) 925-9052;el hacha;sector3;commite3;PRESIDENTE
+Noah;77143;Female;2012-01-31;false;true;(660) 726-9135;ave maria;sector1;commite3;FISCAL
+Jackson;57206;Female;2008-06-03;true;true;(709) 920-9740;ave maria;sector2;commite2;AUXILIAR
+Calvin;82740;Male;2016-04-15;false;true;(462) 494-1763;el hacha;sector2;commite1;VOCAL
+Ada;55801;Male;2015-03-27;true;true;(782) 914-2608;el hacha;sector3;commite2;VICEPRESIDENTE
+Edith;74379;Female;1991-04-14;true;true;(689) 711-6992;el hacha;sector2;commite3;VICEPRESIDENTE
+Blake;60241;Male;2019-09-13;false;true;(886) 465-3308;ave maria;sector3;commite2;SECRETARIO
+Alta;72308;Female;1997-09-27;false;false;(742) 946-9070;un elefante se balanceaba;sector2;commite2;NINGUNO
+Loretta;84270;Female;2002-08-12;false;false;(841) 474-2501;el hacha;sector1;commite1;PRESIDENTE
+Katherine;81619;Male;1993-03-24;false;true;(768) 492-2253;ave maria;sector3;commite3;VICEPRESIDENTE
+Manuel;73266;Female;1988-12-18;false;true;(905) 958-7503;ave maria;sector2;commite2;FISCAL
+Norman;38821;Female;1991-12-10;true;false;(546) 717-6908;un elefante se balanceaba;sector1;commite3;NINGUNO
+Edith;60351;Female;1972-12-16;true;true;(437) 648-3549;un elefante se balanceaba;sector3;commite2;NINGUNO
+Gary;87085;Male;1997-05-24;true;false;(254) 313-8926;un elefante se balanceaba;sector2;commite2;PRESIDENTE
+Clarence;63869;Male;1959-02-10;true;false;(544) 522-8709;el hacha;sector2;commite3;PRESIDENTE
+Leon;60948;Female;1983-07-17;false;true;(520) 446-7508;el hacha;sector1;commite2;SECRETARIO
+Rodney;42327;Male;1999-04-08;false;true;(328) 395-2427;el hacha;sector2;commite2;NINGUNO
+Isaiah;32153;Male;2012-07-09;false;true;(937) 635-6792;el hacha;sector3;commite1;TESORERO
+Chris;6780;Female;1972-12-21;false;false;(568) 772-5609;ave maria;sector3;commite1;PRESIDENTE
+Jesse;71170;Female;1996-04-14;false;true;(934) 699-5985;un elefante se balanceaba;sector3;commite3;VOCAL
+Cecelia;29136;Male;1998-01-13;false;true;(263) 676-4263;ave maria;sector3;commite3;TESORERO
+Mildred;23883;Male;1959-01-08;true;true;(940) 370-3153;el hacha;sector1;commite2;TESORERO
+Eric;76409;Male;1963-06-01;true;true;(938) 803-6877;el hacha;sector1;commite2;VOCAL
+Amelia;82160;Female;1974-07-12;true;false;(205) 824-2317;ave maria;sector2;commite3;PRESIDENTE
+Kevin;2332;Female;2018-07-02;true;true;(843) 725-1779;ave maria;sector3;commite2;PRESIDENTE
+Luke;92944;Male;1960-07-13;true;false;(415) 903-4652;ave maria;sector1;commite1;FISCAL
+Dora;83030;Male;1977-04-17;true;false;(779) 265-8400;ave maria;sector3;commite2;AUXILIAR
+Violet;62388;Male;1976-12-20;false;true;(847) 390-5154;el hacha;sector1;commite1;NINGUNO
+Gene;37879;Male;1986-05-17;true;false;(747) 489-2712;el hacha;sector2;commite1;FISCAL
+Emily;31937;Male;2017-09-16;true;false;(856) 481-6324;ave maria;sector1;commite1;VICEPRESIDENTE
+Amelia;50304;Female;1990-02-19;true;true;(354) 975-5742;ave maria;sector3;commite3;FISCAL
+Roger;17520;Female;1989-02-27;false;true;(457) 602-8047;un elefante se balanceaba;sector1;commite1;VICEPRESIDENTE
+Kate;92324;Female;1965-07-18;true;false;(581) 277-2562;un elefante se balanceaba;sector1;commite3;NINGUNO
+Todd;63433;Female;2002-12-13;false;true;(372) 815-9577;el hacha;sector1;commite2;VOCAL
+Lilly;97533;Female;2018-12-23;false;true;(317) 605-2033;el hacha;sector3;commite1;FISCAL
+Olive;85048;Male;2006-10-08;true;true;(834) 937-9522;un elefante se balanceaba;sector2;commite3;VOCAL
+Frederick;5435;Female;1962-10-03;false;true;(620) 442-9686;ave maria;sector3;commite2;VOCAL
+Harry;90174;Female;1997-06-18;false;false;(704) 211-3710;un elefante se balanceaba;sector1;commite3;AUXILIAR
+George;21147;Male;1992-07-05;true;true;(354) 485-7593;ave maria;sector2;commite2;NINGUNO
+Daniel;98161;Male;1971-05-25;true;true;(860) 429-4766;un elefante se balanceaba;sector2;commite2;SECRETARIO
+Ricardo;23618;Female;2001-09-29;false;true;(771) 444-2701;ave maria;sector2;commite1;PRESIDENTE
+Evan;7816;Male;1980-12-25;true;true;(760) 929-9086;el hacha;sector3;commite1;NINGUNO
+Mark;77219;Female;1981-08-17;true;false;(546) 718-9139;el hacha;sector2;commite1;AUXILIAR
+Curtis;50881;Male;1991-07-24;true;false;(540) 552-6093;el hacha;sector3;commite2;TESORERO
+Derrick;91598;Female;2011-02-19;false;false;(767) 534-5245;el hacha;sector1;commite3;VOCAL
+Leroy;40944;Male;1989-07-31;true;true;(609) 758-1958;el hacha;sector1;commite3;TESORERO
+Larry;47167;Female;1973-10-09;false;true;(713) 351-6122;un elefante se balanceaba;sector2;commite3;SECRETARIO
+Dean;89664;Male;1992-07-21;true;true;(614) 360-2694;el hacha;sector1;commite1;NINGUNO
+Alex;55625;Male;2019-02-01;false;true;(830) 719-4558;ave maria;sector1;commite1;SECRETARIO
+Billy;1163;Female;1960-10-20;false;true;(488) 947-4186;un elefante se balanceaba;sector2;commite1;VICEPRESIDENTE
+Ronnie;59222;Male;1971-08-23;true;false;(515) 625-8807;ave maria;sector2;commite2;AUXILIAR
+Barbara;88588;Male;1978-09-07;true;false;(729) 496-9333;ave maria;sector3;commite3;NINGUNO
+Cornelia;95421;Female;1990-07-24;true;true;(651) 210-5906;un elefante se balanceaba;sector1;commite3;VOCAL
+Clarence;1825;Male;1983-07-02;false;true;(484) 893-8085;el hacha;sector3;commite1;NINGUNO
+Russell;75295;Male;1972-02-09;false;true;(801) 733-9374;el hacha;sector2;commite1;FISCAL
+Rose;29279;Male;1989-06-15;true;true;(878) 816-2120;ave maria;sector3;commite2;NINGUNO
+Belle;60662;Female;1958-05-09;false;false;(866) 871-1571;un elefante se balanceaba;sector1;commite3;TESORERO
+Rosalie;5581;Female;1968-09-03;false;true;(217) 295-3805;el hacha;sector1;commite3;TESORERO
+Ian;77540;Female;2010-07-14;false;false;(989) 862-6082;el hacha;sector2;commite2;FISCAL
+Roger;33441;Female;1980-06-09;true;true;(742) 207-8339;ave maria;sector2;commite3;SECRETARIO
+Georgie;42531;Male;2006-09-17;false;true;(872) 905-8812;el hacha;sector2;commite3;VOCAL
+Irene;12474;Male;1962-05-21;false;false;(574) 652-3858;ave maria;sector1;commite1;FISCAL
+Cody;1310;Male;1988-10-21;true;true;(856) 930-2519;un elefante se balanceaba;sector2;commite2;FISCAL
+Mathilda;19625;Male;2004-04-03;true;true;(370) 694-3015;ave maria;sector3;commite2;NINGUNO
+Earl;14;Female;2021-02-07;true;false;(430) 838-6814;un elefante se balanceaba;sector3;commite2;AUXILIAR
+Corey;91073;Female;2001-09-11;true;false;(612) 474-2939;un elefante se balanceaba;sector2;commite2;VICEPRESIDENTE
+Ronald;321;Female;1961-09-01;false;true;(557) 956-3644;ave maria;sector3;commite1;VOCAL
+Charles;85146;Female;1983-05-21;false;true;(965) 571-4224;el hacha;sector3;commite1;VOCAL
+Isaac;38915;Male;1992-08-29;false;true;(846) 847-3681;ave maria;sector3;commite2;FISCAL
+Adam;92066;Male;1963-10-13;true;true;(513) 897-5618;ave maria;sector2;commite3;FISCAL
+Blanche;59780;Female;1979-12-09;true;false;(318) 864-4261;el hacha;sector2;commite2;SECRETARIO
+Leo;7111;Female;2014-09-30;true;true;(257) 689-6027;el hacha;sector2;commite1;PRESIDENTE
+Matthew;47093;Female;1996-01-30;true;false;(576) 996-9585;un elefante se balanceaba;sector1;commite2;VOCAL
+Sallie;26568;Male;1970-08-12;true;true;(880) 389-9397;el hacha;sector3;commite2;VOCAL
+Ray;60733;Female;2017-04-18;false;true;(603) 789-5646;ave maria;sector1;commite3;VOCAL
+Lily;98053;Female;1990-09-11;false;false;(259) 987-4664;un elefante se balanceaba;sector2;commite3;VICEPRESIDENTE
+Mathilda;69673;Male;1989-08-22;false;false;(453) 725-8606;el hacha;sector2;commite1;AUXILIAR
+Edwin;98334;Male;1992-04-27;true;true;(901) 794-2970;un elefante se balanceaba;sector1;commite3;AUXILIAR

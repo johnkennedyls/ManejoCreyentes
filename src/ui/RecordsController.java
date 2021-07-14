@@ -166,10 +166,10 @@ public class RecordsController {
 		committee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
 	}
     
-    private void loadUpcomingBirthdaysTable(List<Member> upcomingbirthdays) {
+    private void loadUpcomingBirthdaysTable(List<Member> upcomingbirthday) {
 		ObservableList<Member> observableList;
-		observableList = FXCollections.observableArrayList(upcomingbirthdays);
-		birthdays.setItems(observableList);
+		observableList = FXCollections.observableArrayList(upcomingbirthday);		
+		upcomingbirthdays.setItems(observableList);
 
 		UName.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
 		UIdNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("idNumber"));

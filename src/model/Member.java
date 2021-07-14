@@ -219,6 +219,12 @@ public class Member {
 	public void setCommittee(String committee) {
 		this.committee = committee;
 	}
+	@Override
+	public String toString() {
+		return "Member [name=" + name + ", idNumber=" + idNumber + ", gender=" + gender + ", birthday=" + birthday
+				+ ", baptized=" + baptized + ", active=" + active + ", observations=" + observations + ", phoneNumber="
+				+ phoneNumber + ", sector=" + sector + ", committee=" + committee + "]";
+	}
 	
 	
 	/**

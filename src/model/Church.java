@@ -92,12 +92,17 @@ public class Church {
 		Sector theSector = null;
 		Committee theCommittee = null;
 		
-		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector, committee, charge);
+		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector, committee);
 		
 		generalMembers.add(theMember);
 		
 		if (theMember.getSector() != "ninguno") {
-			theSector.getMembersList().add(theMember);
+			//theSector.getMembersList().add(theMember);
+			for (int i = 0; i < theSector.getMembersList().size(); i++) {
+				if (theSector.getMembersList().get(i).equals(theMember.getSector())) {
+					theSector.getMembersList().add(theMember);
+				}
+			}
 			if (theMember.getCommittee() != "ninguno") {
 				theCommittee.getcMembersList().add(theMember);
 			}

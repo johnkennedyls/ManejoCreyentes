@@ -19,5 +19,5 @@ public class ChangePasswordController {
     void save(ActionEvent event) {
     	currentPassword.getScene().getWindow().hide();
     }
-    
+    //
 }

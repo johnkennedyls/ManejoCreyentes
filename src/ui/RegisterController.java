@@ -1,9 +1,9 @@
 package ui;
 
 import java.time.LocalDate;
-
-
 import exceptions.EmptyDataException;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -22,8 +22,11 @@ public class RegisterController {
     @FXML
     private TextField idField;
 
+   
     @FXML
-    private TextField genderField;
+    private ComboBox<String> genderComboBox;
+    
+   
 
     @FXML
     private DatePicker birthday;
@@ -48,8 +51,10 @@ public class RegisterController {
     
     @FXML
     public void initialize() {
+    	loadGender();
         loadCommittees();
         loadSectorType();
+        
     }
     
     @FXML
@@ -63,13 +68,22 @@ public class RegisterController {
 		}
     }
     
+    private void loadGender() {
+   	
+
+   	 genderComboBox.getItems().add("Hombre");
+   	 genderComboBox.getItems().add("Mujer");
+   }
+    
     private void loadSectorType() {
-    	
+    	if()
     }
     
     private void loadCommittees() {
     	
     }
+    
+    
     
     private void validateEmptyFields() throws EmptyDataException{
     	if (nameField.getText().equals("")) {
@@ -77,10 +91,6 @@ public class RegisterController {
 		}
     	
     	if (idField.getText().equals("")) {
-			throw new EmptyDataException();
-		}
-    	
-    	if (genderField.getText().equals("")) {
 			throw new EmptyDataException();
 		}
     	
@@ -103,5 +113,7 @@ public class RegisterController {
     	emptyFieldsAlert.showAndWait();
 
     }
+    
+   
     
 }

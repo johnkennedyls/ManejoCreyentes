@@ -48,10 +48,7 @@
                            <VBox.margin>
                               <Insets left="32.0" right="32.0" />
                            </VBox.margin></TextField>
-                        <TextField fx:id="genderField" promptText="Genero" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: ROYALBLUE;">
-                           <VBox.margin>
-                              <Insets left="32.0" right="32.0" />
-                           </VBox.margin></TextField>
+                        <ComboBox fx:id="genderComboBox" prefWidth="150.0" promptText="Sexo" />
                         <DatePicker fx:id="birthday" promptText="Fecha de nacimiento" style="-fx-border-color: ROYALBLUE;" />
                         <CheckBox fx:id="baptized" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Bautizado" />
                         <CheckBox fx:id="active" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Activo" />

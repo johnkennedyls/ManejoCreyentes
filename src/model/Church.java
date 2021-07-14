@@ -84,6 +84,16 @@ public class Church {
 		return theSectors;
 	}
 	
+	
+	
+	public List<Committee> getTheCommittees() {
+		return theCommittees;
+	}
+
+	public void setTheCommittees(List<Committee> theCommittees) {
+		this.theCommittees = theCommittees;
+	}
+
 	@SuppressWarnings("null")
 	public void createGeneralMember(String name, String idNumber, String gender, String birthday, boolean baptized,
 			boolean active, String observations, String phoneNumber, String sector, String committee, OfficeType charge) {

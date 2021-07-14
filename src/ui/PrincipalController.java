@@ -63,9 +63,12 @@ public class PrincipalController {
     	
     	private void openRegister() {
     		try {
+    			RegisterController registerController = new RegisterController(myChurch);
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/register.fxml"));
+    			fxmlLoader.setController(registerController);
 				Parent Pane = fxmlLoader.load();
 				principalWindow.setRight(Pane);
+				
 
     		} catch (IOException ioException) {
 				ioException.printStackTrace();

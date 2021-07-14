@@ -2,8 +2,7 @@ package ui;
 
 import java.time.LocalDate;
 import exceptions.EmptyDataException;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -12,9 +11,11 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import model.Church;
 import javafx.scene.control.Alert.AlertType;
 
 public class RegisterController {
+	private Church myChurch;
 	
 	@FXML
     private TextField nameField;
@@ -49,6 +50,10 @@ public class RegisterController {
     @FXML
     private TextArea observationsField;
     
+    public  RegisterController(Church myChurch) {
+    	this.myChurch = myChurch;
+	}
+    
     @FXML
     public void initialize() {
     	loadGender();
@@ -76,11 +81,15 @@ public class RegisterController {
    }
     
     private void loadSectorType() {
-    	if()
+    	for (int i = 0; i < myChurch.getTheSectors().size(); i++) {
+			sectorType.getItems().add(myChurch.getTheSectors().get(i).getName());
+		}
     }
     
     private void loadCommittees() {
-    	
+    	for (int i = 0; i < myChurch.getTheCommittees().size(); i++) {
+			sectorType.getItems().add(myChurch.getTheCommittees().get(i).getName());
+		}
     }
     
     

@@ -45,7 +45,7 @@ public class Sector {
 	}
 	*/
 	
-	public void addMember(Member m) {
+	public void addMemberToSector(Member m) {
 		membersList.add(m);
 	}
 }

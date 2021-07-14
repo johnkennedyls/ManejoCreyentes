@@ -92,19 +92,30 @@ public class Church {
 		Sector theSector = null;
 		Committee theCommittee = null;
 		
-		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector, committee);
+		theMember = new Member(name, idNumber, gender, birthday, baptized, active, observations, phoneNumber, sector, committee, charge);
 		
 		generalMembers.add(theMember);
 		
 		if (theMember.getSector() != "ninguno") {
 			//theSector.getMembersList().add(theMember);
-			for (int i = 0; i < theSector.getMembersList().size(); i++) {
-				if (theSector.getMembersList().get(i).equals(theMember.getSector())) {
-					theSector.getMembersList().add(theMember);
+			for (int i = 0; i < theSectors.size(); i++) {
+				if (theMember.getSector().equalsIgnoreCase(theSectors.get(i).getName())) {
+					theSectors.get(i).addMemberToSector(theMember);
+				}else {
+					createSector(theMember.getSector());
+					theSectors.get(theSectors.size()-1).addMemberToSector(theMember);;
 				}
 			}
 			if (theMember.getCommittee() != "ninguno") {
-				theCommittee.getcMembersList().add(theMember);
+				//theCommittee.getcMembersList().add(theMember);
+				for (int i = 0; i < theCommittees.size(); i++) {
+					if (theMember.getCommittee().equalsIgnoreCase(theCommittees.get(i).getName())) {
+						theCommittees.get(i).addMemberToCommittee(theMember);
+					}else {
+						createCommittee(theMember.getCommittee());
+						theCommittees.get(theCommittees.size()-1).addMemberToCommittee(theMember);
+					}
+				}
 			}
 		} 
 	}
@@ -121,13 +132,21 @@ public class Church {
 			String[] split = line.split(";");
 
 			Member member = new Member(split[0], split[1], split[2], split[3],
-					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9],OfficeType.valueOf(split[10]));
+					Boolean.parseBoolean(split[4]),Boolean.parseBoolean(split[5]), split[6], split[7], split[8], split[9] ,OfficeType.valueOf(split[10]));
 			
 
 			generalMembers.add(member);
 			line = br.readLine();
 		}
 
+	}
+	
+	public void createCommittee(String name) {
+		
+		Committee theCommittee;
+		
+		theCommittee = new Committee(name);
+		theCommittees.add(theCommittee);
 	}
 
 	public void createSector(String name) {
@@ -167,11 +186,11 @@ public class Church {
 		for (int i = 0; i < generalMembers.size(); i++) {
 			if (existSector(generalMembers.get(i).getSector())) {
 				Sector s = searchSector(generalMembers.get(i).getSector());
-				s.addMember(generalMembers.get(i));
+				s.addMemberToSector(generalMembers.get(i));
 			} else {
 				createSector(generalMembers.get(i).getSector());
 				Sector s = searchSector(generalMembers.get(i).getSector());
-				s.addMember(generalMembers.get(i));
+				s.addMemberToSector(generalMembers.get(i));
 			}
 		}
 
@@ -248,7 +267,7 @@ public class Church {
 			}
 		}
 		Collections.sort(notBirthayPeople, new BirthayComparator());
-		//System.out.println(notBirthayPeople.get(0).getName());
+		System.out.println(notBirthayPeople.get(0).getName());
 		return notBirthayPeople;
 	}
 }

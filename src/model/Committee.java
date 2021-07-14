@@ -33,4 +33,7 @@ public class Committee {
 		return cMembersList;
 	}
 
+	public void addMemberToCommittee(Member m) {
+		cMembersList.add(m);
+	}
 }

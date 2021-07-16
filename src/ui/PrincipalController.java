@@ -88,11 +88,11 @@ public class PrincipalController {
 	    }
 		
 		@FXML
-	    void openRecords(ActionEvent event) {
+	    void openBirthdays(ActionEvent event) {
 			try {
-				BirthdaysController recordsController = new BirthdaysController(myChurch);
-    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/records.fxml"));
-    			fxmlLoader.setController(recordsController);
+				BirthdaysController birthdaysController = new BirthdaysController(myChurch);
+    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/birthdays.fxml"));
+    			fxmlLoader.setController(birthdaysController);
 				Parent Pane = fxmlLoader.load();
 				principalWindow.setRight(Pane);
 

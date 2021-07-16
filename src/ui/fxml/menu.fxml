@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane prefHeight="600.0" prefWidth="800.0">
         <columnConstraints>
@@ -36,11 +36,11 @@
                         <Insets />
                      </opaqueInsets>
                      <children>
-                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openOptions" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openFollowers" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
                            <children>
                               <HBox layoutY="120.0" prefHeight="40.0" prefWidth="120.0">
                                  <children>
-                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue; -fx-border-style: ;">
+                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue;">
                                        <children>
                                           <Label layoutX="22.0" layoutY="8.0" text="Creyentes" textFill="DODGERBLUE">
                                              <font>
@@ -53,11 +53,11 @@
                               </HBox>
                            </children>
                         </Pane>
-                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openCommittees" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
                            <children>
                               <HBox layoutY="120.0" prefHeight="40.0" prefWidth="120.0">
                                  <children>
-                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue; -fx-border-style: ;">
+                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue;">
                                        <children>
                                           <Label layoutX="25.0" layoutY="8.0" text="Sectores" textFill="DODGERBLUE">
                                              <font>
@@ -70,11 +70,11 @@
                               </HBox>
                            </children>
                         </Pane>
-                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openOptions" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
                            <children>
                               <HBox layoutY="120.0" prefHeight="40.0" prefWidth="120.0">
                                  <children>
-                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue; -fx-border-style: ;">
+                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue;">
                                        <children>
                                           <Label layoutX="29.0" layoutY="7.0" text="Comites" textFill="DODGERBLUE">
                                              <font>
@@ -94,11 +94,11 @@
                         <Insets />
                      </opaqueInsets>
                      <children>
-                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openRecords" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
                            <children>
                               <HBox layoutY="120.0" prefHeight="40.0" prefWidth="120.0">
                                  <children>
-                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue; -fx-border-style: ;">
+                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue;">
                                        <children>
                                           <Label layoutX="13.0" layoutY="8.0" prefHeight="25.0" prefWidth="96.0" text="Cumpleaños" textFill="DODGERBLUE">
                                              <font>
@@ -111,13 +111,13 @@
                               </HBox>
                            </children>
                         </Pane>
-                        <Pane layoutX="370.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openOptions" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
                            <children>
                               <HBox layoutY="120.0" prefHeight="40.0" prefWidth="120.0">
                                  <children>
-                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue; -fx-border-style: ;">
+                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue;">
                                        <children>
-                                          <Label layoutX="19.0" layoutY="6.0" text="Opciones" textFill="DODGERBLUE">
+                                          <Label layoutX="36.0" layoutY="8.0" text="Visitas" textFill="DODGERBLUE">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
@@ -128,13 +128,13 @@
                               </HBox>
                            </children>
                         </Pane>
-                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openOptions" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
+                        <Pane layoutX="370.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
                            <children>
                               <HBox layoutY="120.0" prefHeight="40.0" prefWidth="120.0">
                                  <children>
-                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue; -fx-border-style: ;">
+                                    <Pane prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: WHITE; -fx-border-width: 0px 1px 1px 1px; -fx-border-color: royalBlue;">
                                        <children>
-                                          <Label layoutX="36.0" layoutY="8.0" text="Visitas" textFill="DODGERBLUE">
+                                          <Label layoutX="19.0" layoutY="6.0" text="Opciones" textFill="DODGERBLUE">
                                              <font>
                                                 <Font name="System Bold" size="16.0" />
                                              </font>

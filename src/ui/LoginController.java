@@ -68,9 +68,9 @@ public class LoginController {
 	}
 
 	private void openPrincipalWindow() throws IOException {
-		PrincipalController principalController = new PrincipalController(myChurch);
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/principal.fxml"));
-		fxmlLoader.setController(principalController);
+		MenuController menuController = new MenuController(myChurch);
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/menu.fxml"));
+		fxmlLoader.setController(menuController);
 		Parent root = fxmlLoader.load();
 
 		Scene scene = new Scene(root);

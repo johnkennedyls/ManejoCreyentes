@@ -17,7 +17,8 @@
                   <Button minWidth="112.0" mnemonicParsing="false" onAction="#openOptions" style="-fx-background-color: transparent;" text="Opciones" textFill="WHITE" />
                </children>
             </VBox>
-            <Button layoutX="25.0" layoutY="572.0" minWidth="112.0" mnemonicParsing="false" onAction="#logOff" style="-fx-background-color: transparent;" text="Cerrar sesión" textFill="WHITE" AnchorPane.bottomAnchor="32.0" />
+            <Button layoutX="25.0" layoutY="561.0" minWidth="112.0" mnemonicParsing="false" onAction="#logOff" style="-fx-background-color: transparent;" text="Cerrar sesión" textFill="WHITE" AnchorPane.bottomAnchor="14.0" />
+            <Button layoutX="25.0" layoutY="536.0" minWidth="112.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: transparent;" text="Volver" textFill="WHITE" />
          </children>
       </AnchorPane>
    </left>

@@ -16,16 +16,18 @@ public class PrincipalController {
 		@FXML
 		private BorderPane principalWindow;
 		
+		private String startingWindow;
 		
-		public  PrincipalController(Church myChurch) throws IOException {
+		public  PrincipalController(Church myChurch, String startingWindow) throws IOException {
 			this.myChurch = myChurch;
-			
+			this.startingWindow = startingWindow;
 			
 		}
 		@FXML
 	    public void initialize() {
-	        openFollowers();
-			
+			if (startingWindow.equals("Followers")) {
+				openFollowers();
+			}
 			
 	    }
 	
@@ -34,6 +36,32 @@ public class PrincipalController {
     		openFollowers();
     		
     	}
+    	
+    	@FXML
+        void goBack(ActionEvent event) {
+    		try {
+    			openMenu();
+    			principalWindow.getScene().getWindow().hide();
+
+    		} catch (IOException ioException) {
+				ioException.printStackTrace();
+				
+			}
+        }
+    	
+    	private void openMenu() throws IOException{
+    		MenuController menuController = new MenuController(myChurch);
+    		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/menu.fxml"));
+    		fxmlLoader.setController(menuController);
+    		Parent root = fxmlLoader.load();
+
+    		Scene scene = new Scene(root);
+    		Stage secondaryStage = new Stage();
+    		secondaryStage.setScene(scene);
+    		secondaryStage.setTitle("Principal");
+    		secondaryStage.setResizable(false);
+    		secondaryStage.show();
+        }
     	
     	@FXML
         void logOff(ActionEvent event) {

@@ -26,7 +26,7 @@ public class MemberInfoController {
     
     private void loadInfo() {
     	try {
-    		InfoController infoController = new InfoController(church);
+    		InfoController infoController = new InfoController(church,mainPane);
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/info.fxml"));
 			fxmlLoader.setController(infoController);
 			Parent Pane = fxmlLoader.load();

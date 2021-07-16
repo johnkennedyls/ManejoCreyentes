@@ -6,14 +6,41 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.stage.Stage;
+import javafx.scene.control.TextField;
 import model.Church;
 
-public class RecordsController {
+public class SearchController {
 	@FXML
+    private TextField nameField;
+
+    @FXML
+    private TextField idField;
+
+    @FXML
+    private TextField genderField;
+
+    @FXML
+    private TextField phoneNumberField;
+
+    @FXML
+    private CheckBox baptizedCB;
+
+    @FXML
+    private CheckBox activeCB;
+
+    @FXML
+    private ComboBox<?> sectorType;
+
+    @FXML
+    private ComboBox<?> committee1;
+    
+    
+
+    @FXML
     private TableView<?> members;
 
     @FXML
@@ -45,7 +72,7 @@ public class RecordsController {
     
     private Church church;
     
-    public RecordsController(Church church) {
+    public SearchController(Church church) {
 		this.church = church;
 	}
     
@@ -54,35 +81,14 @@ public class RecordsController {
     	loadMembers();
 		
     }
-   
+    
     private void loadMembers() {
     	
     }
     
     @FXML
-    void showMore(ActionEvent event) {
-    	try {
-			openMemberInfo();
-		} catch (IOException ioException) {
-			ioException.printStackTrace();
-			
-		}
+    void search(ActionEvent event) {
     	
-    }
-    
-    private void openMemberInfo() throws IOException{
-		MemberInfoController memberInfoController = new MemberInfoController(church);
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/memberInfo.fxml"));
-		fxmlLoader.setController(memberInfoController);
-		Parent root = fxmlLoader.load();
-
-		Scene scene = new Scene(root);
-		Stage secondaryStage = new Stage();
-		secondaryStage.setScene(scene);
-		secondaryStage.setTitle("Información");
-		secondaryStage.setResizable(false);
-		secondaryStage.show();
-		
     }
     
 }

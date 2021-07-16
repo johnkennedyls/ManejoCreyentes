@@ -11,7 +11,7 @@
          <children>
             <VBox alignment="CENTER" layoutX="1.0" layoutY="215.0" prefHeight="187.0" prefWidth="160.0" spacing="40.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#openRegister" prefWidth="112.0" style="-fx-background-color: transparent;" text="Registrar" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#openFollowers" prefWidth="112.0" style="-fx-background-color: transparent;" text="Creyentes" textFill="WHITE" />
                   <Button minWidth="112.0" mnemonicParsing="false" onAction="#openCommittees" style="-fx-background-color: transparent;" text="Sectores" textFill="WHITE" />
                   <Button minWidth="112.0" mnemonicParsing="false" onAction="#openRecords" style="-fx-background-color: transparent;" text="Registros/Cumpleaños" textFill="WHITE" />
                   <Button minWidth="112.0" mnemonicParsing="false" onAction="#openOptions" style="-fx-background-color: transparent;" text="Opciones" textFill="WHITE" />

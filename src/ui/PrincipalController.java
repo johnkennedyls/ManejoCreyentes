@@ -1,9 +1,6 @@
 package ui;
 
 import java.io.IOException;
-
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,15 +24,14 @@ public class PrincipalController {
 		}
 		@FXML
 	    public void initialize() {
-			
-	        openRegister();
+	        openFollowers();
 			
 			
 	    }
 	
     	@FXML
-    	void openRegister(ActionEvent event) {
-    		openRegister();
+    	void openFollowers(ActionEvent event) {
+    		openFollowers();
     		
     	}
     	
@@ -61,11 +57,11 @@ public class PrincipalController {
     		secondaryStage.show();
         }
     	
-    	private void openRegister() {
+    	private void openFollowers() {
     		try {
-    			RegisterController registerController = new RegisterController(myChurch);
-    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/register.fxml"));
-    			fxmlLoader.setController(registerController);
+    			FollowersController followersController = new FollowersController(myChurch);
+    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/followers.fxml"));
+    			fxmlLoader.setController(followersController);
 				Parent Pane = fxmlLoader.load();
 				principalWindow.setRight(Pane);
 				
@@ -94,7 +90,7 @@ public class PrincipalController {
 		@FXML
 	    void openRecords(ActionEvent event) {
 			try {
-				RecordsController recordsController = new RecordsController(myChurch);
+				BirthdaysController recordsController = new BirthdaysController(myChurch);
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/records.fxml"));
     			fxmlLoader.setController(recordsController);
 				Parent Pane = fxmlLoader.load();

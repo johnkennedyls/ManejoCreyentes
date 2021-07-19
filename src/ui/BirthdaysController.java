@@ -23,22 +23,7 @@ public class BirthdaysController {
     private TableView<Member> birthdays;
 
     @FXML
-    private TableColumn<Member, String> name;
-
-    @FXML
-    private TableColumn<Member, String> idNumber;
-
-    @FXML
-    private TableColumn<Member, String> gender;
-
-    @FXML
-    private TableColumn<Member, String> birthday;
-
-    @FXML
-    private TableColumn<Member, Boolean> baptized;
-
-    @FXML
-    private TableColumn<Member, Boolean> active;
+    private TableColumn<Member, String> name;   
 
     @FXML
     private TableColumn<Member, String> phoneNumber;
@@ -46,38 +31,15 @@ public class BirthdaysController {
     @FXML
     private TableColumn<Member, String> sector;
 
-    @FXML
-    private TableColumn<Member, String> committee;
-
+   
     @FXML
     private TableView<Member> upcomingbirthdays;
 
     @FXML
     private TableColumn<Member, String> UName;
-
+   
     @FXML
-    private TableColumn<Member, String> UIdNumber;
-
-    @FXML
-    private TableColumn<Member, String> UGender;
-
-    @FXML
-    private TableColumn<Member, String> UBirthday;
-
-    @FXML
-    private TableColumn<Member, Boolean> UBaptized;
-
-    @FXML
-    private TableColumn<Member, Boolean> UActive;
-
-    @FXML
-    private TableColumn<Member, String> UPhoneNumber;
-
-    @FXML
-    private TableColumn<Member, String> USector;
-
-    @FXML
-    private TableColumn<Member, String> UCommittee;
+    private TableColumn<Member, String>  UTextForUnBirthDay;;
 
     @FXML
     private TextField nameField;
@@ -155,15 +117,10 @@ public class BirthdaysController {
 		observableList = FXCollections.observableArrayList(birthdaysList);
 		birthdays.setItems(observableList);
 
-		name.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
-		idNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("idNumber"));
-		gender.setCellValueFactory(new PropertyValueFactory<Member, String>("gender"));
-		birthday.setCellValueFactory(new PropertyValueFactory<Member, String>("birthday"));
-		baptized.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("baptized"));
-		active.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("active"));
+		name.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));		
 		phoneNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("phoneNumber"));
 		sector.setCellValueFactory(new PropertyValueFactory<Member, String>("sector"));
-		committee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
+		
 	}
     
     private void loadUpcomingBirthdaysTable(List<Member> upcomingbirthday) {
@@ -172,14 +129,8 @@ public class BirthdaysController {
 		upcomingbirthdays.setItems(observableList);
 
 		UName.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
-		UIdNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("idNumber"));
-		UGender.setCellValueFactory(new PropertyValueFactory<Member, String>("gender"));
-		UBirthday.setCellValueFactory(new PropertyValueFactory<Member, String>("birthday"));
-		UBaptized.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("baptized"));
-		UActive.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("active"));
-		UPhoneNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("phoneNumber"));
-		USector.setCellValueFactory(new PropertyValueFactory<Member, String>("sector"));
-		UCommittee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
+		
+		UTextForUnBirthDay.setCellValueFactory(new PropertyValueFactory<Member, String>("textForUnbirthday"));
 	}
     
 }

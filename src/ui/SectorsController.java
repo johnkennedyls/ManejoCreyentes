@@ -7,7 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import model.Church;
 
-public class CommitteesController {
+public class SectorsController {
 	@FXML
     private ComboBox<?> sectorOne;
 
@@ -76,7 +76,7 @@ public class CommitteesController {
     
     private Church church;
     
-    public CommitteesController(Church church) {
+    public SectorsController(Church church) {
 		this.church = church;
 	}
     

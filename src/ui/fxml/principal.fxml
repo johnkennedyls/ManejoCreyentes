@@ -9,11 +9,13 @@
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="161.0" style="-fx-background-color: DODGERBLUE;" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="CENTER" layoutX="1.0" layoutY="215.0" prefHeight="187.0" prefWidth="160.0" spacing="40.0">
+            <VBox alignment="CENTER" layoutX="1.0" layoutY="125.0" prefHeight="187.0" prefWidth="160.0" spacing="40.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#openFollowers" prefWidth="112.0" style="-fx-background-color: transparent;" text="Creyentes" textFill="WHITE" />
-                  <Button minWidth="112.0" mnemonicParsing="false" onAction="#openCommittees" style="-fx-background-color: transparent;" text="Sectores" textFill="WHITE" />
+                  <Button minWidth="112.0" mnemonicParsing="false" onAction="#openSectors" style="-fx-background-color: transparent;" text="Sectores" textFill="WHITE" />
+                  <Button layoutX="34.0" layoutY="75.0" minWidth="112.0" mnemonicParsing="false" onAction="#openCommittees" style="-fx-background-color: transparent;" text="Comités" textFill="WHITE" />
                   <Button minWidth="112.0" mnemonicParsing="false" onAction="#openBirthdays" style="-fx-background-color: transparent;" text="Cumpleaños" textFill="WHITE" />
+                  <Button layoutX="34.0" layoutY="205.0" minWidth="112.0" mnemonicParsing="false" onAction="#openVisits" style="-fx-background-color: transparent;" text="Visitas" textFill="WHITE" />
                   <Button minWidth="112.0" mnemonicParsing="false" onAction="#openOptions" style="-fx-background-color: transparent;" text="Opciones" textFill="WHITE" />
                </children>
             </VBox>

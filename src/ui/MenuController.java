@@ -24,7 +24,7 @@ public class MenuController {
 	@FXML
     void openFollowers(MouseEvent event) {
 		try {
-			openPrincipalWindow();
+			openPrincipalWindow("Followers");
 			
 			mainPane.getScene().getWindow().hide();
 			
@@ -34,8 +34,68 @@ public class MenuController {
 		
     }
 	
-	private void openPrincipalWindow() throws IOException {
-		PrincipalController principalController = new PrincipalController(church,"Followers");
+    @FXML
+    void openSectors(MouseEvent event) {
+    	try {
+			openPrincipalWindow("Sectors");
+			
+			mainPane.getScene().getWindow().hide();
+			
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+    }
+    
+    @FXML
+    void openCommittees(MouseEvent event) {
+    	try {
+			openPrincipalWindow("Committees");
+			
+			mainPane.getScene().getWindow().hide();
+			
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+    }
+    
+	@FXML
+    void openBirthdays(MouseEvent event) {
+		try {
+			openPrincipalWindow("Birthdays");
+			
+			mainPane.getScene().getWindow().hide();
+			
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+    }
+	
+    @FXML
+    void openVisits(MouseEvent event) {
+    	try {
+			openPrincipalWindow("Visits");
+			
+			mainPane.getScene().getWindow().hide();
+			
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+    }
+	
+    @FXML
+    void openOptions(MouseEvent event) {
+    	try {
+			openPrincipalWindow("Options");
+			
+			mainPane.getScene().getWindow().hide();
+			
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+		}
+    }
+	
+	private void openPrincipalWindow(String startingWindow) throws IOException {
+		PrincipalController principalController = new PrincipalController(church,startingWindow);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/principal.fxml"));
 		fxmlLoader.setController(principalController);
 		Parent root = fxmlLoader.load();

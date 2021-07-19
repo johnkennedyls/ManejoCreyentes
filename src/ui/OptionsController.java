@@ -8,8 +8,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Church;
 
 public class OptionsController {
+	
+	private Church church;
+    
+    public OptionsController(Church church) {
+		this.church = church;
+	}
+    
 	@FXML
     void changePassword(ActionEvent event) {
 		try {

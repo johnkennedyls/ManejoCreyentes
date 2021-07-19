@@ -9,10 +9,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -52,30 +54,23 @@ public class LoginController {
 			ioException.printStackTrace();
 
 		} catch (InvalidUserException invalidUserException) {
-			invalidUserException.printStackTrace();
+			invaliduserAlert();
 
 		}
 
 	}
-/*
-	private void openPrincipalWindow() throws IOException {
-		RecordsController recordsController = new RecordsController(myChurch);
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/records.fxml"));
-		fxmlLoader.setController(recordsController);
-		Parent root = fxmlLoader.load();
-
-		Scene scene = new Scene(root);
-		Stage secondaryStage = new Stage();
-		secondaryStage.setScene(scene);
-		secondaryStage.setTitle("Principal");
-		secondaryStage.setResizable(false);
-		secondaryStage.show();
+	
+	private void invaliduserAlert() {
+		Alert emptyFieldsAlert = new Alert(AlertType.ERROR);
+    	emptyFieldsAlert.setTitle("Usuario o contraseña invalidos.");
+    	emptyFieldsAlert.setHeaderText("EL usuario y/o la contrasña ingresados son incorrectos.");
+    	emptyFieldsAlert.showAndWait();
 	}
-	*/
+
 	private void openPrincipalWindow() throws IOException {
-		PrincipalController principalController = new PrincipalController(myChurch);
-		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/principal.fxml"));
-		fxmlLoader.setController(principalController);
+		MenuController menuController = new MenuController(myChurch);
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/menu.fxml"));
+		fxmlLoader.setController(menuController);
 		Parent root = fxmlLoader.load();
 
 		Scene scene = new Scene(root);

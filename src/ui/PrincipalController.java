@@ -1,9 +1,6 @@
 package ui;
 
 import java.io.IOException;
-
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,25 +16,52 @@ public class PrincipalController {
 		@FXML
 		private BorderPane principalWindow;
 		
+		private String startingWindow;
 		
-		public  PrincipalController(Church myChurch) throws IOException {
+		public  PrincipalController(Church myChurch, String startingWindow) throws IOException {
 			this.myChurch = myChurch;
-			
+			this.startingWindow = startingWindow;
 			
 		}
 		@FXML
 	    public void initialize() {
-			
-	        openRegister();
-			
+			if (startingWindow.equals("Followers")) {
+				openFollowers();
+			}
 			
 	    }
 	
     	@FXML
-    	void openRegister(ActionEvent event) {
-    		openRegister();
+    	void openFollowers(ActionEvent event) {
+    		openFollowers();
     		
     	}
+    	
+    	@FXML
+        void goBack(ActionEvent event) {
+    		try {
+    			openMenu();
+    			principalWindow.getScene().getWindow().hide();
+
+    		} catch (IOException ioException) {
+				ioException.printStackTrace();
+				
+			}
+        }
+    	
+    	private void openMenu() throws IOException{
+    		MenuController menuController = new MenuController(myChurch);
+    		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/menu.fxml"));
+    		fxmlLoader.setController(menuController);
+    		Parent root = fxmlLoader.load();
+
+    		Scene scene = new Scene(root);
+    		Stage secondaryStage = new Stage();
+    		secondaryStage.setScene(scene);
+    		secondaryStage.setTitle("Principal");
+    		secondaryStage.setResizable(false);
+    		secondaryStage.show();
+        }
     	
     	@FXML
         void logOff(ActionEvent event) {
@@ -61,11 +85,11 @@ public class PrincipalController {
     		secondaryStage.show();
         }
     	
-    	private void openRegister() {
+    	private void openFollowers() {
     		try {
-    			RegisterController registerController = new RegisterController(myChurch);
-    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/register.fxml"));
-    			fxmlLoader.setController(registerController);
+    			FollowersController followersController = new FollowersController(myChurch);
+    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/followers.fxml"));
+    			fxmlLoader.setController(followersController);
 				Parent Pane = fxmlLoader.load();
 				principalWindow.setRight(Pane);
 				
@@ -92,11 +116,11 @@ public class PrincipalController {
 	    }
 		
 		@FXML
-	    void openRecords(ActionEvent event) {
+	    void openBirthdays(ActionEvent event) {
 			try {
-				RecordsController recordsController = new RecordsController(myChurch);
-    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/records.fxml"));
-    			fxmlLoader.setController(recordsController);
+				BirthdaysController birthdaysController = new BirthdaysController(myChurch);
+    			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/birthdays.fxml"));
+    			fxmlLoader.setController(birthdaysController);
 				Parent Pane = fxmlLoader.load();
 				principalWindow.setRight(Pane);
 

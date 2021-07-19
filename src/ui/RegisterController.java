@@ -92,8 +92,6 @@ public class RegisterController {
 		}
     }
     
-    
-    
     private void validateEmptyFields() throws EmptyDataException{
     	if (nameField.getText().equals("")) {
 			throw new EmptyDataException();
@@ -122,7 +120,5 @@ public class RegisterController {
     	emptyFieldsAlert.showAndWait();
 
     }
-    
-   
-    
+
 }

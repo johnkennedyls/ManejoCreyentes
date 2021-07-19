@@ -51,6 +51,10 @@ public class Member {
 	 */
 	private OfficeType charge;
 	
+	private String textForUnbirthday;
+	
+	private int daysForBirthay;
+	
 	/**
 	 * Initialize a new member
 	 * @param name:String Represents member name
@@ -241,6 +245,22 @@ public class Member {
 	public void setCharge(OfficeType charge) {
 		this.charge = charge;
 	}
+	
+	
+	public String getTextForUnbirthday() {
+		return textForUnbirthday;
+	}
+	public void setTextForUnbirthday(String textForUnbirthday) {
+		this.textForUnbirthday = textForUnbirthday;
+	}
+	public int getDaysForBirthay() {
+		return daysForBirthay;
+	}
+	public void setDaysForBirthay(int daysForBirthay) {
+		this.daysForBirthay = daysForBirthay;
+	}
+	
+	
 	
 	
 	

@@ -1,6 +1,7 @@
 package model;
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -249,6 +250,8 @@ public class Church {
 		ArrayList<Member> notBirthayPeople = new ArrayList<Member>();
 		for (Member member : generalMembers) {
 			try {
+				
+				String textForUnbirthDay = "";
 				/* Fecha actual */
 				LocalDate today = LocalDate.now();
 
@@ -267,8 +270,10 @@ public class Church {
 				/* Cuando totalDias=365 hoy es el cumpleaños */
 
 				if (totalDias != 365) {
-					System.out.println("Restan " + p.getMonths() + " meses, y " + p.getDays()
-							+ " días para su próximo cumpleaños. (" + totalDias + " días en total)");
+					textForUnbirthDay = "Restan " + p.getMonths() + " meses, y " + p.getDays()
+					+ " días para su próximo cumpleaños. (" + totalDias + " días en total)";
+					member.setTextForUnbirthday(textForUnbirthDay);
+					member.setDaysForBirthay((int) totalDias);
 					notBirthayPeople.add(member);
 
 				}
@@ -277,7 +282,12 @@ public class Church {
 			}
 		}
 		Collections.sort(notBirthayPeople, new BirthayComparator());
-		System.out.println(notBirthayPeople.get(0).getName());
+		for (Member member : notBirthayPeople) {
+			System.out.println(member.getTextForUnbirthday());
+		}
 		return notBirthayPeople;
 	}
+	
+	//Hacer un sort de los mensajes de cuanto falta
+	
 }

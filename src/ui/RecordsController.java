@@ -15,160 +15,163 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.*;
 
 public class RecordsController {
-	
+
 	private Church myChurch;
-	
-	
+
 	@FXML
-    private TableView<Member> birthdays;
+	private TableView<Member> birthdays;
 
-    @FXML
-    private TableColumn<Member, String> name;
+	@FXML
+	private TableColumn<Member, String> name;
+/*
+	@FXML
+	private TableColumn<Member, String> idNumber;
 
-    @FXML
-    private TableColumn<Member, String> idNumber;
+	@FXML
+	private TableColumn<Member, String> gender;
 
-    @FXML
-    private TableColumn<Member, String> gender;
+	@FXML
+	private TableColumn<Member, String> birthday;
 
-    @FXML
-    private TableColumn<Member, String> birthday;
+	@FXML
+	private TableColumn<Member, Boolean> baptized;
 
-    @FXML
-    private TableColumn<Member, Boolean> baptized;
+	@FXML
+	private TableColumn<Member, Boolean> active;
+*/
+	@FXML
+	private TableColumn<Member, String> phoneNumber;
 
-    @FXML
-    private TableColumn<Member, Boolean> active;
+	@FXML
+	private TableColumn<Member, String> sector;
+/*
+	@FXML
+	private TableColumn<Member, String> committee;
+*/
+	@FXML
+	private TableView<Member> upcomingbirthdays;
 
-    @FXML
-    private TableColumn<Member, String> phoneNumber;
+	@FXML
+	private TableColumn<Member, String> UName;
 
-    @FXML
-    private TableColumn<Member, String> sector;
+	@FXML
+	private TableColumn<Member, String> UIdNumber;
 
-    @FXML
-    private TableColumn<Member, String> committee;
+	@FXML
+	private TableColumn<Member, String> UGender;
 
-    @FXML
-    private TableView<Member> upcomingbirthdays;
+	@FXML
+	private TableColumn<Member, String> UBirthday;
 
-    @FXML
-    private TableColumn<Member, String> UName;
+	@FXML
+	private TableColumn<Member, Boolean> UBaptized;
 
-    @FXML
-    private TableColumn<Member, String> UIdNumber;
+	@FXML
+	private TableColumn<Member, Boolean> UActive;
 
-    @FXML
-    private TableColumn<Member, String> UGender;
+	@FXML
+	private TableColumn<Member, String> UPhoneNumber;
 
-    @FXML
-    private TableColumn<Member, String> UBirthday;
+	@FXML
+	private TableColumn<Member, String> USector;
 
-    @FXML
-    private TableColumn<Member, Boolean> UBaptized;
+	@FXML
+	private TableColumn<Member, String> UCommittee;
 
-    @FXML
-    private TableColumn<Member, Boolean> UActive;
+	@FXML
+	private TextField nameField;
 
-    @FXML
-    private TableColumn<Member, String> UPhoneNumber;
+	@FXML
+	private TextField idField;
 
-    @FXML
-    private TableColumn<Member, String> USector;
+	@FXML
+	private TextField genderField;
 
-    @FXML
-    private TableColumn<Member, String> UCommittee;
+	@FXML
+	private TextField phoneNumberField;
 
-    @FXML
-    private TextField nameField;
+	@FXML
+	private CheckBox baptizedCB;
 
-    @FXML
-    private TextField idField;
+	@FXML
+	private CheckBox activeCB;
 
-    @FXML
-    private TextField genderField;
+	@FXML
+	private ComboBox<?> sectorType;
 
-    @FXML
-    private TextField phoneNumberField;
+	@FXML
+	private ComboBox<?> committee1;
 
-    @FXML
-    private CheckBox baptizedCB;
+	@FXML
+	private TableView<?> members;
 
-    @FXML
-    private CheckBox activeCB;
+	@FXML
+	private TableColumn<?, ?> MName;
 
-    @FXML
-    private ComboBox<?> sectorType;
+	@FXML
+	private TableColumn<?, ?> MIdNumber;
 
-    @FXML
-    private ComboBox<?> committee1;
+	@FXML
+	private TableColumn<?, ?> MGender;
 
-    @FXML
-    private TableView<?> members;
+	@FXML
+	private TableColumn<?, ?> MBirthday;
 
-    @FXML
-    private TableColumn<?, ?> MName;
+	@FXML
+	private TableColumn<?, ?> MBaptized;
 
-    @FXML
-    private TableColumn<?, ?> MIdNumber;
+	@FXML
+	private TableColumn<?, ?> MActive;
 
-    @FXML
-    private TableColumn<?, ?> MGender;
+	@FXML
+	private TableColumn<?, ?> MPhoneNumber;
 
-    @FXML
-    private TableColumn<?, ?> MBirthday;
+	@FXML
+	private TableColumn<?, ?> MSector;
 
-    @FXML
-    private TableColumn<?, ?> MBaptized;
+	@FXML
+	private TableColumn<?, ?> MCommittee;
 
-    @FXML
-    private TableColumn<?, ?> MActive;
-
-    @FXML
-    private TableColumn<?, ?> MPhoneNumber;
-
-    @FXML
-    private TableColumn<?, ?> MSector;
-
-    @FXML
-    private TableColumn<?, ?> MCommittee;
-    
-    
-    
-    public  RecordsController( Church myChurch) {
+	public RecordsController(Church myChurch) {
 		this.myChurch = myChurch;
 	}
 
-    @FXML
-    void search(ActionEvent event) {
-    	
-    }
-    @FXML
-    public void initialize() {
-    	loadBirthdaysTable(myChurch.ToListodayBirthays());
+	@FXML
+	void search(ActionEvent event) {
+
+	}
+
+	@FXML
+	public void initialize() {
+		loadBirthdaysTable(myChurch.ToListodayBirthays());
 		loadUpcomingBirthdaysTable(myChurch.ToListnextBirthays());
-		
-    }
-    
-    private void loadBirthdaysTable(List<Member> birthdaysList) {
+
+	}
+
+	private void loadBirthdaysTable(List<Member> birthdaysList) {
 		ObservableList<Member> observableList;
 		observableList = FXCollections.observableArrayList(birthdaysList);
 		birthdays.setItems(observableList);
 
 		name.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
-		idNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("idNumber"));
-		gender.setCellValueFactory(new PropertyValueFactory<Member, String>("gender"));
-		birthday.setCellValueFactory(new PropertyValueFactory<Member, String>("birthday"));
-		baptized.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("baptized"));
-		active.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("active"));
+		// idNumber.setCellValueFactory(new PropertyValueFactory<Member,
+		// String>("idNumber"));
+		// gender.setCellValueFactory(new PropertyValueFactory<Member,
+		// String>("gender"));
+		// birthday.setCellValueFactory(new PropertyValueFactory<Member,
+		// String>("birthday"));
+        //baptized.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("baptized"));
+		// active.setCellValueFactory(new PropertyValueFactory<Member,
+		// Boolean>("active"));
 		phoneNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("phoneNumber"));
 		sector.setCellValueFactory(new PropertyValueFactory<Member, String>("sector"));
-		committee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
+		// committee.setCellValueFactory(new PropertyValueFactory<Member,
+		// String>("committee"));
 	}
-    
-    private void loadUpcomingBirthdaysTable(List<Member> upcomingbirthday) {
+
+	private void loadUpcomingBirthdaysTable(List<Member> upcomingbirthday) {
 		ObservableList<Member> observableList;
-		observableList = FXCollections.observableArrayList(upcomingbirthday);		
+		observableList = FXCollections.observableArrayList(upcomingbirthday);
 		upcomingbirthdays.setItems(observableList);
 
 		UName.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
@@ -181,5 +184,5 @@ public class RecordsController {
 		USector.setCellValueFactory(new PropertyValueFactory<Member, String>("sector"));
 		UCommittee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
 	}
-    
+
 }

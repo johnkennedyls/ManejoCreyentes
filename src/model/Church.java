@@ -68,17 +68,7 @@ public class Church {
 		this.city = city;
 	}
 
-	
-//	public Minister getMinister() {
-//		return minister;
-//	}
-//
-//	public void setMinister(String name, String password) {
-//		
-//		Minister tempMinister = new Minister(name, password);
-//		this.minister = tempMinister;
-//		
-//	}
+
 
 
 	public List<Sector> getTheSectors() {
@@ -93,6 +83,20 @@ public class Church {
 
 	public void setTheCommittees(List<Committee> theCommittees) {
 		this.theCommittees = theCommittees;
+	}
+	
+	
+
+	public List<Member> getGeneralMembers() {
+		return generalMembers;
+	}
+
+	public void setGeneralMembers(List<Member> generalMembers) {
+		this.generalMembers = generalMembers;
+	}
+
+	public void setTheSectors(List<Sector> theSectors) {
+		this.theSectors = theSectors;
 	}
 
 	@SuppressWarnings("null")

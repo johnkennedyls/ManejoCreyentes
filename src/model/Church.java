@@ -334,4 +334,47 @@ public class Church {
 		return returned;
 	}
 	
+public List<Member> buscarPorBautizados(boolean vf) {
+		
+		List<Member> listafinal = new ArrayList<Member>();
+		for (int i = 0; i < generalMembers.size(); i++) {
+			if (generalMembers.get(i).isBaptized() == vf) {
+				listafinal.add(generalMembers.get(i));
+			}
+		}
+		return listafinal;
+	}
+	
+	public List<Member> buscarPorActivo(boolean ac) {
+		
+		List<Member> listafinal = new ArrayList<Member>();
+		for (int i = 0; i < generalMembers.size(); i++) {
+			if (generalMembers.get(i).isActive() == ac) {
+				listafinal.add(generalMembers.get(i));
+			}
+		}
+		return listafinal;
+	}
+	
+	public List<Member> buscarPorSector(String sec) {
+		
+		List<Member> listafinal = new ArrayList<Member>();
+		for (int i = 0; i < generalMembers.size(); i++) {
+			if (generalMembers.get(i).getSector().equalsIgnoreCase(sec)) {
+				listafinal.add(generalMembers.get(i));
+			}
+		}
+		return listafinal;
+	}
+	
+	public List<Member> buscarPorComite(String com) {
+		
+		List<Member> listafinal = new ArrayList<Member>();
+		for (int i = 0; i < generalMembers.size(); i++) {
+			if (generalMembers.get(i).getCommittee().equalsIgnoreCase(com)) {
+				listafinal.add(generalMembers.get(i));
+			}
+		}
+		return listafinal;
+	}
 }

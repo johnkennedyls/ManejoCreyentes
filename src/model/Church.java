@@ -1,10 +1,12 @@
 package model;
 
 import java.io.BufferedReader;
-
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -101,7 +103,7 @@ public class Church {
 
 	@SuppressWarnings("null")
 	public void createGeneralMember(String name, String idNumber, String gender, String birthday, boolean baptized,
-			boolean active, String observations, String phoneNumber, String sector, String committee, OfficeType charge) {
+			boolean active, String observations, String phoneNumber, String sector, String committee, OfficeType charge) throws IOException {
 		
 		Member theMember = null;
 		Sector theSector = null;
@@ -132,7 +134,23 @@ public class Church {
 					}
 				}
 			}
-		} 
+		}
+		writeMember(theMember);
+	}
+
+	private void writeMember(Member theMember) throws IOException {
+		
+		FileWriter fichero = null;
+		PrintWriter pw = null;
+		
+		fichero = new FileWriter("data/memberscsv.csv", true);
+		BufferedWriter bw=new BufferedWriter(fichero);
+		
+
+		bw.write(theMember.getName() + ";" + theMember.getIdNumber() + ";" + theMember.getGender()
+		+ ";" + theMember.getBirthday()+ ";" +theMember.isBaptized()+ ";" +theMember.isActive()+ ";" +
+		theMember.getObservations()+ ";" +theMember.getPhoneNumber()+ ";" +	theMember.getSector()+ ";" +theMember.getCommittee()+ ";" +theMember.getCharge());
+		bw.close();
 	}
 
 	public void readMembers(String fn) throws IOException {

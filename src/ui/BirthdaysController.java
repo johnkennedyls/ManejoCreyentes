@@ -1,5 +1,6 @@
 package ui;
 
+import java.io.IOException;
 import java.util.List;
 
 import javafx.collections.FXCollections;
@@ -106,9 +107,10 @@ public class BirthdaysController {
     	
     }
     @FXML
-    public void initialize() {
+    public void initialize() throws IOException {
     	loadBirthdaysTable(myChurch.ToListodayBirthays());
 		loadUpcomingBirthdaysTable(myChurch.ToListnextBirthays());
+		//myChurch.createGeneralMember("El nuevo paco", "24567876", "Masculino", "1998-20-07", false, false, "drgeth", "wsfdthht", "sector4", "comite2", OfficeType.AUXILIAR);
 		
     }
     

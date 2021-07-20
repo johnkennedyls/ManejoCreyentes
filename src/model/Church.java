@@ -292,6 +292,46 @@ public class Church {
 		return notBirthayPeople;
 	}
 	
-	//Hacer un sort de los mensajes de cuanto falta
+	//Searching metods
+	
+	public List<Member> searchByName(String searched) {
+		List<Member> returned = new ArrayList<Member>();
+		for (Member member : generalMembers) {
+			if(member.getName().contains(searched)) {
+				returned.add(member);
+			}
+		}
+		return returned;
+	}
+	
+	public List<Member> searchByIdNumber(String searched) {
+		List<Member> returned = new ArrayList<Member>();
+		for (Member member : generalMembers) {
+			if(member.getIdNumber().contains(searched)) {
+				returned.add(member);
+			}
+		}
+		return returned;
+	}
+	
+	public List<Member> searchByGender(String searched) {
+		List<Member> returned = new ArrayList<Member>();
+		for (Member member : generalMembers) {
+			if(member.getGender().contains(searched)) {
+				returned.add(member);
+			}
+		}
+		return returned;
+	}
+	
+	public List<Member> searchByPhoneNumber(String searched) {
+		List<Member> returned = new ArrayList<Member>();
+		for (Member member : generalMembers) {
+			if(member.getPhoneNumber().contains(searched)) {
+				returned.add(member);
+			}
+		}
+		return returned;
+	}
 	
 }

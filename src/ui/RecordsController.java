@@ -2,7 +2,6 @@ package ui;
 
 import java.io.IOException;
 import java.util.List;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,46 +19,46 @@ import model.Member;
 public class RecordsController {
 	@FXML
 	private TableView<Member> members;
-
+	
 	@FXML
 	private TableColumn<Member,String> Name;
-
+	
 	@FXML
 	private TableColumn<Member, String> IdNumber;
-
+	
 	@FXML
 	private TableColumn<Member, String> Gender;
-
+	
 	@FXML
 	private TableColumn<Member, String> Birthday;
-
+	
 	@FXML
 	private TableColumn<Member, Boolean> Baptized;
-
+	
 	@FXML
 	private TableColumn<Member, Boolean> Active;
-
+	
 	@FXML
 	private TableColumn<Member, String> PhoneNumber;
-
+	
 	@FXML
 	private TableColumn<Member, String> Sector;
-
+	
 	@FXML
 	private TableColumn<Member, String> Committee;
-
+	
 	private Church church;
-
+	
 	public RecordsController(Church church) {
 		this.church = church;
 	}
-
+	
 	@FXML
 	public void initialize() {
 		loadMembers(church.getGeneralMembers());
 
 	}
-
+	
 	private void loadMembers(List<Member> membersList) {
 
 		ObservableList<Member> observableList;
@@ -76,18 +75,19 @@ public class RecordsController {
 		Sector.setCellValueFactory(new PropertyValueFactory<Member, String>("sector"));
 		Committee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
 	}
-
+	
 	@FXML
 	void showMore(ActionEvent event) {
 		try {
 			openMemberInfo();
+			
 		} catch (IOException ioException) {
 			ioException.printStackTrace();
 
 		}
 
 	}
-
+	
 	private void openMemberInfo() throws IOException {
 		MemberInfoController memberInfoController = new MemberInfoController(church);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/memberInfo.fxml"));
@@ -102,5 +102,5 @@ public class RecordsController {
 		secondaryStage.show();
 
 	}
-
+	
 }

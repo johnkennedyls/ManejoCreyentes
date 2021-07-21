@@ -31,24 +31,6 @@
                   </Label>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-border-color: DODGERBLUE; -fx-border-width: 4px 4px 4px 4px;">
-               <children>
-                  <Button layoutX="64.0" layoutY="131.0" mnemonicParsing="false" onAction="#createSector" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: DODGERBLUE;" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../img/people.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="117.0" prefWidth="154.0" text="Crear Sector" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
          </children>
       </HBox>
    </children>

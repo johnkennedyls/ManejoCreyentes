@@ -109,4 +109,26 @@ public class CommitteesController {
 		secondaryStage.show();
 
 	}
+    
+    @FXML
+    void createCommittee(ActionEvent event) {
+    	try {
+    		openNewCommitteeWindow();
+			
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+			
+		}
+    }
+    
+    private void openNewCommitteeWindow() throws IOException{
+    	Parent root = FXMLLoader.load(getClass().getResource("fxml/newCommittee.fxml"));
+		Scene scene = new Scene(root);
+		Stage secondaryStage = new Stage();
+		secondaryStage.setScene(scene);
+		secondaryStage.setTitle("Nuevo Sector");
+		secondaryStage.setResizable(false);
+		secondaryStage.show();
+    }
+    
 }

@@ -110,4 +110,25 @@ public class SectorsController {
 
 	}
     
+    @FXML
+    void createSector(ActionEvent event) {
+    	try {
+			openNewSectorWindow();
+			
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+			
+		}
+    }
+    
+    private void openNewSectorWindow() throws IOException{
+    	Parent root = FXMLLoader.load(getClass().getResource("fxml/newSector.fxml"));
+		Scene scene = new Scene(root);
+		Stage secondaryStage = new Stage();
+		secondaryStage.setScene(scene);
+		secondaryStage.setTitle("Nuevo Sector");
+		secondaryStage.setResizable(false);
+		secondaryStage.show();
+    }
+  
 }

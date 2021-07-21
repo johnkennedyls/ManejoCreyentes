@@ -10,6 +10,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -75,6 +76,11 @@
             </TableView>
          </content>
       </ScrollPane>
-      <Button layoutX="284.0" layoutY="210.0" mnemonicParsing="false" onAction="#search" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Buscar" textFill="WHITE" />
+      <HBox alignment="CENTER" layoutY="203.0" prefHeight="47.0" prefWidth="600.0" spacing="32.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#search" prefHeight="32.0" prefWidth="88.0" style="-fx-background-color: ROYALBLUE;" text="Buscar" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#showMore" prefHeight="32.0" prefWidth="88.0" style="-fx-background-color: ROYALBLUE;" text="Mostrar más" textFill="WHITE" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

@@ -6,60 +6,27 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox prefHeight="243.0" prefWidth="576.0" spacing="20.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="32.0">
-         <children>
-            <ComboBox fx:id="sectorOne" prefHeight="25.0" prefWidth="225.0" promptText="Seleccionar Sector" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
-            <ScrollPane prefHeight="193.0" prefWidth="640.0">
-               <content>
-                  <TableView fx:id="birthdays" minHeight="-Infinity" prefHeight="178.0">
-                     <columns>
-                        <TableColumn fx:id="name" prefWidth="75.0" text="Nombre" />
-                        <TableColumn fx:id="idNumber" prefWidth="75.0" text="CC-TI" />
-                        <TableColumn fx:id="gender" prefWidth="75.0" text="Genero" />
-                        <TableColumn fx:id="birthday" prefWidth="75.0" text="Cumpleaños" />
-                        <TableColumn fx:id="baptized" prefWidth="75.0" text="Bautizado" />
-                        <TableColumn fx:id="active" prefWidth="75.0" text="Activo" />
-                        <TableColumn fx:id="phoneNumber" prefWidth="75.0" text="Numero" />
-                        <TableColumn fx:id="sector" prefWidth="75.0" text="Sector" />
-                        <TableColumn fx:id="committee" prefWidth="75.0" text="Comité" />
-                     </columns>
-                  </TableView>
-               </content>
-            </ScrollPane>
-         </children>
-      </VBox>
-      <HBox alignment="CENTER" layoutX="32.0" layoutY="294.0" prefHeight="29.0" prefWidth="576.0" spacing="32.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#transferOneToTwo" text="Transferir ↓" />
-            <Button mnemonicParsing="false" onAction="#transferTwoToOne" text="Transferir ↑" />
-         </children>
-      </HBox>
-      <VBox layoutY="343.0" prefHeight="243.0" prefWidth="640.0" spacing="20.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
-         <children>
-            <ComboBox fx:id="sectorTwo" prefHeight="25.0" prefWidth="225.0" promptText="Seleccionar Sector" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
-            <ScrollPane prefHeight="193.0" prefWidth="640.0">
-               <content>
-                  <TableView fx:id="birthdays1" minHeight="-Infinity" prefHeight="178.0">
-                     <columns>
-                        <TableColumn fx:id="name1" prefWidth="75.0" text="Nombre" />
-                        <TableColumn fx:id="idNumber1" prefWidth="75.0" text="CC-TI" />
-                        <TableColumn fx:id="gender1" prefWidth="75.0" text="Genero" />
-                        <TableColumn fx:id="birthday1" prefWidth="75.0" text="Cumpleaños" />
-                        <TableColumn fx:id="baptized1" prefWidth="75.0" text="Bautizado" />
-                        <TableColumn fx:id="active1" prefWidth="75.0" text="Activo" />
-                        <TableColumn fx:id="phoneNumber1" prefWidth="75.0" text="Numero" />
-                        <TableColumn fx:id="sector1" prefWidth="75.0" text="Sector" />
-                        <TableColumn fx:id="committee1" prefWidth="75.0" text="Comité" />
-                     </columns>
-                  </TableView>
-               </content>
-            </ScrollPane>
-         </children>
-      </VBox>
+      <ScrollPane layoutX="21.0" layoutY="55.0" prefHeight="491.0" prefWidth="599.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0">
+         <content>
+            <TableView fx:id="members" minHeight="-Infinity" prefHeight="474.0" prefWidth="677.0">
+               <columns>
+                  <TableColumn fx:id="Name" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="IdNumber" prefWidth="75.0" text="CC-TI" />
+                  <TableColumn fx:id="Gender" prefWidth="75.0" text="Genero" />
+                  <TableColumn fx:id="Birthday" prefWidth="75.0" text="Cumpleaños" />
+                  <TableColumn fx:id="Baptized" prefWidth="75.0" text="Bautizado" />
+                  <TableColumn fx:id="Active" prefWidth="75.0" text="Activo" />
+                  <TableColumn fx:id="PhoneNumber" prefWidth="75.0" text="Teléfono:" />
+                  <TableColumn fx:id="Sector" prefWidth="75.0" text="Sector" />
+                  <TableColumn fx:id="Committee" prefWidth="75.0" text="Comité" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button layoutX="251.0" layoutY="554.0" mnemonicParsing="false" onAction="#editSector" prefHeight="32.0" prefWidth="140.0" style="-fx-background-color: ROYALBLUE;" text="Editar/Eliminar Sector" textFill="WHITE" />
+      <ComboBox fx:id="sectors" layoutX="21.0" layoutY="14.0" prefHeight="29.0" prefWidth="229.0" promptText="Seleccionar Sector" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
    </children>
 </AnchorPane>

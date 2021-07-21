@@ -2,7 +2,6 @@ package ui;
 
 import java.io.IOException;
 import java.util.Optional;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -90,11 +89,14 @@ public class InfoController {
     
     @FXML
     void remove(ActionEvent event) {
-    	removingMemberAlert();
-    	committee.getScene().getWindow().hide();
+    	boolean removed = removingMemberAlert();
+    	if (removed) {
+    		committee.getScene().getWindow().hide();
+		}
+
     }
     
-    private void removingMemberAlert() {
+    private boolean removingMemberAlert() {
     	Alert emptyFieldsAlert = new Alert(AlertType.WARNING);
     	emptyFieldsAlert.setTitle("Eliminar miembro.");
     	emptyFieldsAlert.setHeaderText("El miembro será ELIMINADO de los registros.");
@@ -105,7 +107,9 @@ public class InfoController {
     	Optional<ButtonType> result = emptyFieldsAlert.showAndWait();
     	if (result.isPresent() && result.get() == ButtonType.OK) {
     		memberRemovedAlert();
-    		
+    		return true;
+		}else {
+			return false;
 		}
     	
     }

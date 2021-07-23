@@ -9,6 +9,7 @@ import javafx.scene.control.Tab;
 import model.Church;
 
 public class FollowersController {
+	
 	@FXML
     private Tab recordsTab;
 

@@ -68,7 +68,7 @@
                             <RowConstraints maxHeight="203.0" minHeight="10.0" prefHeight="203.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <TextField style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Observaciones:">
+                              <TextField editable="false" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Observaciones:">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

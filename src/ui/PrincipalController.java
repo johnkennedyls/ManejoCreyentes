@@ -28,6 +28,8 @@ public class PrincipalController {
 	    public void initialize() {
 			try {
 				myChurch.readMembers("data/memberscsv.csv");
+				myChurch.divideBySectors();
+				myChurch.divideByCommittee();
 			} catch (IOException e) {
 				System.out.println("Error en la lectura del csv de miembros");
 				e.printStackTrace();

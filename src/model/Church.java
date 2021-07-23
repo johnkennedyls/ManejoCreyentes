@@ -80,6 +80,7 @@ public class Church {
 	
 	
 	public List<Committee> getTheCommittees() {
+		
 		return theCommittees;
 	}
 
@@ -141,15 +142,16 @@ public class Church {
 	private void writeMember(Member theMember) throws IOException {
 		
 		FileWriter fichero = null;
-		PrintWriter pw = null;
+		
 		
 		fichero = new FileWriter("data/memberscsv.csv", true);
 		BufferedWriter bw=new BufferedWriter(fichero);
 		
 
-		bw.write(theMember.getName() + ";" + theMember.getIdNumber() + ";" + theMember.getGender()
+		bw.write("\n"+theMember.getName() + ";" + theMember.getIdNumber() + ";" + theMember.getGender()
 		+ ";" + theMember.getBirthday()+ ";" +theMember.isBaptized()+ ";" +theMember.isActive()+ ";" +
-		theMember.getObservations()+ ";" +theMember.getPhoneNumber()+ ";" +	theMember.getSector()+ ";" +theMember.getCommittee()+ ";" +theMember.getCharge());
+		theMember.getObservations()+ ";" +theMember.getPhoneNumber()+ ";" +	theMember.getSector()+ ";" +
+		theMember.getCommittee()+ ";" +theMember.getCharge());
 		bw.close();
 	}
 
@@ -224,6 +226,44 @@ public class Church {
 				createSector(generalMembers.get(i).getSector());
 				Sector s = searchSector(generalMembers.get(i).getSector());
 				s.addMemberToSector(generalMembers.get(i));
+			}
+		}
+
+	}
+	
+	public boolean existCommittee(String name) {
+		boolean exist = false;
+		for (int i = 0; i < theCommittees.size(); i++) {
+			if (theCommittees.get(i).getName().equals(name)) {
+				exist = true;
+			}
+		}
+
+		return exist;
+
+	}
+
+	public Committee searchCommittee(String name) {
+		Committee s = null;
+		for (int i = 0; i < theCommittees.size(); i++) {
+			if (theCommittees.get(i).getName().equals(name)) {
+				s = theCommittees.get(i);
+			}
+		}
+
+		return s;
+
+	}
+
+	public void divideByCommittee() {
+		for (int i = 0; i < generalMembers.size(); i++) {
+			if (existCommittee(generalMembers.get(i).getCommittee())) {
+				Committee s = searchCommittee(generalMembers.get(i).getCommittee());
+				s.addMemberToCommittee(generalMembers.get(i));
+			} else {
+				createCommittee(generalMembers.get(i).getCommittee());
+				Committee s = searchCommittee(generalMembers.get(i).getCommittee());
+				s.addMemberToCommittee(generalMembers.get(i));
 			}
 		}
 
@@ -395,4 +435,6 @@ public List<Member> buscarPorBautizados(boolean vf) {
 		}
 		return listafinal;
 	}
+	
+	
 }

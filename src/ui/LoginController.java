@@ -22,11 +22,15 @@ import model.Church;
 
 public class LoginController {
 
-	private Church myChurch;
+	private Church church;
+	
+	final static String DEVELOPER_USER = "Admin" ;
+	
+	final static String DEVELOPER_PASSWORD = "7uVxe2DKma8LAJm1lrHV6" ;
 
 	public LoginController() {
-		myChurch = new Church("default", "Cali");
-
+		church = new Church("default", "Cali");
+		
 	}
 
 	@FXML
@@ -39,7 +43,7 @@ public class LoginController {
 	void login(ActionEvent event) {
 		try {
 			if (verifyLogin()) {
-				myChurch.readMembers("data/memberscsv.csv");
+				church.readMembers("data/memberscsv.csv");
 				openPrincipalWindow();
 
 				passwordField.getScene().getWindow().hide();
@@ -68,7 +72,7 @@ public class LoginController {
 	}
 
 	private void openPrincipalWindow() throws IOException {
-		MenuController menuController = new MenuController(myChurch);
+		MenuController menuController = new MenuController(church);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/menu.fxml"));
 		fxmlLoader.setController(menuController);
 		Parent root = fxmlLoader.load();
@@ -83,17 +87,23 @@ public class LoginController {
 
 	private boolean verifyLogin() {
 		/*
-		 * String name = church.getMinister().getName(); String password =
-		 * church.getMinister().getPassword();
-		 * 
-		 * String inputName = userNameField.getText(); String inputPassword =
-		 * passwordField.getText();
-		 * 
-		 * if (name.equals(inputName) && password.equals(inputPassword)) { return true;
-		 * }
-		 * 
-		 * return false;
+		 String name = church.getMinister().getName(); 
+		String password = church.getMinister().getPassword();
+		 
+		 String inputName = userNameField.getText(); 
+		 String inputPassword = passwordField.getText();
+		 
+		 if (name.equals(inputName) && password.equals(inputPassword)) {
+		 	return true;
+		  
+		 }else if (inputName.equals(DEVELOPER_USER) && inputPassword.equals(DEVELOPER_PASSWORD)) {
+			 return true;
+		 }
+			 
+		 return false;
+		 
 		 */
+		
 		return true;
 	}
 

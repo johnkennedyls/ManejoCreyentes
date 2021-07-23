@@ -95,9 +95,7 @@ public class BirthdaysController {
 
     @FXML
     private TableColumn<?, ?> MCommittee;
-    
-    
-    
+
     public  BirthdaysController( Church myChurch) {
 		this.myChurch = myChurch;
 	}
@@ -106,6 +104,7 @@ public class BirthdaysController {
     void search(ActionEvent event) {
     	
     }
+    
     @FXML
     public void initialize() throws IOException {
     	loadBirthdaysTable(myChurch.ToListodayBirthays());

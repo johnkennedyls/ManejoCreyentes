@@ -88,6 +88,7 @@ public class CommitteesController {
 	void editCommittee(ActionEvent event) {
 		try {
 			openCommitteeInfo();
+			
 		} catch (IOException ioException) {
 			ioException.printStackTrace();
 

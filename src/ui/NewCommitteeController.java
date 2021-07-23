@@ -6,11 +6,11 @@ import javafx.scene.control.TextField;
 
 public class NewCommitteeController {
 	@FXML
-    private TextField currentPassword;
+    private TextField committeeName;
 
     @FXML
     void save(ActionEvent event) {
-    	currentPassword.getScene().getWindow().hide();
+    	committeeName.getScene().getWindow().hide();
     	
     }
     

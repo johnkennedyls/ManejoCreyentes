@@ -1,14 +1,19 @@
 package ui;
 
+import java.io.IOException;
 import java.util.Optional;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.stage.Stage;
 import model.Church;
 
 public class CommitteeInfoController {
@@ -36,6 +41,22 @@ public class CommitteeInfoController {
     
     @FXML
     void edit(ActionEvent event) {
+    	try {
+    		EditCommitteeController editCommitteeController = new EditCommitteeController(church);
+    		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/editCommittee.fxml"));
+    		fxmlLoader.setController(editCommitteeController);
+    		Parent root = fxmlLoader.load();
+
+    		Scene scene = new Scene(root);
+    		Stage secondaryStage = new Stage();
+    		secondaryStage.setScene(scene);
+    		secondaryStage.setTitle("Información");
+    		secondaryStage.setResizable(false);
+    		secondaryStage.show();
+    		
+		} catch (IOException ioException) {
+			//TODO
+		}
     	
     }
 

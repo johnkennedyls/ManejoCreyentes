@@ -6,11 +6,11 @@ import javafx.scene.control.TextField;
 
 public class NewSectorController {
 	@FXML
-    private TextField currentPassword;
+    private TextField sectorName;
 
     @FXML
     void save(ActionEvent event) {
-    	currentPassword.getScene().getWindow().hide();
+    	sectorName.getScene().getWindow().hide();
     	
     }
     

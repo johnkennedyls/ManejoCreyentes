@@ -41,10 +41,10 @@ public class EditController {
 	    private TextField phoneNumberField;
 
 	    @FXML
-	    private ComboBox<?> sectorType;
+	    private ComboBox<String> sectorType;
 
 	    @FXML
-	    private ComboBox<?> committee;
+	    private ComboBox<String> committee;
 
 	    @FXML
 	    private TextArea observationsField;

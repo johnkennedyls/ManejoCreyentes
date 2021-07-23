@@ -29,7 +29,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="currentPassword" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: ROYALBLUE;" GridPane.rowIndex="1">
+                  <TextField fx:id="committeeName" prefWidth="50.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: ROYALBLUE;" GridPane.rowIndex="1">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

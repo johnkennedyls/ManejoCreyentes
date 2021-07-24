@@ -298,7 +298,7 @@ public class Church {
 
 				if (totalDias == 365) {
 					birthayPeople.add(member);
-					System.out.println("¡Su cumpleaños es hoy. Felicidades!");
+					
 
 				}
 			} catch (DateTimeParseException exc) {
@@ -344,9 +344,7 @@ public class Church {
 			}
 		}
 		Collections.sort(notBirthayPeople, new BirthayComparator());
-		for (Member member : notBirthayPeople) {
-			System.out.println(member.getTextForUnbirthday());
-		}
+		
 		return notBirthayPeople;
 	}
 	

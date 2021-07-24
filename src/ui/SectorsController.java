@@ -81,7 +81,9 @@ public class SectorsController {
 	}
 
     private void loadComboBox() {
-    	
+    	for (int i = 0; i < church.getTheSectors().size(); i++) {
+			sectors.getItems().add(church.getTheSectors().get(i).getName());
+		}
     }
     
     @FXML

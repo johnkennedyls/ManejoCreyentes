@@ -84,8 +84,13 @@ public class RegisterController {
 
 			myChurch.createGeneralMember(name, idNumber, gender, memberBirthday, baptizedBool, activeBool, observations,
 					phoneNumber, sector, MemberCommittee, charge);
+
 			resetForm();
 			System.out.println("registered :)");
+
+			resetForm();
+			
+
 		} catch (EmptyDataException emptyDataException) {
 			emptyFieldsAlert(emptyDataException.getMessage());
 		}

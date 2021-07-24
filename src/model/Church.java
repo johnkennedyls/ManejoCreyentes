@@ -29,11 +29,8 @@ public class Church {
 	 */
 	private String city;
 	
-	//private Minister minister;
+	private Minister minister;
 	
-	/**
-	 * 
-	 */
 
 	private List<Sector> theSectors;
 	private List<Committee> theCommittees;
@@ -43,7 +40,7 @@ public class Church {
 		this.name = name;
 		this.city = city;
 
-		//this.minister = new Minister("admin", "123");	
+
 
 		theSectors = new ArrayList<Sector>();
 		theCommittees = new ArrayList<Committee>();
@@ -101,6 +98,8 @@ public class Church {
 	public void setTheSectors(List<Sector> theSectors) {
 		this.theSectors = theSectors;
 	}
+	
+	
 
 	@SuppressWarnings("null")
 	public void createGeneralMember(String name, String idNumber, String gender, String birthday, boolean baptized,

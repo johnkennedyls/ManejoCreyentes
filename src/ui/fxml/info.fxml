@@ -124,12 +124,12 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="232.0" prefHeight="35.0" prefWidth="600.0" spacing="20.0">
                      <children>
-                        <Label fx:id="sector" prefHeight="30.0" prefWidth="160.0" text="Sector:" textFill="DODGERBLUE">
+                        <Label prefHeight="30.0" prefWidth="160.0" text="Sector:" textFill="DODGERBLUE">
                            <font>
                               <Font name="Verdana Bold" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="phoneNumber1" prefHeight="37.0" prefWidth="398.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: ROYALBLUE;">
+                        <Label fx:id="sector" prefHeight="37.0" prefWidth="398.0" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: ROYALBLUE;">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -138,7 +138,7 @@
                   </HBox>
                   <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="269.0" prefHeight="35.0" prefWidth="600.0" spacing="20.0">
                      <children>
-                        <Label fx:id="sector1" prefHeight="30.0" prefWidth="160.0" text="Comité:" textFill="DODGERBLUE">
+                        <Label prefHeight="30.0" prefWidth="160.0" text="Comité:" textFill="DODGERBLUE">
                            <font>
                               <Font name="Verdana Bold" size="18.0" />
                            </font>

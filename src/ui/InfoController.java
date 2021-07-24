@@ -13,47 +13,46 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.layout.BorderPane;
 import model.Church;
+import model.Member;
 
 public class InfoController {
-	@FXML
-    private Label name;
+	
+	 	@FXML
+	    private Label name;
 
-    @FXML
-    private Label id;
+	    @FXML
+	    private Label id;
 
-    @FXML
-    private Label gender;
+	    @FXML
+	    private Label gender;
 
-    @FXML
-    private Label birthday;
+	    @FXML
+	    private Label birthday;
 
-    @FXML
-    private Label baptized;
+	    @FXML
+	    private Label baptized;
 
-    @FXML
-    private Label active;
+	    @FXML
+	    private Label active;
 
-    @FXML
-    private Label phoneNumber;
+	    @FXML
+	    private Label phoneNumber;
 
-    @FXML
-    private Label sector;
+	    @FXML
+	    private Label sector;
 
-    @FXML
-    private Label phoneNumber1;
-
-    @FXML
-    private Label sector1;
-
-    @FXML
-    private Label committee;
+	    @FXML
+	    private Label committee;
 	
 	private Church church;
 	private BorderPane mainPane;
-    
-    public InfoController(Church church,BorderPane mainPane) {
+	private Member member;
+	
+    public InfoController(Church church,BorderPane mainPane,Member member) {
 		this.church = church;
 		this.mainPane = mainPane;
+		this.member = member;
+		
 	}
     
     @FXML
@@ -63,7 +62,28 @@ public class InfoController {
     }
     
     private void loadInfo() {
-    	church.getTheCommittees();
+    	name.setText(member.getName());
+    	id.setText(member.getIdNumber());
+    	gender.setText(member.getGender());
+    	birthday.setText(member.getBirthday());
+    	
+    	if (member.isBaptized()) {
+    		baptized.setText("Bautizado");
+		}else {
+			baptized.setText("NO bautizado");
+		}
+    	
+    	if (member.isActive()) {
+    		active.setText("Activo");
+		}else {
+			active.setText("Inactivo");
+		}
+    	
+    	phoneNumber.setText(member.getPhoneNumber());
+    	
+    	sector.setText(member.getSector());
+    	committee.setText(member.getCommittee());
+    	
     }
     
     @FXML
@@ -73,7 +93,7 @@ public class InfoController {
     
     private void openEdit() {
     	try {
-    		EditController editController = new EditController(church,mainPane);
+    		EditController editController = new EditController(church,mainPane,member);
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/edit.fxml"));
 			fxmlLoader.setController(editController);
 			Parent Pane = fxmlLoader.load();

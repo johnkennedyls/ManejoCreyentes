@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
 import model.Church;
+import model.Member;
 
 public class MemberInfoController {
 	
@@ -15,8 +16,11 @@ public class MemberInfoController {
 	
 	private Church church;
     
-    public MemberInfoController(Church church) {
+	private Member member;
+	
+    public MemberInfoController(Church church,Member member) {
 		this.church = church;
+		this.member = member;
 	}
     
     @FXML
@@ -26,7 +30,7 @@ public class MemberInfoController {
     
     private void loadInfo() {
     	try {
-    		InfoController infoController = new InfoController(church,mainPane);
+    		InfoController infoController = new InfoController(church,mainPane,member);
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/info.fxml"));
 			fxmlLoader.setController(infoController);
 			Parent Pane = fxmlLoader.load();

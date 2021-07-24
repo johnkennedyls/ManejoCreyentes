@@ -2,6 +2,8 @@ package ui;
 
 import java.io.IOException;
 import java.util.List;
+
+import exceptions.NoSelectionException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,8 +11,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Church;
@@ -79,17 +83,32 @@ public class RecordsController {
 	@FXML
 	void showMore(ActionEvent event) {
 		try {
-			openMemberInfo();
+			
+			Member selectedMember = members.getSelectionModel().getSelectedItem();
+			if (selectedMember == null) {
+				throw new NoSelectionException();
+			}
+			openMemberInfo(selectedMember);
 			
 		} catch (IOException ioException) {
 			ioException.printStackTrace();
 
+		}catch (NoSelectionException noSelectionException) {
+			noSelectionAlert(noSelectionException.getMessage());
 		}
 
 	}
 	
-	private void openMemberInfo() throws IOException {
-		MemberInfoController memberInfoController = new MemberInfoController(church);
+	private void noSelectionAlert(String message) {
+		Alert emptyFieldsAlert = new Alert(AlertType.ERROR);
+		emptyFieldsAlert.setTitle("Ningún miembro seleccionado.");
+		emptyFieldsAlert.setHeaderText(message);
+		emptyFieldsAlert.showAndWait();
+
+	}
+	
+	private void openMemberInfo(Member member) throws IOException {
+		MemberInfoController memberInfoController = new MemberInfoController(church,member);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/memberInfo.fxml"));
 		fxmlLoader.setController(memberInfoController);
 		Parent root = fxmlLoader.load();

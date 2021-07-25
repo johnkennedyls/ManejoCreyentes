@@ -48,17 +48,39 @@ public class InfoController {
 	private BorderPane mainPane;
 	private Member member;
 	
-    public InfoController(Church church,BorderPane mainPane,Member member) {
+	private RecordsController recordsController;
+	private SearchController searchController;
+	
+    public InfoController(Church church,BorderPane mainPane,Member member,RecordsController recordsController) {
 		this.church = church;
 		this.mainPane = mainPane;
 		this.member = member;
+		this.recordsController = recordsController;
+		this.searchController = null;
+		if (recordsController != null) {
+    		recordsController.loadMembers();
+    		
+		}
+    	
+	}
+    
+    public InfoController(Church church,BorderPane mainPane,Member member,SearchController searchController) {
+		this.church = church;
+		this.mainPane = mainPane;
+		this.member = member;
+		this.recordsController = null;
+		this.searchController = searchController;
+    	if (searchController != null) {
+    		searchController.search();
+    		
+		}
 		
 	}
     
     @FXML
     public void initialize() {
     	loadInfo();
-		
+
     }
     
     private void loadInfo() {
@@ -89,17 +111,28 @@ public class InfoController {
     @FXML
     void edit(ActionEvent event) {
     	openEdit();
+    	
     }
     
     private void openEdit() {
     	try {
-    		EditController editController = new EditController(church,mainPane,member);
+    		EditController editController = null;
+    		
+    		if (recordsController != null) {
+        		recordsController.loadMembers();
+        		editController = new EditController(church,mainPane,member,recordsController);
+    		}
+        	
+        	if (searchController != null) {
+        		searchController.search();
+        		editController = new EditController(church,mainPane,member,searchController);
+        		
+    		}
+
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/edit.fxml"));
 			fxmlLoader.setController(editController);
 			Parent Pane = fxmlLoader.load();
 			mainPane.setCenter(Pane);
-			
-			//committee.getScene().getWindow().hide();
 
 		} catch (IOException ioException) {
 			ioException.printStackTrace();

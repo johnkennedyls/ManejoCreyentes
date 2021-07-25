@@ -22,7 +22,7 @@ import model.Church;
 import model.Member;
 
 public class EditController {
-	 @FXML
+	 	@FXML
 	    private TextField name;
 
 	    @FXML
@@ -56,10 +56,24 @@ public class EditController {
 	private BorderPane mainPane;
 	private Member member;
     
-    public EditController(Church church,BorderPane mainPane,Member member) {
+	private RecordsController recordsController;
+	private SearchController searchController;
+	
+    public EditController(Church church,BorderPane mainPane,Member member,RecordsController recordsController) {
+    	this.church = church;
+		this.mainPane = mainPane;
+		this.member = member;
+		this.recordsController = recordsController;
+		this.searchController = null;
+		
+	}
+
+    public EditController(Church church,BorderPane mainPane,Member member,SearchController searchController) {
 		this.church = church;
 		this.mainPane = mainPane;
 		this.member = member;
+		this.recordsController = null;
+		this.searchController = searchController;
 		
 	}
     
@@ -122,11 +136,11 @@ public class EditController {
     	
     	committee.getSelectionModel().select(committeeIndex);
     	
+    	observations.setText(member.getObservations());
+    	
     }
     
     private void loadComboBoxes() {
-    	
-    	
     	for (int i = 0; i < church.getTheCommittees().size(); i++) {
 			committee.getItems().add(church.getTheCommittees().get(i).getName());
 		}
@@ -137,10 +151,34 @@ public class EditController {
     void edit(ActionEvent event) {
     	try {
     		validateEmptyFields();
+    		member.setName(name.getText());
+    		member.setIdNumber(id.getText());
+    		member.setGender(gender.getValue());
+    		LocalDate birthdayLocalDate = birthday.getValue();
+			String memberBirthday = birthdayLocalDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+    		member.setBirthday(memberBirthday);
+    		member.setBaptized(baptized.isSelected());
+    		member.setActive(active.isSelected());
+    		member.setPhoneNumber(phoneNumber.getText());
+    		member.setCommittee(committee.getValue());
+    		member.setSector(sector.getValue());
+    		member.setObservations(observations.getText());
+    		memberEditedAlert();
+    		loadInfoWindow();
     		
 		} catch (EmptyDataException emptyDataException) {
 			emptyFieldsAlert(emptyDataException.getMessage());
+			
 		}
+    	
+    }
+ 
+    private void memberEditedAlert() {
+    	Alert emptyFieldsAlert = new Alert(AlertType.INFORMATION);
+    	emptyFieldsAlert.setTitle("Editado.");
+    	emptyFieldsAlert.setHeaderText("El miembro ha sido editado exitosamente.");
+    	emptyFieldsAlert.showAndWait();
+
     }
 
     @FXML
@@ -150,7 +188,18 @@ public class EditController {
     
     private void loadInfoWindow() {
     	try {
-    		InfoController infoController = new InfoController(church,mainPane,member);
+    		InfoController infoController = null;
+    		
+    		if (recordsController != null) {
+        		recordsController.loadMembers();
+        		infoController = new InfoController(church,mainPane,member,recordsController);
+    		}
+        	
+        	if (searchController != null) {
+        		searchController.search();
+        		infoController = new InfoController(church,mainPane,member,searchController);
+        		
+    		}
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/info.fxml"));
 			fxmlLoader.setController(infoController);
 			Parent Pane = fxmlLoader.load();

@@ -1,8 +1,6 @@
 package ui;
 
 import java.io.IOException;
-import java.util.List;
-
 import exceptions.NoSelectionException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -59,14 +57,14 @@ public class RecordsController {
 	
 	@FXML
 	public void initialize() {
-		loadMembers(church.getGeneralMembers());
+		loadMembers();
 
 	}
 	
-	private void loadMembers(List<Member> membersList) {
-
+	public void loadMembers() {
+		members.setItems(null);
 		ObservableList<Member> observableList;
-		observableList = FXCollections.observableArrayList(membersList);
+		observableList = FXCollections.observableArrayList(church.getGeneralMembers());
 		members.setItems(observableList);
 
 		Name.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
@@ -108,7 +106,7 @@ public class RecordsController {
 	}
 	
 	private void openMemberInfo(Member member) throws IOException {
-		MemberInfoController memberInfoController = new MemberInfoController(church,member);
+		MemberInfoController memberInfoController = new MemberInfoController(church,member,this);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/memberInfo.fxml"));
 		fxmlLoader.setController(memberInfoController);
 		Parent root = fxmlLoader.load();

@@ -98,26 +98,12 @@ public class SearchController {
 		
     }
     
-    private void loadMembers(List<Member> membersList) {
-
-		ObservableList<Member> observableList;
-		observableList = FXCollections.observableArrayList(membersList);
-		members.setItems(observableList);
-
-		Name.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
-		IdNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("idNumber"));
-		Gender.setCellValueFactory(new PropertyValueFactory<Member, String>("gender"));
-		Birthday.setCellValueFactory(new PropertyValueFactory<Member, String>("birthday"));
-		Baptized.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("baptized"));
-		Active.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("active"));
-		PhoneNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("phoneNumber"));
-		Sector.setCellValueFactory(new PropertyValueFactory<Member, String>("sector"));
-		Committee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
-		
-	}
-    
     @FXML
     void search(ActionEvent event) {
+    	search();
+    }
+    
+    public void search() {
     	List<Member> toPrint = new ArrayList<Member>();
     	if(!(nameField.getText().isEmpty())) {
     		toPrint = church.searchByName(nameField.getText());
@@ -162,7 +148,7 @@ public class SearchController {
 	}
     
     private void ToloadMembers(List<Member> membersList) {
-
+    	members.setItems(null);
 		ObservableList<Member> observableList;
 		observableList = FXCollections.observableArrayList(membersList);
 		members.setItems(observableList);
@@ -176,6 +162,7 @@ public class SearchController {
 		PhoneNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("phoneNumber"));
 		Sector.setCellValueFactory(new PropertyValueFactory<Member, String>("sector"));
 		Committee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
+		
 	}
     
 	private void loadSectorType() {
@@ -206,7 +193,7 @@ public class SearchController {
 	}
 	
 	private void openMemberInfo(Member member) throws IOException {
-		MemberInfoController memberInfoController = new MemberInfoController(church,member);
+		MemberInfoController memberInfoController = new MemberInfoController(church,member,this);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/memberInfo.fxml"));
 		fxmlLoader.setController(memberInfoController);
 		Parent root = fxmlLoader.load();

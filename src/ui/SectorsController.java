@@ -133,5 +133,19 @@ public class SectorsController {
 		secondaryStage.setResizable(false);
 		secondaryStage.show();
     }
+    
+    @FXML
+    void loadSector(ActionEvent event) {
+    	if (sectors.getValue() != null) {
+			loadSector(sectors.getValue());
+		}
+    	
+    }
+    
+    private void loadSector(String sectorString) {
+    	//model.Sector sector = church.getSector(sectorString);
+    	//loadMembers(sector.getMembersList());
+    	
+    }
   
 }

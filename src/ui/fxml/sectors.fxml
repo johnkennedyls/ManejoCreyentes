@@ -28,6 +28,7 @@
       </ScrollPane>
       <Button layoutX="251.0" layoutY="554.0" mnemonicParsing="false" onAction="#editSector" prefHeight="32.0" prefWidth="140.0" style="-fx-background-color: ROYALBLUE;" text="Editar/Eliminar Sector" textFill="WHITE" />
       <ComboBox fx:id="sectors" layoutX="21.0" layoutY="14.0" prefHeight="29.0" prefWidth="229.0" promptText="Seleccionar Sector" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
-      <Button layoutX="321.0" layoutY="13.0" mnemonicParsing="false" onAction="#createSector" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Crear" textFill="WHITE" />
+      <Button layoutX="355.0" layoutY="13.0" mnemonicParsing="false" onAction="#createSector" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Crear" textFill="WHITE" />
+      <Button layoutX="263.0" layoutY="13.0" mnemonicParsing="false" onAction="#loadSector" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Cargar" textFill="WHITE" />
    </children>
 </AnchorPane>

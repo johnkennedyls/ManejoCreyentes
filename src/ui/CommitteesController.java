@@ -81,7 +81,9 @@ public class CommitteesController {
 	}
 
     private void loadComboBox() {
-    	
+    	for (int i = 0; i < church.getTheCommittees().size(); i++) {
+			committees.getItems().add(church.getTheCommittees().get(i).getName());
+		}
     }
     
     @FXML
@@ -130,6 +132,20 @@ public class CommitteesController {
 		secondaryStage.setTitle("Nuevo Sector");
 		secondaryStage.setResizable(false);
 		secondaryStage.show();
+    }
+    
+    @FXML
+    void loadCommittee(ActionEvent event) {
+    	if (committees.getValue() != null) {
+    		loadCommittee(committees.getValue());
+		}
+    	
+    }
+    
+    private void loadCommittee(String committeeString) {
+    	//model.Committee committee = church.getCommittee (committeeString);
+    	//loadMembers(committee.getMembersList());
+    	
     }
     
 }

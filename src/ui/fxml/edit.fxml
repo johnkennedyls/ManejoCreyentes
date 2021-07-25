@@ -76,6 +76,7 @@
                               </TextField>
                               <ComboBox fx:id="sector" prefHeight="25.0" prefWidth="225.0" promptText="Sector" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
                               <ComboBox fx:id="committee" prefHeight="25.0" prefWidth="225.0" promptText="Comité" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
+                              <ComboBox fx:id="officeType" prefHeight="25.0" prefWidth="225.0" promptText="Cargo" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
                               <GridPane prefHeight="227.0" prefWidth="400.0">
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

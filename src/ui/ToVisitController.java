@@ -1,5 +1,7 @@
 package ui;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javafx.collections.FXCollections;
@@ -80,6 +82,11 @@ public class ToVisitController {
     @FXML
     void visited(ActionEvent event) {
     	Member selectedMember = members.getSelectionModel().getSelectedItem();
+    	
+    	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+    	LocalDateTime now = LocalDateTime.now(); 
+    	selectedMember.setlastVisitedDate(now);
+    	
     	church.moveToVisited(selectedMember);
     	
     	moveTovisitedAlert();

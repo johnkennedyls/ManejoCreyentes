@@ -31,7 +31,11 @@ public class OptionsController {
     }
 	
 	private void openChangePasswordWindow() throws IOException{
-    	Parent root = FXMLLoader.load(getClass().getResource("fxml/changePassword.fxml"));
+		ChangePasswordController changePasswordController = new ChangePasswordController(church);
+		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/changePassword.fxml"));
+		fxmlLoader.setController(changePasswordController);
+		Parent root = fxmlLoader.load();
+
 		Scene scene = new Scene(root);
 		Stage secondaryStage = new Stage();
 		secondaryStage.setScene(scene);

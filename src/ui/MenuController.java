@@ -2,6 +2,7 @@ package ui;
 
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -107,5 +108,27 @@ public class MenuController {
 		secondaryStage.setResizable(false);
 		secondaryStage.show();
 	}
+	
+	@FXML
+    void logOff(ActionEvent event) {
+		try {
+			openLoginWindow();
+			mainPane.getScene().getWindow().hide();
+
+		} catch (IOException ioException) {
+			ioException.printStackTrace();
+			
+		}
+    }
+	
+	private void openLoginWindow() throws IOException{
+    	Parent root = FXMLLoader.load(getClass().getResource("fxml/login.fxml"));
+		Scene scene = new Scene(root);
+		Stage secondaryStage = new Stage();
+		secondaryStage.setScene(scene);
+		secondaryStage.setTitle("Principal");
+		secondaryStage.setResizable(false);
+		secondaryStage.show();
+    }
 	
 }

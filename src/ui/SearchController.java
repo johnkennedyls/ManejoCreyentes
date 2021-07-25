@@ -127,19 +127,21 @@ public class SearchController {
     		toPrint = church.buscarPorBautizados(baptizedCB.isSelected());
     		ToloadMembers(toPrint);
     	}else if(activeCB.isSelected()) {
-    		toPrint = church.buscarPorBautizados(activeCB.isSelected());
+    		toPrint = church.buscarPorActivo(activeCB.isSelected());
     		ToloadMembers(toPrint);
+
     	}else if(Nobaptized.isSelected()) {
-    		toPrint = church.buscarPorBautizados(Nobaptized.isSelected());
+    		toPrint = church.buscarPorNoBautizados(Nobaptized.isSelected());
     		ToloadMembers(toPrint);
     	}else if(inactive.isSelected()) {
-    		toPrint = church.buscarPorBautizados(inactive.isSelected());
+    		toPrint = church.buscarPorInactivo(inactive.isSelected());
     		ToloadMembers(toPrint);
-    	}else if(!(sectorType.getValue().isEmpty())) {
+    	}else if(sectorType.getValue()!=null) {
+
     		toPrint = church.buscarPorSector(sectorType.getValue());
     		ToloadMembers(toPrint);
-    	}else if(!(committee1.getValue().isEmpty())){
-    		toPrint = church.buscarPorSector(committee1.getValue());
+    	}else if(committee1.getValue() != null){
+    		toPrint = church.buscarPorComite(committee1.getValue());
     		ToloadMembers(toPrint);
     	}
     	resetForm();
@@ -148,14 +150,14 @@ public class SearchController {
     private void resetForm() {
 		nameField.clear();
 		idField.clear();
-		
-		
 		baptizedCB.setSelected(false);
 		activeCB.setSelected(false);
-		
 		phoneNumberField.clear();
 		sectorType.setValue(null);
 		committee1.setValue(null);
+		genderField.clear();
+		Nobaptized.setSelected(false);
+		inactive.setSelected(false);
 
 	}
     

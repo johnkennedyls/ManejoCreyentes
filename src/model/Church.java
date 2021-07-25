@@ -399,12 +399,32 @@ public List<Member> buscarPorBautizados(boolean vf) {
 		}
 		return listafinal;
 	}
+public List<Member> buscarPorNoBautizados(boolean vf) {
+	
+	List<Member> listafinal = new ArrayList<Member>();
+	for (int i = 0; i < generalMembers.size(); i++) {
+		if (generalMembers.get(i).isBaptized() == false) {
+			listafinal.add(generalMembers.get(i));
+		}
+	}
+	return listafinal;
+}
 	
 	public List<Member> buscarPorActivo(boolean ac) {
 		
 		List<Member> listafinal = new ArrayList<Member>();
 		for (int i = 0; i < generalMembers.size(); i++) {
 			if (generalMembers.get(i).isActive() == ac) {
+				listafinal.add(generalMembers.get(i));
+			}
+		}
+		return listafinal;
+	}
+public List<Member> buscarPorInactivo(boolean ac) {
+		
+		List<Member> listafinal = new ArrayList<Member>();
+		for (int i = 0; i < generalMembers.size(); i++) {
+			if (generalMembers.get(i).isActive() == false) {
 				listafinal.add(generalMembers.get(i));
 			}
 		}

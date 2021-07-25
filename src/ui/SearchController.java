@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+import exceptions.NoSelectionException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,11 +15,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Church;
@@ -135,10 +138,10 @@ public class SearchController {
     	}else if(inactive.isSelected()) {
     		toPrint = church.buscarPorBautizados(inactive.isSelected());
     		ToloadMembers(toPrint);
-    	}else if(!(sectorType.getValue().isEmpty())) {
+    	}else if((sectorType.getValue()!= null)) {
     		toPrint = church.buscarPorSector(sectorType.getValue());
     		ToloadMembers(toPrint);
-    	}else if(!(committee1.getValue().isEmpty())){
+    	}else if((committee1.getValue()!=null)){
     		toPrint = church.buscarPorSector(committee1.getValue());
     		ToloadMembers(toPrint);
     	}
@@ -194,13 +197,25 @@ public class SearchController {
 		try {
 			
 			Member selectedMember = members.getSelectionModel().getSelectedItem();
-			
+			if (selectedMember == null) {
+				throw new NoSelectionException();
+			}
 			openMemberInfo(selectedMember);
 			
 		} catch (IOException ioException) {
 			ioException.printStackTrace();
 
+		}catch (NoSelectionException noSelectionException) {
+			noSelectionAlert(noSelectionException.getMessage());
 		}
+
+	}
+    
+    private void noSelectionAlert(String message) {
+		Alert emptyFieldsAlert = new Alert(AlertType.ERROR);
+		emptyFieldsAlert.setTitle("Ningún miembro seleccionado.");
+		emptyFieldsAlert.setHeaderText(message);
+		emptyFieldsAlert.showAndWait();
 
 	}
 	

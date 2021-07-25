@@ -20,6 +20,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import model.Church;
 import model.Member;
+import model.OfficeType;
 
 public class EditController {
 	 	@FXML
@@ -48,6 +49,9 @@ public class EditController {
 
 	    @FXML
 	    private ComboBox<String> committee;
+	    
+	    @FXML
+		private ComboBox<String> officeType;
 
 	    @FXML
 	    private TextArea observations;
@@ -136,6 +140,17 @@ public class EditController {
     	
     	committee.getSelectionModel().select(committeeIndex);
     	
+    	int i = 0;
+    	int officeTypeIndex = 0;
+    	for (OfficeType op : OfficeType.values()) {
+    	    if (member.getCharge().equals(op)) {
+				officeTypeIndex = i;
+			}
+    	    i++;
+    	}
+    	
+    	officeType.getSelectionModel().select(officeTypeIndex);
+    	
     	observations.setText(member.getObservations());
     	
     }
@@ -144,6 +159,19 @@ public class EditController {
     	for (int i = 0; i < church.getTheCommittees().size(); i++) {
 			committee.getItems().add(church.getTheCommittees().get(i).getName());
 		}
+    	
+    	for (int i = 0; i < church.getTheSectors().size(); i++) {
+			sector.getItems().add(church.getTheSectors().get(i).getName());
+		}
+    	
+    	officeType.getItems().add(OfficeType.PRESIDENTE.toString());
+		officeType.getItems().add(OfficeType.VICEPRESIDENTE.toString());
+		officeType.getItems().add(OfficeType.SECRETARIO.toString());
+		officeType.getItems().add(OfficeType.TESORERO.toString());
+		officeType.getItems().add(OfficeType.VOCAL.toString());
+		officeType.getItems().add(OfficeType.AUXILIAR.toString());
+		officeType.getItems().add(OfficeType.FISCAL.toString());
+		officeType.getItems().add(OfficeType.NINGUNO.toString());
     	
     }
     

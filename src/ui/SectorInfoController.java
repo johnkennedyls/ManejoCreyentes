@@ -1,28 +1,26 @@
 package ui;
 
-import java.util.Optional;
-
 import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.ButtonBar.ButtonData;
 import model.Church;
+import model.Sector;
 
 public class SectorInfoController {
 	@FXML
     private Label name;
-
+	/*
     @FXML
     private Label lider;
-    
+    */
     private Church church;
+    private Sector sector;
     
-    public SectorInfoController(Church church) {
+    public SectorInfoController(Church church,Sector sector) {
 		this.church = church;
+		this.sector = sector;
+		
 	}
     
     @FXML
@@ -32,14 +30,15 @@ public class SectorInfoController {
     }
     
     private void loadInfo() {
-    	church.getTheCommittees();
+    	name.setText(sector.getName());
     }
-    
+    /*
     @FXML
     void edit(ActionEvent event) {
     	
     }
-
+	*/
+    /*
     @FXML
     void remove(ActionEvent event) {
     	boolean removed = removingSectorAlert();
@@ -48,7 +47,8 @@ public class SectorInfoController {
 		}
     	
     }
-    
+    */
+    /*
     private boolean removingSectorAlert() {
     	Alert emptyFieldsAlert = new Alert(AlertType.WARNING);
     	emptyFieldsAlert.setTitle("Eliminar Sector.");
@@ -66,7 +66,8 @@ public class SectorInfoController {
 		}
     	return true;
     }
-    
+    */
+    /*
     private void memberRemovedAlert() {
     	Alert emptyFieldsAlert = new Alert(AlertType.INFORMATION);
     	emptyFieldsAlert.setTitle("Sector Eliminado.");
@@ -74,6 +75,7 @@ public class SectorInfoController {
     	emptyFieldsAlert.showAndWait();
 
     }
+    */
     
     @FXML
     void close(ActionEvent event) {

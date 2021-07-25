@@ -17,6 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Church;
 import model.Member;
+import model.Sector;
 
 public class SectorsController {
 	@FXML
@@ -88,9 +89,12 @@ public class SectorsController {
     }
     
     @FXML
-	void editSector(ActionEvent event) {
+	void sectorInfo(ActionEvent event) {
 		try {
-			openSectorInfo();
+			if (sectors.getValue() != null) {
+				openSectorInfo(sectors.getValue());
+			}
+			
 		} catch (IOException ioException) {
 			ioException.printStackTrace();
 
@@ -98,8 +102,9 @@ public class SectorsController {
 
 	}
     
-    private void openSectorInfo() throws IOException {
-    	SectorInfoController sCInfoController = new SectorInfoController(church);
+    private void openSectorInfo(String sectorString) throws IOException {
+    	model.Sector sectorModel = church.getCommittee(sectorString);
+    	SectorInfoController sCInfoController = new SectorInfoController(church,sectorModel);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/sectorsInfo.fxml"));
 		fxmlLoader.setController(sCInfoController);
 		Parent root = fxmlLoader.load();
@@ -113,6 +118,7 @@ public class SectorsController {
 
 	}
     
+    /*
     @FXML
     void createSector(ActionEvent event) {
     	try {
@@ -123,7 +129,8 @@ public class SectorsController {
 			
 		}
     }
-    
+    */
+    /*
     private void openNewSectorWindow() throws IOException{
     	Parent root = FXMLLoader.load(getClass().getResource("fxml/newSector.fxml"));
 		Scene scene = new Scene(root);
@@ -132,6 +139,20 @@ public class SectorsController {
 		secondaryStage.setTitle("Nuevo Sector");
 		secondaryStage.setResizable(false);
 		secondaryStage.show();
+    }
+    */
+    @FXML
+    void loadSector(ActionEvent event) {
+    	if (sectors.getValue() != null) {
+			loadSector(sectors.getValue());
+		}
+    	
+    }
+    
+    private void loadSector(String sectorString) {
+    	model.Sector sector = church.getSector(sectorString);
+    	loadMembers(sector.getMembersList());
+    	
     }
   
 }

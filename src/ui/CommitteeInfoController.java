@@ -15,18 +15,17 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.stage.Stage;
 import model.Church;
+import model.Committee;
 
 public class CommitteeInfoController {
 	@FXML
     private Label name;
-
-    @FXML
-    private Label id;
     
     private Church church;
-    
-    public CommitteeInfoController(Church church) {
+    private Committee committee;
+    public CommitteeInfoController(Church church, Committee committtee) {
 		this.church = church;
+		this.committee = committtee;
 	}
     
     @FXML
@@ -36,7 +35,7 @@ public class CommitteeInfoController {
     }
     
     private void loadInfo() {
-    	church.getTheCommittees();
+    	name.setText(committee.getName());
     }
     
     @FXML

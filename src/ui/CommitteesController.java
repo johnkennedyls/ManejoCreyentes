@@ -81,13 +81,18 @@ public class CommitteesController {
 	}
 
     private void loadComboBox() {
-    	
+    	for (int i = 0; i < church.getTheCommittees().size(); i++) {
+			committees.getItems().add(church.getTheCommittees().get(i).getName());
+		}
     }
     
     @FXML
-	void editCommittee(ActionEvent event) {
+	void committeeInfo(ActionEvent event) {
 		try {
-			openCommitteeInfo();
+			
+			if (committees.getValue() != null) {
+				openCommitteeInfo(committees.getValue());
+			}
 			
 		} catch (IOException ioException) {
 			ioException.printStackTrace();
@@ -96,8 +101,9 @@ public class CommitteesController {
 
 	}
     
-    private void openCommitteeInfo() throws IOException {
-    	CommitteeInfoController cInfoController = new CommitteeInfoController(church);
+    private void openCommitteeInfo(String committeeString) throws IOException {
+    	model.Committee committeeModel = church.getCommittee(committeeString);
+    	CommitteeInfoController cInfoController = new CommitteeInfoController(church,committeeModel);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/committeesInfo.fxml"));
 		fxmlLoader.setController(cInfoController);
 		Parent root = fxmlLoader.load();
@@ -111,6 +117,7 @@ public class CommitteesController {
 
 	}
     
+    /*
     @FXML
     void createCommittee(ActionEvent event) {
     	try {
@@ -121,7 +128,8 @@ public class CommitteesController {
 			
 		}
     }
-    
+    */
+    /*
     private void openNewCommitteeWindow() throws IOException{
     	Parent root = FXMLLoader.load(getClass().getResource("fxml/newCommittee.fxml"));
 		Scene scene = new Scene(root);
@@ -130,6 +138,20 @@ public class CommitteesController {
 		secondaryStage.setTitle("Nuevo Sector");
 		secondaryStage.setResizable(false);
 		secondaryStage.show();
+    }
+    */
+    @FXML
+    void loadCommittee(ActionEvent event) {
+    	if (committees.getValue() != null) {
+    		loadCommittee(committees.getValue());
+		}
+    	
+    }
+    
+    private void loadCommittee(String committeeString) {
+    	model.Committee committee = church.getCommittee(committeeString);
+    	loadMembers(committee.getcMembersList());
+    	
     }
     
 }

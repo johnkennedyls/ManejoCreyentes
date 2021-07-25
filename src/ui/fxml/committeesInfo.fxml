@@ -45,8 +45,6 @@
             </VBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0" GridPane.rowIndex="1">
                <children>
-                  <Button mnemonicParsing="false" onAction="#edit" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Editar" textFill="WHITE" />
-                  <Button mnemonicParsing="false" onAction="#remove" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Eliminar" textFill="WHITE" />
                   <Button mnemonicParsing="false" onAction="#close" prefHeight="32.0" prefWidth="72.0" style="-fx-background-color: ROYALBLUE;" text="Cerrar" textFill="WHITE" />
                </children>
             </HBox>

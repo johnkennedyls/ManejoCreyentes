@@ -1,12 +1,11 @@
 package ui;
 
 import java.io.IOException;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import exceptions.EmptyDataException;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -16,7 +15,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import model.Church;
-import model.Member;
 import model.OfficeType;
 import javafx.scene.control.Alert.AlertType;
 
@@ -49,6 +47,9 @@ public class RegisterController {
 
 	@FXML
 	private ComboBox<String> committee;
+	
+	@FXML
+	private ComboBox<String> officeType;
 
 	@FXML
 	private TextArea observationsField;
@@ -62,6 +63,7 @@ public class RegisterController {
 		loadGender();
 		loadCommittees();
 		loadSectorType();
+		loadofficeTypes();
 
 	}
 
@@ -80,7 +82,7 @@ public class RegisterController {
 			String phoneNumber = phoneNumberField.getText();
 			String sector = sectorType.getValue();
 			String MemberCommittee = committee.getValue();
-			OfficeType charge = OfficeType.NINGUNO;
+			OfficeType charge = OfficeType.valueOf(officeType.getValue());
 
 			myChurch.createGeneralMember(name, idNumber, gender, memberBirthday, baptizedBool, activeBool, observations,
 					phoneNumber, sector, MemberCommittee, charge);
@@ -126,6 +128,18 @@ public class RegisterController {
 		for (int i = 0; i < myChurch.getTheCommittees().size(); i++) {
 			committee.getItems().add(myChurch.getTheCommittees().get(i).getName());
 		}
+	}
+	
+	private void loadofficeTypes() {
+		officeType.getItems().add(OfficeType.PRESIDENTE.toString());
+		officeType.getItems().add(OfficeType.VICEPRESIDENTE.toString());
+		officeType.getItems().add(OfficeType.SECRETARIO.toString());
+		officeType.getItems().add(OfficeType.TESORERO.toString());
+		officeType.getItems().add(OfficeType.VOCAL.toString());
+		officeType.getItems().add(OfficeType.AUXILIAR.toString());
+		officeType.getItems().add(OfficeType.FISCAL.toString());
+		officeType.getItems().add(OfficeType.NINGUNO.toString());
+		
 	}
 
 	private void validateEmptyFields() throws EmptyDataException {

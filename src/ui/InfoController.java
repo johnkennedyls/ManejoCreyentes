@@ -144,6 +144,7 @@ public class InfoController {
     void remove(ActionEvent event) {
     	boolean removed = removingMemberAlert();
     	if (removed) {
+    		//church.removeMember(member);
     		committee.getScene().getWindow().hide();
 		}
 

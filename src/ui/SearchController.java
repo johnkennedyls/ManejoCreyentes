@@ -42,7 +42,13 @@ public class SearchController {
 
     @FXML
     private CheckBox activeCB;
+    
+    @FXML
+    private CheckBox Nobaptized;
 
+    @FXML
+    private CheckBox inactive;
+    
     @FXML
     private ComboBox<String> sectorType;
 
@@ -122,6 +128,12 @@ public class SearchController {
     		ToloadMembers(toPrint);
     	}else if(activeCB.isSelected()) {
     		toPrint = church.buscarPorBautizados(activeCB.isSelected());
+    		ToloadMembers(toPrint);
+    	}else if(Nobaptized.isSelected()) {
+    		toPrint = church.buscarPorBautizados(Nobaptized.isSelected());
+    		ToloadMembers(toPrint);
+    	}else if(inactive.isSelected()) {
+    		toPrint = church.buscarPorBautizados(inactive.isSelected());
     		ToloadMembers(toPrint);
     	}else if(!(sectorType.getValue().isEmpty())) {
     		toPrint = church.buscarPorSector(sectorType.getValue());

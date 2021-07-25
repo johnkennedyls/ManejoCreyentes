@@ -48,13 +48,23 @@
             </TextField>
          </children>
       </VBox>
-      <VBox alignment="CENTER" layoutX="320.0" layoutY="34.0" prefHeight="184.0" prefWidth="320.0" spacing="8.0">
+      <VBox alignment="CENTER" layoutX="300.0" layoutY="35.0" prefHeight="184.0" prefWidth="320.0" spacing="8.0">
          <padding>
             <Insets right="4.0" />
          </padding>
          <children>
-            <CheckBox fx:id="baptizedCB" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Bautizado" />
-            <CheckBox fx:id="activeCB" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Activo" />
+            <HBox alignment="CENTER" prefHeight="16.0" prefWidth="316.0" spacing="20.0">
+               <children>
+                  <CheckBox fx:id="baptizedCB" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Bautizado" />
+                  <CheckBox fx:id="Nobaptized" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="No Bautizado" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="15.0" prefWidth="316.0" spacing="20.0">
+               <children>
+                  <CheckBox fx:id="activeCB" alignment="TOP_LEFT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Activo" />
+                  <CheckBox fx:id="inactive" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Inactivo" />
+               </children>
+            </HBox>
             <ComboBox fx:id="sectorType" prefHeight="25.0" prefWidth="225.0" promptText="Sector" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
             <ComboBox fx:id="committee1" prefHeight="25.0" prefWidth="225.0" promptText="Comité" style="-fx-border-color: ROYALBLUE; -fx-border-width: 2px 2px 2px 2px; -fx-background-color: transparent;" visibleRowCount="5" />
          </children>

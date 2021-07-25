@@ -79,6 +79,7 @@ public class SectorsController {
 		PhoneNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("phoneNumber"));
 		Sector.setCellValueFactory(new PropertyValueFactory<Member, String>("sector"));
 		Committee.setCellValueFactory(new PropertyValueFactory<Member, String>("committee"));
+		
 	}
 
     private void loadComboBox() {

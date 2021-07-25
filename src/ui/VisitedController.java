@@ -62,6 +62,8 @@ public class VisitedController {
     	Member selectedMember = members.getSelectionModel().getSelectedItem();
     	church.moveToToVisit(selectedMember);
     	
+    	loadVisitedTable(church.getVisited());
+    	
     	moveToTovisitAlert();
     	
     }

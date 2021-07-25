@@ -89,6 +89,8 @@ public class ToVisitController {
     	
     	church.moveToVisited(selectedMember);
     	
+    	loadToVisitTable(Church.getToVisited);
+    	
     	moveTovisitedAlert();
     	
     }

@@ -102,7 +102,7 @@ public class CommitteesController {
 	}
     
     private void openCommitteeInfo(String committeeString) throws IOException {
-    	model.Committee committeeModel = church.getCommittee(committeeString);
+    	model.Committee committeeModel = church.searchCommittee(committeeString);
     	CommitteeInfoController cInfoController = new CommitteeInfoController(church,committeeModel);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/committeesInfo.fxml"));
 		fxmlLoader.setController(cInfoController);
@@ -149,7 +149,7 @@ public class CommitteesController {
     }
     
     private void loadCommittee(String committeeString) {
-    	model.Committee committee = church.getCommittee(committeeString);
+    	model.Committee committee = church.searchCommittee(committeeString);
     	loadMembers(committee.getcMembersList());
     	
     }

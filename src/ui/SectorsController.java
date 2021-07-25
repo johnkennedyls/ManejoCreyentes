@@ -1,6 +1,7 @@
 package ui;
 
 import java.io.IOException;
+
 import java.util.List;
 
 import javafx.collections.FXCollections;
@@ -17,7 +18,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Church;
 import model.Member;
-import model.Sector;
 
 public class SectorsController {
 	@FXML
@@ -104,7 +104,7 @@ public class SectorsController {
 	}
     
     private void openSectorInfo(String sectorString) throws IOException {
-    	model.Sector sectorModel = church.getCommittee(sectorString);
+    	model.Sector sectorModel = church.searchSector(sectorString);
     	SectorInfoController sCInfoController = new SectorInfoController(church,sectorModel);
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/sectorsInfo.fxml"));
 		fxmlLoader.setController(sCInfoController);
@@ -151,7 +151,7 @@ public class SectorsController {
     }
     
     private void loadSector(String sectorString) {
-    	model.Sector sector = church.getSector(sectorString);
+    	model.Sector sector = church.searchSector(sectorString);
     	loadMembers(sector.getMembersList());
     	
     }

@@ -60,7 +60,7 @@ public class VisitedController {
     @FXML
     void toVisit(ActionEvent event) {
     	Member selectedMember = members.getSelectionModel().getSelectedItem();
-    	church.moveToToVisit(selectedMember);
+    	church.moveToNovisited(selectedMember);
     	
     	loadVisitedTable(church.getVisited());
     	

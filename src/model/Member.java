@@ -1,5 +1,8 @@
 package model;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Member {
 	
 	/**
@@ -54,6 +57,10 @@ public class Member {
 	private String textForUnbirthday;
 	
 	private int daysForBirthay;
+	
+	private boolean visited;
+	
+	private LocalDateTime dateCapture;
 	
 	/**
 	 * Initialize a new member
@@ -258,6 +265,18 @@ public class Member {
 	}
 	public void setDaysForBirthay(int daysForBirthay) {
 		this.daysForBirthay = daysForBirthay;
+	}
+	public boolean isVisited() {
+		return visited;
+	}
+	public void setVisited(boolean visited) {
+		this.visited = visited;
+	}
+	public LocalDateTime getDateCapture() {
+		return dateCapture;
+	}
+	public void setDateCapture(LocalDateTime dateCapture) {
+		this.dateCapture = dateCapture;
 	}
 	
 	

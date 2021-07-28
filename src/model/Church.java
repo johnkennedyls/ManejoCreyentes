@@ -19,6 +19,7 @@ import java.time.format.DateTimeParseException;
 
 public class Church {
 	
+	
 	/**
 	 * 
 	 */
@@ -35,16 +36,20 @@ public class Church {
 	private List<Sector> theSectors;
 	private List<Committee> theCommittees;
 	private List<Member> generalMembers;
+	private List<Member> visited;
+	private static List<Member> noVisited;
 
 	public Church(String name, String city) {
 		this.name = name;
 		this.city = city;
-
+		
 
 
 		theSectors = new ArrayList<Sector>();
 		theCommittees = new ArrayList<Committee>();
 		generalMembers = new ArrayList<Member>();
+		visited = new ArrayList<Member>();
+		noVisited = new ArrayList<Member>();
 	}
 
 	// ------------------------------------------------------
@@ -101,6 +106,30 @@ public class Church {
 	
 	
 
+	public Minister getMinister() {
+		return minister;
+	}
+
+	public void setMinister(Minister minister) {
+		this.minister = minister;
+	}
+
+	public List<Member> getVisited() {
+		return visited;
+	}
+
+	public void setVisited(List<Member> visited) {
+		this.visited = visited;
+	}
+
+	public static List<Member> getNoVisited() {
+		return noVisited;
+	}
+
+	public void setNoVisited(List<Member> noVisited) {
+		this.noVisited = noVisited;
+	}
+
 	@SuppressWarnings("null")
 	public void createGeneralMember(String name, String idNumber, String gender, String birthday, boolean baptized,
 			boolean active, String observations, String phoneNumber, String sector, String committee, OfficeType charge) throws IOException {
@@ -135,6 +164,7 @@ public class Church {
 				}
 			}
 		}
+		noVisited.add(theMember);
 		writeMember(theMember);
 	}
 
@@ -453,5 +483,19 @@ public List<Member> buscarPorInactivo(boolean ac) {
 		return listafinal;
 	}
 	
+	public void moveTovisited(Member theMember) {
+		if(theMember.isVisited() == false) {
+			theMember.setVisited(true);
+			noVisited.remove(searchByName(theMember.getName()).get(0));
+			visited.add(theMember);
+		}
+	}
+	public void moveToNovisited(Member theMember) {
+		if(theMember.isVisited() == true) {
+			theMember.setVisited(false);
+			visited.remove(searchByName(theMember.getName()).get(0));
+			noVisited.add(theMember);
+		}
+	}
 	
 }

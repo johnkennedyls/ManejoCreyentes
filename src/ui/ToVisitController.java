@@ -57,7 +57,7 @@ public class ToVisitController {
     
     @FXML
     public void initialize() {
-    	loadToVisitTable(Church.getToVisited);
+    	loadToVisitTable(Church.getNoVisited());
 		
     }
     
@@ -85,11 +85,11 @@ public class ToVisitController {
     	
     	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
     	LocalDateTime now = LocalDateTime.now(); 
-    	selectedMember.setlastVisitedDate(now);
+    	selectedMember.setDateCapture(now);
     	
-    	church.moveToVisited(selectedMember);
+    	church.moveTovisited(selectedMember);
     	
-    	loadToVisitTable(Church.getToVisited);
+    	loadToVisitTable(Church.getNoVisited());
     	
     	moveTovisitedAlert();
     	

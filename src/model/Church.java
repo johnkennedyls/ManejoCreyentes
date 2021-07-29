@@ -3,13 +3,20 @@ package model;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import exceptions.InvalidRouteException;
+
 import java.lang.*;
 import java.time.LocalDate;
 import java.time.Month;
@@ -19,10 +26,17 @@ import java.time.format.DateTimeParseException;
 
 public class Church {
 	
-	
-	/**
-	 * 
-	 */
+	private static final long serialVersionUID = 1;
+	public final static String SAVE_PATH_FILE_SECTORS = "data/sectors.xd";
+	public final static String SAVE_PATH_FILE_COMMITTEES = "data/committees.xd";
+	public final static String SAVE_PATH_FILE_MEMBERS = "data/members.xd";
+	public final static String SAVE_PATH_FILE_VISITED_MEMBERS = "data/visitedMembers.xd";
+	public final static String SAVE_PATH_FILE_NO_VISITED_MEMBERS = "data/noVisitedMembers.xd";
+	private List<Sector> theSectors;
+	private List<Committee> theCommittees;
+	private List<Member> generalMembers;
+	private List<Member> visited;
+	private static List<Member> noVisited;
 
 	private String name;
 	/**
@@ -33,11 +47,7 @@ public class Church {
 	private Minister minister;
 	
 
-	private List<Sector> theSectors;
-	private List<Committee> theCommittees;
-	private List<Member> generalMembers;
-	private List<Member> visited;
-	private static List<Member> noVisited;
+	
 
 	public Church(String name, String city) {
 		this.name = name;
@@ -166,6 +176,7 @@ public class Church {
 		}
 		noVisited.add(theMember);
 		writeMember(theMember);
+		saveData("member");
 	}
 
 	private void writeMember(Member theMember) throws IOException {
@@ -205,20 +216,22 @@ public class Church {
 
 	}
 	
-	public void createCommittee(String name) {
+	public void createCommittee(String name) throws IOException {
 		
 		Committee theCommittee;
 		
 		theCommittee = new Committee(name);
 		theCommittees.add(theCommittee);
+		saveData("committee");
 	}
 
-	public void createSector(String name) {
+	public void createSector(String name) throws IOException {
 
 		Sector theSector;
 
 		theSector = new Sector(name);
 		theSectors.add(theSector);
+		saveData("sector");
 
 	}
 
@@ -246,7 +259,7 @@ public class Church {
 
 	}
 
-	public void divideBySectors() {
+	public void divideBySectors() throws IOException {
 		for (int i = 0; i < generalMembers.size(); i++) {
 			if (existSector(generalMembers.get(i).getSector())) {
 				Sector s = searchSector(generalMembers.get(i).getSector());
@@ -284,7 +297,7 @@ public class Church {
 
 	}
 
-	public void divideByCommittee() {
+	public void divideByCommittee() throws IOException {
 		for (int i = 0; i < generalMembers.size(); i++) {
 			if (existCommittee(generalMembers.get(i).getCommittee())) {
 				Committee s = searchCommittee(generalMembers.get(i).getCommittee());
@@ -483,19 +496,203 @@ public List<Member> buscarPorInactivo(boolean ac) {
 		return listafinal;
 	}
 	
-	public void moveTovisited(Member theMember) {
+	public void moveTovisited(Member theMember) throws IOException {
 		if(theMember.isVisited() == false) {
 			theMember.setVisited(true);
 			noVisited.remove(searchByName(theMember.getName()).get(0));
 			visited.add(theMember);
+			saveData("visited");
 		}
 	}
-	public void moveToNovisited(Member theMember) {
+	public void moveToNovisited(Member theMember) throws IOException {
 		if(theMember.isVisited() == true) {
 			theMember.setVisited(false);
 			visited.remove(searchByName(theMember.getName()).get(0));
 			noVisited.add(theMember);
+			saveData("noVisited");
 		}
 	}
+	
+	public void importData(String fileName) throws IOException, InvalidRouteException {
+		
+		if(fileName.equals("data/sectors.csv")) {
+			importSectorsData("data/sectors.csv");
+		}
+		else if (fileName.equals("data/committees.csv")) {
+			importCommitteesData("data/committees.csv");
+		}
+		else if(fileName.equals("data/members.csv")) {
+			importMembersData("data/members.csv");
+		}
+		else if(fileName.equals("data/visitedMembers.csv")) {
+			importVisitedMembersData("data/visitedMembers.csv");
+		}
+		else if(fileName.equals("data/noVisitedMembers.csv")) {
+			importNoVisitedMembersData("data/noVisitedMembers.csv");
+		}
+		else {
+			throw new InvalidRouteException();
+		}
+	}
+	
+	public void importSectorsData(String fileName) throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		br.readLine();
+		String line = br.readLine();
+		while(line!=null){
+			String[] parts = line.split(";");
+			createSector(parts[0]);	
+			line = br.readLine();
+		}
+		br.close();
+		
+		
+	}
+	
+	public void importCommitteesData(String fileName) throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		br.readLine();
+		String line = br.readLine();
+		while(line!=null){
+			String[] parts = line.split(";");
+			createCommittee(parts[0]);	
+			line = br.readLine();
+		}
+		br.close();
+		
+		
+	}
+	
+	public void importMembersData(String fileName) throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		br.readLine();
+		String line = br.readLine();
+		while(line!=null){
+			String[] parts = line.split(";");
+			createGeneralMember(parts[0], parts[1], parts[2], parts[3],
+					Boolean.parseBoolean(parts[4]),Boolean.parseBoolean(parts[5]), parts[6], parts[7], parts[8],
+					parts[9] ,OfficeType.valueOf(parts[10]));	
+			line = br.readLine();
+		}
+		br.close();
+		
+		
+	}
+	
+	public void importVisitedMembersData(String fileName) throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		br.readLine();
+		String line = br.readLine();
+		while(line!=null){
+			String[] parts = line.split(";");
+			Member theMember = new Member(parts[0], parts[1], parts[2], parts[3],
+					Boolean.parseBoolean(parts[4]),Boolean.parseBoolean(parts[5]), parts[6], parts[7], parts[8],
+					parts[9] ,OfficeType.valueOf(parts[10]));
+			moveTovisited(theMember);	
+			line = br.readLine();
+		}
+		br.close();
+		
+		
+	}
+
+	public void importNoVisitedMembersData(String fileName) throws IOException{
+		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		br.readLine();
+		String line = br.readLine();
+		while(line!=null){
+			String[] parts = line.split(";");
+			Member theMember = new Member(parts[0], parts[1], parts[2], parts[3],
+					Boolean.parseBoolean(parts[4]),Boolean.parseBoolean(parts[5]), parts[6], parts[7], parts[8],
+					parts[9] ,OfficeType.valueOf(parts[10]));
+			moveToNovisited(theMember);	
+			line = br.readLine();
+		}
+		br.close();
+		
+		
+	}
+	
+	public void saveData(String type) throws IOException{
+		if(type.equalsIgnoreCase("sector")) {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(SAVE_PATH_FILE_SECTORS));
+			oos.writeObject(theSectors);
+			oos.close();
+		} 
+		if(type.equalsIgnoreCase("committee")) {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(SAVE_PATH_FILE_COMMITTEES));
+			oos.writeObject(theCommittees);
+			oos.close();
+		}
+		if(type.equalsIgnoreCase("member")) {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(SAVE_PATH_FILE_MEMBERS));
+			oos.writeObject(generalMembers);
+			oos.close();
+		}
+		if(type.equalsIgnoreCase("visited")) {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(SAVE_PATH_FILE_VISITED_MEMBERS));
+			oos.writeObject(visited);
+			oos.close();
+		}
+		if(type.equalsIgnoreCase("noVisited")) {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(SAVE_PATH_FILE_NO_VISITED_MEMBERS));
+			oos.writeObject(noVisited);
+			oos.close();
+		}
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	public String loadData() throws IOException, ClassNotFoundException{
+		File sector = new File(SAVE_PATH_FILE_SECTORS);
+		File committee = new File(SAVE_PATH_FILE_COMMITTEES);
+		File member = new File(SAVE_PATH_FILE_MEMBERS);
+		File visited = new File(SAVE_PATH_FILE_VISITED_MEMBERS);
+		File noVisited = new File(SAVE_PATH_FILE_NO_VISITED_MEMBERS);
+		String info = "";
+		boolean loaded = false;
+		if(sector.exists()){
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(sector));
+			theSectors = (ArrayList<Sector>)ois.readObject();
+			info += "Restaurants loaded succesfully\n";
+			ois.close();	
+			loaded = true;
+		}
+		if(committee.exists()){
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(committee));
+			theCommittees = (ArrayList<Committee>)ois.readObject();
+			info += "Clients loaded succesfully\n";
+			ois.close();
+			loaded = true;
+		}
+		if(member.exists()){
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(member));
+			generalMembers = (ArrayList<Member>)ois.readObject();
+			info += "Products loaded succesfully\n";
+			ois.close();
+			loaded = true;
+		} 
+		if(visited.exists()){
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(visited));
+			this.visited = (ArrayList<Member>)ois.readObject();
+			info += "Orders loaded succesfully\n";
+			ois.close();
+			loaded = true;
+		}
+		if(noVisited.exists()){
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(visited));
+			Church.noVisited = (ArrayList<Member>)ois.readObject();
+			info += "Orders loaded succesfully\n";
+			ois.close();
+			loaded = true;
+		}
+		if(loaded == false) {
+			info = "Nothing to load";
+		}
+		return info;
+	}
+	
+	
+	
 	
 }

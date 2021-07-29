@@ -176,7 +176,7 @@ public class EditController {
     }
     
     @FXML
-    void edit(ActionEvent event) {
+    void edit(ActionEvent event) throws IOException {
     	try {
     		validateEmptyFields();
     		member.setName(name.getText());
@@ -193,6 +193,7 @@ public class EditController {
     		member.setObservations(observations.getText());
     		memberEditedAlert();
     		loadInfoWindow();
+    		church.readMembers("data/memberscsv.csv");
     		
 		} catch (EmptyDataException emptyDataException) {
 			emptyFieldsAlert(emptyDataException.getMessage());

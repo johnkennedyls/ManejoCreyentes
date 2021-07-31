@@ -27,6 +27,9 @@ public class CommitteesController {
 
 	@FXML
 	private TableColumn<Member, String> IdNumber;
+	
+	@FXML
+	private TableColumn<Member, String> charge;
 
 	@FXML
 	private TableColumn<Member, String> Gender;
@@ -72,6 +75,7 @@ public class CommitteesController {
 		Name.setCellValueFactory(new PropertyValueFactory<Member, String>("name"));
 		IdNumber.setCellValueFactory(new PropertyValueFactory<Member, String>("idNumber"));
 		Gender.setCellValueFactory(new PropertyValueFactory<Member, String>("gender"));
+		Gender.setCellValueFactory(new PropertyValueFactory<Member, String>("chargeString"));
 		Birthday.setCellValueFactory(new PropertyValueFactory<Member, String>("birthday"));
 		Baptized.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("baptized"));
 		Active.setCellValueFactory(new PropertyValueFactory<Member, Boolean>("active"));

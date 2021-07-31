@@ -15,6 +15,7 @@
                <columns>
                   <TableColumn fx:id="Name" prefWidth="75.0" text="Nombre" />
                   <TableColumn fx:id="IdNumber" prefWidth="75.0" text="CC-TI" />
+                  <TableColumn fx:id="charge" prefWidth="75.0" text="Cargo" />
                   <TableColumn fx:id="Gender" prefWidth="75.0" text="Genero" />
                   <TableColumn fx:id="Birthday" prefWidth="75.0" text="Cumpleaños" />
                   <TableColumn fx:id="Baptized" prefWidth="75.0" text="Bautizado" />

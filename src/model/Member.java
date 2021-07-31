@@ -54,6 +54,8 @@ public class Member {
 	 */
 	private OfficeType charge;
 	
+	private String chargeString;
+	
 	private String textForUnbirthday;
 	
 	private int daysForBirthay;
@@ -89,6 +91,7 @@ public class Member {
 		this.sector = sector;
 		this.committee = committee;
 		this.charge = charge;
+		chargeString = charge.toString();
 	}
 	/**
 	 * return member name

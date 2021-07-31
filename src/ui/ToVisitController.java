@@ -1,5 +1,6 @@
 package ui;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -81,23 +82,38 @@ public class ToVisitController {
     
     @FXML
     void visited(ActionEvent event) {
-    	Member selectedMember = members.getSelectionModel().getSelectedItem();
+    	try {
+    		Member selectedMember = members.getSelectionModel().getSelectedItem();
+        	
+        	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        	LocalDateTime now = LocalDateTime.now(); 
+        	selectedMember.setDateCapture(now);
+        	
+        	church.moveTovisited(selectedMember);
+        	
+        	loadToVisitTable(Church.getNoVisited());
+        	
+        	moveTovisitedAlert();
+        	
+		} catch (IOException ioException) {
+			memberNotMovedAlert();
+			
+		}
     	
-    	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
-    	LocalDateTime now = LocalDateTime.now(); 
-    	selectedMember.setDateCapture(now);
     	
-    	church.moveTovisited(selectedMember);
-    	
-    	loadToVisitTable(Church.getNoVisited());
-    	
-    	moveTovisitedAlert();
-    	
+    }
+    
+    private void memberNotMovedAlert() {
+    	Alert emptyFieldsAlert = new Alert(AlertType.ERROR);
+		emptyFieldsAlert.setTitle("Error al agregar a visitados");
+		emptyFieldsAlert.setHeaderText("El miembro NO ha sido agregado a la lista de visitados.");
+		emptyFieldsAlert.showAndWait();
+		
     }
     
     private void moveTovisitedAlert() {
     	Alert emptyFieldsAlert = new Alert(AlertType.ERROR);
-		emptyFieldsAlert.setTitle("Agregado a por visitar");
+		emptyFieldsAlert.setTitle("Agregado a visitados");
 		emptyFieldsAlert.setHeaderText("El miembro ha sido agregado a la lista de visitados y removido de la lista de por visitar");
 		emptyFieldsAlert.showAndWait();
 		

@@ -52,6 +52,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/individual-man-people-person.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </Pane>
                         <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openSectors" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
@@ -69,6 +74,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/clan-group-partners-peers-people.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </Pane>
                         <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openCommittees" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
@@ -86,6 +96,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/leader-leading-president-speaking-speech.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </Pane>
                      </children>
@@ -110,6 +125,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/birthdaycakewithcandles.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </Pane>
                         <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openVisits" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
@@ -127,6 +147,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/placeholderblackshapeforlocalizationonmaps.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </Pane>
                         <Pane layoutX="370.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#openOptions" prefHeight="160.0" prefWidth="120.0" style="-fx-background-color: DODGERBLUE; -fx-border-color: ROYALBLUE;">
@@ -144,6 +169,11 @@
                                     </Pane>
                                  </children>
                               </HBox>
+                              <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/configuration-edit-gear-options-preferences-setting-settings.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </Pane>
                      </children>

@@ -1,7 +1,5 @@
 package ui;
 
-import java.time.temporal.ChronoUnit;
-
 import exceptions.EmptyDataException;
 import exceptions.InvalidUserException;
 import exceptions.PasswordMismatchException;

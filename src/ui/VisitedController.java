@@ -1,5 +1,6 @@
 package ui;
 
+import java.io.IOException;
 import java.util.List;
 
 import javafx.collections.FXCollections;
@@ -59,13 +60,27 @@ public class VisitedController {
     
     @FXML
     void toVisit(ActionEvent event) {
-    	Member selectedMember = members.getSelectionModel().getSelectedItem();
-    	church.moveToNovisited(selectedMember);
+    	try {
+    		Member selectedMember = members.getSelectionModel().getSelectedItem();
+        	church.moveToNovisited(selectedMember);
+        	
+        	loadVisitedTable(church.getVisited());
+        	
+        	moveToTovisitAlert();
+        	
+		} catch (IOException ioException) {
+			memberNotMovedAlert();
+		}
     	
-    	loadVisitedTable(church.getVisited());
     	
-    	moveToTovisitAlert();
-    	
+    }
+    
+    private void memberNotMovedAlert() {
+    	Alert emptyFieldsAlert = new Alert(AlertType.ERROR);
+		emptyFieldsAlert.setTitle("Error al agregar a por visitar");
+		emptyFieldsAlert.setHeaderText("El miembro NO ha sido agregado a la lista de por visitar.");
+		emptyFieldsAlert.showAndWait();
+		
     }
     
     private void moveToTovisitAlert() {

@@ -2,6 +2,7 @@ package ui;
 
 import java.io.IOException;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -107,6 +108,9 @@ public class MenuController {
 		secondaryStage.setTitle("Principal");
 		secondaryStage.setResizable(false);
 		secondaryStage.show();
+		
+		secondaryStage.setOnCloseRequest(e -> Platform.exit());
+		
 	}
 	
 	@FXML

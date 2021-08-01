@@ -152,6 +152,7 @@ public class PrincipalController {
     		secondaryStage.setTitle("Principal");
     		secondaryStage.setResizable(false);
     		secondaryStage.show();
+    		
         }
     	
     	@FXML
@@ -188,7 +189,7 @@ public class PrincipalController {
     			fxmlLoader.setController(optionsController);
 				Parent Pane = fxmlLoader.load();
 				principalWindow.setRight(Pane);
-				
+
     		} catch (IOException ioException) {
 				ioException.printStackTrace();
 				
